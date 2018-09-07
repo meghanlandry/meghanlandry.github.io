@@ -1,11 +1,11 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>(Your Name)</title>
-  </head>
-  <body>
-    <h1>Hello World -- This is my website!</h1>
-    <p>I'm making this to host my portfolio for free.</p>
-  </body>
-</html>
+body {
+  margin: 30px auto;
+  max-width: 1000px;
+  font-family: "Helvetica", "Arial", sans-serif;
+  line-height: 1.5;
+  padding: 30px 20px;
+}
+
+h1 {
+  padding: 20px 0px 10px 0px;
+}
