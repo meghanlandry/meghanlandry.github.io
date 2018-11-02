@@ -1,0 +1,91 @@
+  body {
+    background: #c0baba;
+  }
+
+  .navbar {
+    background: #f6dada;
+    border-style: hidden;
+    text-align: center;
+  }
+
+  .navbar .navbar-nav {
+    display: inline-block;
+    float: none;
+    vertical-align: top;
+    font-variant: small-caps;
+    letter-spacing: 10px;
+  }
+
+  .navbar-nav>li>.dropdown-menu {
+    font-variant: small-caps;
+    letter-spacing: 10px;
+    background: #f6dada;
+    border-style: hidden;
+  }
+
+  .nav .open>a {
+    background: #6c5656 !important;
+  }
+
+  /* new nav stuff */
+  .navbar-toggle {
+    border-style: none;
+  }
+  .navbar-toggle:hover{
+    background-color: #6c5656 !important;
+  }
+
+  /* ---------- */
+
+  .caption {
+    text-align: center;
+    font-variant: small-caps;
+    color: #6c5656 !important;
+    letter-spacing: 1px;
+  }
+
+  .modal-content {
+    text-align: center;
+    background-color: #6c5656;
+    letter-spacing: 1px;
+    color: #f6dada;
+    font-family: Helvetica;
+    font-variant: small-caps;
+  }
+
+  a {color: white}
+
+  .text1 {font-variant: normal;
+          font-size: 80%}
+
+          .clearfix
+                  {
+                      zoom: 1;
+                  }
+          .clearfix:before, .clearfix:after {
+                      content: "";
+                      display: table;
+                      line-height: 0;
+                  }
+          .clearfix:after {
+                      clear: both;
+                  }
+
+          .Slider_img {
+                      float:left;
+                      width:40%;
+                  }
+          .content{
+                      float:right;
+                      width:60%;
+                      font-family: "Helvetica";
+                      letter-spacing: 3px;
+                      color: #6c5656;
+                      padding: 0% 10% 0% 0%
+                  }
+          a {color: #FFFFFF;}
+          a:visited { color: white;}
+          a:active { color: white;}
+          a:hover { color: white; font-weight: bold }
+
+          .text1 {font-variant: normal;}
