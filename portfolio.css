@@ -31,12 +31,12 @@
   .navbar-toggle {
     border-style: none;
   }
-  .navbar-toggle:hover{
+
+  .navbar-toggle:hover {
     background-color: #6c5656 !important;
   }
 
   /* ---------- */
-
   .caption {
     text-align: center;
     font-variant: small-caps;
@@ -53,39 +53,61 @@
     font-variant: small-caps;
   }
 
-  a {color: white}
 
-  .text1 {font-variant: normal;
-          font-size: 80%}
+  .text1 {
+    font-variant: normal;
+    font-size: 80%
+  }
 
-          .clearfix
-                  {
-                      zoom: 1;
-                  }
-          .clearfix:before, .clearfix:after {
-                      content: "";
-                      display: table;
-                      line-height: 0;
-                  }
-          .clearfix:after {
-                      clear: both;
-                  }
+  .clearfix {
+    zoom: 1;
+  }
 
-          .Slider_img {
-                      float:left;
-                      width:40%;
-                  }
-          .content{
-                      float:right;
-                      width:60%;
-                      font-family: "Helvetica";
-                      letter-spacing: 3px;
-                      color: #6c5656;
-                      padding: 0% 10% 0% 0%
-                  }
-          a {color: #FFFFFF;}
-          a:visited { color: white;}
-          a:active { color: white;}
-          a:hover { color: white; font-weight: bold }
+  .clearfix:before, .clearfix:after {
+    content: "";
+    display: table;
+    line-height: 0;
+  }
 
-          .text1 {font-variant: normal;}
+  .clearfix:after {
+    clear: both;
+  }
+
+  .Slider_img {
+    float: left;
+    width: 40%;
+  }
+
+  .content {
+    float: right;
+    width: 60%;
+    font-family: "Helvetica";
+    letter-spacing: 3px;
+    color: #6c5656;
+    padding: 0% 10% 0% 0%
+  }
+
+  a {
+    color: #FFFFFF;
+  }
+
+  a:visited {
+    color: white;
+  }
+
+  a:active {
+    color: white;
+  }
+
+  a:hover {
+    color: white;
+  }
+
+  .text1 {
+    font-variant: normal;
+  }
+
+  .textlink:hover {
+    font-weight: bold;
+    text-decoration: none;
+  }
