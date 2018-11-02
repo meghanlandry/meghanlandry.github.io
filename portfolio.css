@@ -110,4 +110,11 @@
   .textlink:hover {
     font-weight: bold;
     text-decoration: none;
+    color: white !important;
+  }
+
+  .textlink:active {
+    font-weight: bold;
+    text-decoration: none;
+    color: white !important;
   }
