@@ -37,7 +37,7 @@ function setup() {
   video2.style('left', '20%');
   video2.style('top', '5%');
 
-  video3 = createVideo(['assets/video3.mp4']);
+  video3 = createVideo(['assets/video6.mp4']);
   video3.size(0,0);
   video3.position(followX, followY)
   video3.style('top', '45%');
@@ -54,7 +54,7 @@ function setup() {
   video5.position(followX, followY)
   video5.style('top', '25%' );
 
-  video6 = createVideo(['assets/video6.mp4']);
+  video6 = createVideo(['assets/video3.mp4']);
   video6.size(0,0);
   video6.position(followX, followY)
   video6.style('top', '60%');
