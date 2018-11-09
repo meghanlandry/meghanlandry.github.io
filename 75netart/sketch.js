@@ -71,7 +71,7 @@ function setup() {
   imgBtn = createImg(IMG_URL, 'My Clickable Image');
   imgBtn.position(100, 100);
 
-  out = createButton("I'm done.");
+  out = createButton("I'm done. (Click to exit.)");
   out.position(-100,-100);
   out.mousePressed(awayAway);
 }
