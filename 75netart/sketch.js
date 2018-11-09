@@ -58,7 +58,7 @@ function setup() {
   video6.size(0,0);
   video6.position(followX, followY)
   video6.style('top', '60%');
-  video6.style('right', '60%');
+  video6.style('right', '40%');
 
   video7 = createVideo(['assets/video7.mp4']);
   video7.size(0,0);
@@ -82,10 +82,18 @@ function draw() {
     imgBtn.position(followX-50, followY-70);
     imgBtn.size(150, 150);
     imgBtn.mousePressed(togglePlayVid);
+    video1.speed(mouseX/500+.5);
+    video2.speed(mouseY/500+.5);
+    video3.speed(mouseX/500+.5);
+    video4.speed(mouseY/500+.5);
+    video5.speed(mouseX/500+.5);
+    video6.speed(mouseY/500+.5);
+    video7.speed(mouseX/500+.5);
     if (btnRS > 1) {
       imgBtn.size(0, 0);
       out.size(100,100);
     }
+
 
 }
 function awayAway() {
