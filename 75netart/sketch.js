@@ -125,9 +125,9 @@ function togglePlayVid() {
     video7.pause();
     imgBtn.html('play');
   }else{
-    video1.size(300, 400);
-    video1.loop();
+
     }
+    setTimeout(video,1000)
     setTimeout(videoOne,2000);
     setTimeout(videoTwo,4000);
     setTimeout(videoThree,6000);
@@ -137,6 +137,11 @@ function togglePlayVid() {
     setTimeout(away,18000);
 
   }
+
+function video() {
+  video1.size(300, 400);
+  video1.loop();
+}
 
 function videoOne() {
     video2.size(600, 500);
