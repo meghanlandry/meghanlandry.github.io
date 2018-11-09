@@ -152,7 +152,7 @@ function videoThree() {
     video4.loop();
   }
 function videoFour() {
-    video5.size(100, 500);
+    video5.size(250, 500);
     video5.loop();
   }
 function videoFive() {
