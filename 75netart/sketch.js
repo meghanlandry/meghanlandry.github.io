@@ -128,8 +128,8 @@ function togglePlayVid() {
 
     }
     setTimeout(video,1000)
-    setTimeout(videoOne,2000);
-    setTimeout(videoTwo,4000);
+    setTimeout(videoOne,3000);
+    setTimeout(videoTwo,4500);
     setTimeout(videoThree,6000);
     setTimeout(videoFour,8000);
     setTimeout(videoFive,10000);
