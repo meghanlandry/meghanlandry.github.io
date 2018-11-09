@@ -134,7 +134,7 @@ function togglePlayVid() {
     setTimeout(videoFour,8000);
     setTimeout(videoFive,10000);
     setTimeout(videoSix,12000);
-    setTimeout(away,14000);
+    setTimeout(away,18000);
 
   }
 
