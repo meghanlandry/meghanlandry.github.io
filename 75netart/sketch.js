@@ -15,9 +15,6 @@ var followX;
 var followY;
 var cnv;
 
-var test=300;
-var test2=150;
-
 function preload() {
 }
 
@@ -27,7 +24,7 @@ function setup() {
   var y = (windowHeight - height) /2;
   cnv.position(x, y);
 
-  video1 = createVideo(['https://www.youtube.com/embed/VralJMGGyic']);
+  video1 = createVideo(['assets/video1.mp4']);
   video1.size(0,0);
 
   video2 = createVideo(['assets/video1.mp4']);
