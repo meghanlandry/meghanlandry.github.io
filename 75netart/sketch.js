@@ -66,10 +66,10 @@ function setup() {
   video7.style('top', '50%');
   video7.style('right', '30%');
 
-  mouseX = 100;
-  mouseY = 100;
+  mouseX = windowWidth/2;
+  mouseY = 20;
   imgBtn = createImg(IMG_URL, 'My Clickable Image');
-  imgBtn.position(100, 100);
+  imgBtn.position(mouseX, mouseY);
 
   out = createButton("I'm done. (Click to exit.)");
   out.position(-100,-100);
