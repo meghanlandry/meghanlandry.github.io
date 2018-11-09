@@ -93,20 +93,20 @@ function awayAway() {
 }
 
 function seekCursor() {
-  if (followX < mouseX-3) {
-    followX = followX + 3;
+  if (followX < mouseX-2) {
+    followX = followX + 2;
   }
-  else if (followX >= mouseX+3) {
-    followX = followX - 3;
+  else if (followX >= mouseX+2) {
+    followX = followX - 2;
   }
   else {
     followX = mouseX;
   }
-  if (followY < mouseY-3) {
-    followY = followY + 3
+  if (followY < mouseY-2) {
+    followY = followY + 2
   }
-  else if (followY > mouseY+3) {
-    followY = followY - 3
+  else if (followY > mouseY+2) {
+    followY = followY - 2
   }
   else {
     followY = mouseY
