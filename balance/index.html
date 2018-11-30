@@ -6,13 +6,30 @@
     <script>
     function goTo() {
         window.location = "balance.html"
-        console.log("cat")
+        console.log("works")
       }
       </script>
   </head>
-  <body style="background:#BBBBBB; text-align:center; color:#FFCCCC;">
-    <div>
+  <body onload="goTo();" style="background:#BBBBBB; text-align:center; color:#FFCCCC;">
     c l i c k a n y w h e r e
+
+    <div>
+
+    <video id="balance" preload="auto" src="balance.mp4" controls></video>
+    <video id="learn" preload="auto" src="learn.mp4" controls></video>
+    <video id="speak" preload="auto" src="speak.mp4" controls></video>
+    <video id="play" preload="auto" src="play.mp4" controls></video>
+    <video id="work" preload="auto" src="work.mp4" controls></video>
+
+    <!-- <script>
+  // video.addEventListener('loadedmetadata', function() {
+  //   if (video.buffered.length === 0) return;
+  //
+  //   var bufferedSeconds = video.buffered.end(0) - video.buffered.start(0);
+  //   console.log(bufferedSeconds + ' 3');
+    //});
+  </script>
+  <script> -->
   </div>
   </body>
 </html>
