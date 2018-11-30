@@ -118,3 +118,8 @@
     text-decoration: none;
     color: white !important;
   }
+
+  #p3portrait canvas {
+    widtch: 100% !important:
+    height: auto !important:
+  }
