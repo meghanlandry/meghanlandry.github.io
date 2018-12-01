@@ -5,16 +5,13 @@
     <title>l o a d i n g . . . </title>
     <script>
 
-    function goTo () {
-      setTimeout(go, 5000)
-    }
 
-    function go() {
+    function goTo() {
         window.location = "balance.html"
       }
       </script>
   </head>
-  <body onload="goTo();" style="background:#BBBBBB; text-align:center; color:#FFCCCC;">
+  <body style="background:#BBBBBB; text-align:center; color:#FFCCCC;">
     <div>
   l o a d i n g . . .
 
@@ -22,7 +19,7 @@
     <video id="learn" preload="auto" src="learn.mp4" width=1></video>
     <video id="speak" preload="auto" src="speak.mp4" width=1></video>
     <video id="play" preload="auto" src="play.mp4" width=1></video>
-    <video id="work" preload="auto" src="work.mp4" width=1></video>
+    <video id="work" preload="auto" src="work.mp4" width=1 onloadeddata="goTo();"></video>
   </div>
   </body>
 </html>
