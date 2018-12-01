@@ -1,25 +1,28 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr" onClick="goTo();">
+<html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
     <title>l o a d i n g . . . </title>
     <script>
-    function goTo() {
+
+    function goTo () {
+      setTimeout(go, 5000)
+    }
+
+    function go() {
         window.location = "balance.html"
-        console.log("works")
       }
       </script>
   </head>
   <body onload="goTo();" style="background:#BBBBBB; text-align:center; color:#FFCCCC;">
-
     <div>
+  l o a d i n g . . .
 
-    <video id="balance" preload="auto" src="balance.mp4"></video>
-    <video id="learn" preload="auto" src="learn.mp4"></video>
-    <video id="speak" preload="auto" src="speak.mp4"></video>
-    <video id="play" preload="auto" src="play.mp4"></video>
-    <video id="work" preload="auto" src="work.mp4"></video>
-
+    <video id="balance" preload="auto" src="balance.mp4" width=1></video>
+    <video id="learn" preload="auto" src="learn.mp4" width=1></video>
+    <video id="speak" preload="auto" src="speak.mp4" width=1></video>
+    <video id="play" preload="auto" src="play.mp4" width=1></video>
+    <video id="work" preload="auto" src="work.mp4" width=1></video>
   </div>
   </body>
 </html>
