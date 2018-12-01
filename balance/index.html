@@ -4,12 +4,25 @@
     <meta charset="utf-8">
     <title>l o a d i n g . . . </title>
     <script>
+    var l = 0
 
+    function load() {
+      l++
+    }
+
+    function check() {
+      if (l==5) {
+        goTo();
+      } else {
+        setTimeout(check(), 2000);
+      }
+    }
 
     function goTo() {
         window.location = "balance.html"
       }
       </script>
+
   </head>
   <body style="background:#BBBBBB; text-align:center; color:#FFCCCC;">
     <div>
