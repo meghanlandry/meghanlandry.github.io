@@ -1,5 +1,5 @@
 
-$(document).ready(function() {
+$('document').ready(function() {
 
 
 	$('body').videoBG({
@@ -13,7 +13,6 @@ $(document).ready(function() {
 		opacity:1,
 		fullscreen:true,
 	});
-
 
 
 })

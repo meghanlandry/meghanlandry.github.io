@@ -18,18 +18,10 @@
 </head>
 
 <body onClick="go()">
-  <video id="speak" style="max-width: 100%;" src="speak.mp4" alt="speaksmall.mp4">
-    <script>
-      var video = document.getElementById("speak");
-      video.autoplay = true;
-      video.load();
-      speak.loop = true;
-    </script>
-    <script>
+  <video style="max-width: 100%;" muted autoplay loop poster >
+  <source src="speak.mp4" alt="speaksmall.mp4" type="video/mp4">
+  </video>
 
-
-
-    </script>
 </body>
 
 </html>

@@ -5,28 +5,36 @@
   <meta charset="utf-8">
 
   <link rel="stylesheet" href="assets/style.css" />
-  <!-- <script type="text/javascript" src="assets/script.js"></script> -->
   <script type="text/javascript" src="assets/jquery-1.5.1.js"></script>
+  <script type="text/javascript" src="jquery.videoBG.js"></script>
+	<script type="text/javascript" src="assets/script.js"></script>
 
   <script>
   function go() {
       window.location = "balance.html"
     }
     </script>
+    <style>
+    </style>
 
 
   <title>i w a n t t o d r a w h a t i l o v e i w a n t t o r e l a x a n d e s c a p e t h i s i s w h y i l o v e a r t i l o v e t h e s e c o l o r s i w a n t t o d r a w s o m e t h i n g p r e t t y i w a n t t o l i v e v i c a r i o u s l y t h r o u g h m y c h a r a c t e r s t h i s i s w h y i m a k e a r t</title>
 </head>
 
 <body onClick="go()">
+  <script> var videoBG = $('play.mp4').videoBG();
+  </script>
   <!-- <video src='play.mp4'> -->
-  <video id="play" muted="muted" style="height: 100%;" style="max-width: 100% !important;" src="play.mp4">
+  <!-- <video id="play" muted="muted" style="overflow:hidden; max-width: 100%; height: 100% !important; position: absolute" src="play.mp4">
     <script>
       var video = document.getElementById("play");
       video.autoplay = true;
       video.load();
       play.loop = true;
-    </script>
+      video.scale = false;
+      video.position = absolute;
+    </script> -->
+
 
 </body>
 
