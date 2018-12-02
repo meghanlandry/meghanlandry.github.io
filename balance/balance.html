@@ -33,12 +33,14 @@
   <script type="text/javascript" src="assets/script.js"></script>
 
   <script>
-
+  var q = 0;
+  var w = 0;
   var a = 0;
   var s = 0;
   var x = 0;
   var y = 0;
   var t = 0;
+  var r = 0;
 
   function go() {
     if (a==1 && s==1 && t==0) {
@@ -68,10 +70,11 @@
     }
 
     function checkBrowser() {
-      if (innerWidth < 600) {
+      if (q < 600) {
         t = 1;
+
       }
-  }
+      }
 
   </script>
 
@@ -86,8 +89,9 @@
 
     <script>
       $('body').mousedown(function(event) {
-        var q = $(window).width()
-        var w = $(window).height()
+        window.innerWidth = r;
+        q = $(window).width()
+        w = $(window).height()
         x = event.clientX;
         y = event.clientY;
 
@@ -101,6 +105,7 @@
         } else if (w * .637 < y) {
           s = 2;
         }
+        checkBrowser();
         go();
       });
 
