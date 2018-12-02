@@ -2,6 +2,7 @@
 <html lang="en" dir="ltr" >
   <head>
     <meta charset="utf-8">
+    <script type="text/javascript" src="jquery.js"></script>
     <title>l o a d i n g . . . </title>
     <script>
 
@@ -22,7 +23,7 @@
     }
 
     function progressReturn() {
-      document.write('l' + "/5");
+      $('#progress').load(document.URL + '#progress');
     }
 
     function goTo() {
@@ -33,7 +34,10 @@
   </head>
   <body style="background:#BBBBBB; text-align:center; color:#FFCCCC;" >
     <div>
-  l o a d i n g . . .
+  <div id="progress">l o a d i n g . . .
+
+
+  </div>
 
     <video id="balance" preload='auto' src="balance.mp4" width=1 oncanplay="loadedVideo();"></video>
     <video id="learn" preload='auto' src="learn.mp4" width=1 oncanplay="loadedVideo();"></video>
