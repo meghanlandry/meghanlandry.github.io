@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-
-<head>
-  <meta charset="utf-8">
-  <script type="text/javascript" src="jquery.js"></script>
-  <title>l o a d i n g . . . </title>
-  <script>
+<html lang="en" dir="ltr" >
+  <head>
+    <meta charset="utf-8">
+    <script type="text/javascript" src="jquery.js"></script>
+    <title>l o a d i n g . . . </title>
+    <script>
     setTimeout(goTo, 15000)
     let l = 0
 
@@ -17,7 +16,7 @@
     }
 
     function check() {
-      if (l == '5') {
+      if (l=='5') {
         goTo();
         console.log(l);
       }
@@ -28,39 +27,37 @@
     }
 
     function goTo() {
-      window.location.href = "balance.html"
-    }
-  </script>
+        window.location.href = "balance.html"
+      }
+      </script>
 
-</head>
+  </head>
+  <body style="background:#BBBBBB; text-align:center; color:#FFCCCC;" >
+    <div>
+  <div>l o a d i n g . . .
 
-<body style="background:#BBBBBB; text-align:center; color:#FFCCCC;">
-  <div>
-    <div>l o a d i n g . . .
+  <p id="p1">0/5</p>
 
-      <p id="p1">0/5</p>
-
-      <!-- <script>
+  <!-- <script>
   document.getElementById("p1").innerHTML = 'l' + "/5";
   </script> -->
 
 
-    </div>
+  </div>
 
-    <video id="balance" preload='auto' src="balance.mp4" width=1 muted autoplay></video>
-    <video id="speak" preload='auto' src="speak.mp4" width=1 muted autoplay></video>
-    <video id="learn" preload='auto' src="learn.mp4" width=1 muted autoplay></video>
-    <video id="play" preload='auto' src="play.mp4" width=1 muted autoplay></video>
-    <video id="work" preload='auto' src="work.mp4" width=1 muted autoplay></video>
+    <video id="balance" preload='auto' src="balance.mp4" width=1 muted playsinline autobuffer autoplay ></video>
+    <video id="speak" preload='auto' src="speak.mp4" width=1 muted playsinline autobuffer autoplay ></video>
+    <video id="learn" preload='auto' src="learn.mp4" width=1  muted playsinline autobuffer autoplay ></video>
+    <video id="play" preload='auto' src="play.mp4" width=1  muted playsinline autobuffer autoplay ></video>
+    <video id="work" preload='auto' src="work.mp4" width=1 muted playsinline autobuffer autoplay ></video>
   </div>
 
   <script>
-    $('#balance').on('canplaythrough', loadedVideo);
-    $('#learn').on('canplaythrough', loadedVideo);
-    $('#speak').on('canplaythrough', loadedVideo);
-    $('#play').on('canplaythrough', loadedVideo);
-    $('#work').on('canplaythrough', loadedVideo);
-  </script>
-</body>
-
+  $('#balance').on('canplaythrough', loadedVideo);
+  $('#learn').on('canplaythrough', loadedVideo);
+  $('#speak').on('canplaythrough', loadedVideo);
+  $('#play').on('canplaythrough', loadedVideo);
+  $('#work').on('canplaythrough', loadedVideo);
+</script>
+  </body>
 </html>
