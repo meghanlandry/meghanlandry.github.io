@@ -45,11 +45,19 @@
 
   </div>
 
-    <video id="balance" preload='auto' src="balance.mp4" width=1 oncanplay="loadedVideo();"></video>
-    <video id="learn" preload='auto' src="learn.mp4" width=1 oncanplay="loadedVideo();"></video>
-    <video id="speak" preload='auto' src="speak.mp4" width=1 oncanplay="loadedVideo();"></video>
-    <video id="play" preload='auto' src="play.mp4" width=1 oncanplay="loadedVideo();"></video>
-    <video id="work" preload='auto' src="work.mp4" width=1 oncanplay="loadedVideo();"></video>
+    <video id="balance" preload='auto' src="balance.mp4" width=1 ></video>
+    <video id="learn" preload='auto' src="learn.mp4" width=1 ></video>
+    <video id="speak" preload='auto' src="speak.mp4" width=1 ></video>
+    <video id="play" preload='auto' src="play.mp4" width=1 ></video>
+    <video id="work" preload='auto' src="work.mp4" width=1 ></video>
   </div>
+
+  <script>
+  $('#balance').on('canplaythrough', loadedVideo);
+  $('#learn').on('canplaythrough', loadedVideo);
+  $('#speak').on('canplaythrough', loadedVideo);
+  $('#play').on('canplaythrough', loadedVideo);
+  $('#work').on('canplaythrough', loadedVideo);
+</script>
   </body>
 </html>

@@ -33,7 +33,6 @@
   <script type="text/javascript" src="assets/script.js"></script>
 
   <script>
-  $('elementid').bind('tap',function() {  alert('Tap event triggered'); });
 
   var a = 0;
   var s = 0;
@@ -85,6 +84,7 @@
         }
         go();
       });
+
   $('elementid').bind('tap',function() {  alert('Tap event triggered');
       $('html').promise().tap(function(event) {
         var q = $(window).width()
