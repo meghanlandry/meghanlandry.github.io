@@ -7,6 +7,8 @@
 
     var l = 0
 
+
+
     function loadedVideo() {
       l= (l+1)
       console.log('l')
@@ -29,6 +31,16 @@
   <body style="background:#BBBBBB; text-align:center; color:#FFCCCC;" >
     <div>
   l o a d i n g . . .
+
+    <p id="checkit"></p>
+
+    <script>
+    function progressReturn() {
+      return l + "/5"
+    }
+
+    document.getElementById("checkit").innerHTML = progressReturn('l');
+    </script>
 
     <video id="balance" preload='auto' src="balance.mp4" width=1 oncanplay="loadedVideo();"></video>
     <video id="learn" preload='auto' src="learn.mp4" width=1 oncanplay="loadedVideo();"></video>
