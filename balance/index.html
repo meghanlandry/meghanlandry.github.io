@@ -23,7 +23,7 @@
     }
 
     function progressReturn() {
-      $('#progress').load(document.URL + '#progress');
+      document.getElementById("p1").innerHTML = 'l' + "/5";
     }
 
     function goTo() {
@@ -34,7 +34,13 @@
   </head>
   <body style="background:#BBBBBB; text-align:center; color:#FFCCCC;" >
     <div>
-  <div id="progress">l o a d i n g . . .
+  <div>l o a d i n g . . .
+
+  <p id="p1">0/5</p>
+
+  <!-- <script>
+  document.getElementById("p1").innerHTML = 'l' + "/5";
+  </script> -->
 
 
   </div>
