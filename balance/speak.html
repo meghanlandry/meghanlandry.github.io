@@ -15,11 +15,27 @@
     }
     </script>
 
+    <style>
+    .scroll {
+      z-index: 1;
+
+      position: fixed;
+      text-align: right;
+      float: right;
+      right: 10px;
+      padding-top: 20%;
+      padding-right: 5%;
+      width: 2%;
+    }
+    </style>
+
   <title>i s m y a r t s t i l l v a l i d i f i d o n t t a l k a b o u t s o c i e t y a m i e v e n a n a r t i s t t h i s i s w h a t m y t e a c h e r s w a n t i s h o u l d h a v e s o m e t h i n g t o s a y</title>
 </head>
 
 <body onMouseDown="go()">
-  <video style="max-width: 100%;" muted autoplay playsinline autobuffer loop poster preload onMouseDown="go()">
+<img class="scroll" src="scroll.png">
+
+  <video style="max-width: 100%; z-index:-1; position: absolute" muted autoplay playsinline autobuffer loop poster preload onMouseDown="go()">
   <source src="speak.mp4" media="all and (min-width: 480px)">
   <source src="speaksmall.mp4">
 

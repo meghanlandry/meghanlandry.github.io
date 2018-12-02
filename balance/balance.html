@@ -17,6 +17,7 @@
 }
 
 #bgvid {
+  z-index: -1;
   margin: 0;
   position: absolute;
   top: 50%;
@@ -25,6 +26,16 @@
   width:100% !important;
   min-height:100% !important;
   object-fit: cover;
+}
+
+.tap {
+  z-index: 1;
+  text-align: right;
+  float: right;
+  position: relative;
+  padding-top: 30%;
+  padding-right: 5%;
+  width: 8%;
 }
 </style>
 
@@ -89,6 +100,7 @@
 
 <body onclick''>
   <!-- <script> var videoBG = $('balance.mp4').videoBG(); -->
+  <img class="tap" src="tap.png">
 
   <video id="bgvid" muted autoplay playsinline autobuffer loop poster onMouseDown="go()">
     <source src="balance.mp4">
