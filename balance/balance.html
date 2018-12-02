@@ -1,12 +1,36 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="assets/style.css"/>
 
-	<script type="text/javascript" src="assets/jquery-1.5.1.js"></script>
-	<script type="text/javascript" src="jquery.videoBG.js"></script>
-	<script type="text/javascript" src="assets/script.js"></script>
+<head>
+  <meta charset="utf-8">
+  <!-- <link rel="stylesheet" href="assets/style.css" /> -->
+
+  <style>
+  .video_contain {
+  position: absolute;
+  z-index: -1
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  right: 0px;
+  position: 50% 50%;
+}
+
+#bgvid {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width:100% !important;
+  min-height:100% !important;
+  object-fit: cover;
+}
+</style>
+
+  <script type="text/javascript" src="assets/jquery-1.5.1.js"></script>
+  <!-- <script type="text/javascript" src="jquery.videoBG.js"></script> -->
+  <script type="text/javascript" src="assets/script.js"></script>
 
   <script>
   var a = 0;
@@ -30,33 +54,38 @@
   }
   </script>
 
-    <title>t h e b a l a n c e</title>
-  </head>
-  <body>
-    <script> var videoBG = $('balance.mp4').videoBG();
+  <title>t h e b a l a n c e</title>
+</head>
 
+<body>
+  <!-- <script> var videoBG = $('balance.mp4').videoBG(); -->
 
-    $('body').click(function(event){
-      var q = $(window).width()
-      var w = $(window).height()
-       x = event.clientX;
-       y = event.clientY;
+  <video id="bgvid" muted autoplay loop poster>
+    <source src="balance.mp4" type="video/mp4">
 
-    console.log(a, s);
-    if(x >= q*.545) {
-        a = 1;
-    } else if (x < q*.545) {
-        a = 2;
-      }
-    if (w*.637 >= y) {
-        s = 1;
-    } else if (w*.637 < y) {
-        s = 2;
-      }
-      go();
-    });
+    <script>
+      $('html').click(function(event) {
+        var q = $(window).width()
+        var w = $(window).height()
+        x = event.clientX;
+        y = event.clientY;
+
+        console.log(a, s);
+        if (x >= q * .545) {
+          a = 1;
+        } else if (x < q * .545) {
+          a = 2;
+        }
+        if (w * .637 >= y) {
+          s = 1;
+        } else if (w * .637 < y) {
+          s = 2;
+        }
+        go();
+      });
     </script>
 
 
-  </body>
+</body>
+
 </html>
