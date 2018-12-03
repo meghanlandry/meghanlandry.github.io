@@ -33,13 +33,36 @@
 }
 
 .tap {
-  z-index: 1;
-  text-align: right;
-  float: right;
-  position: relative;
-  padding-top: 30%;
-  padding-right: 5%;
-  width: 8%;
+	position: absolute;
+	top: 0;
+	left: 0;
+  width: 5%;
+  float: none;
+
+}
+.tap2 {
+	position: absolute;
+	top: 0;
+	right: 0;
+  width: 5%;
+  float: none;
+
+}
+.tap3 {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+  width: 5%;
+  float: none;
+
+}
+.tap4 {
+	bottom: 0;
+	right: 0;
+	position: absolute;
+  width: 5%;
+  float: none;
+
 }
 </style>
 
@@ -104,7 +127,10 @@
 
 <body onclick''>
   <!-- <script> var videoBG = $('balance.mp4').videoBG(); -->
-  <img class="tap" src="tap.png">
+  <img class="tap" src="tap2.png"><br>
+  <img class="tap2" src="tap4.png"><br>
+  <img class="tap3" src="tap3.png"><br>
+  <img class="tap4" src="tap.png"><br>
 
   <video id="bgvid" muted autoplay playsinline autobuffer loop poster onMouseDown="go()">
     <source src="balance.mp4">
