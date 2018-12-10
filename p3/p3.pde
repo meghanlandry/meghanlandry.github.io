@@ -86,7 +86,7 @@ drawCloud();
 ((key == '2') && (mouseY >= 175) && (mouseY <= 250)) {
 frameRate((g/2));
 a = '2';
-noStroke(); 
+noStroke();
 fill(r, rr, rrr, (t/4));
 drawBolt();
 } else if
@@ -186,10 +186,10 @@ f = '0';
 //pulls up Help window
 void checkInstr() {
 if ((e == true) && (key == '1')) {
-javax.swing.JOptionPane.showMessageDialog(null, "Controls: H - HELP (Q,W,E - Color) (R - Erase) (A,S - Size) (1,2,3 - Brush) (D,S - Opacity) (Z,X - Spacing) (/ - Clear Canvas) (P - Save)");
+
 } else if (e== true) {
 key = 'i';
-javax.swing.JOptionPane.showMessageDialog(null,"Controls: H - HELP (Q,W,E - Color) (R - Erase) (A,S - Size) (1,2,3 - Brush) (D,S - Opacity) (Z,X - Spacing) (/ - Clear Canvas) (P - Save)");
+
 }
 }
 
@@ -333,7 +333,7 @@ checkColor();
 }
 }
 
- 
+
 
 //notifies if user wants size increased or decreased ***************************************************
 void setC() {
