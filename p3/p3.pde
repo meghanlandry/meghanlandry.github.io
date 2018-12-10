@@ -128,24 +128,27 @@ fill(r, rr, rrr, (t/2));
 drawFire();
 }
 
-//option 4
-else if ((key == '4') && (mouseY < 200)) {
+//Bird / Butterfly / Cat Brush
+else if ((key == '4') && (mouseY < 225)) {
+frameRate((g/2));
 a = '4';
-fill(255);
-beginShape();
-vertex(mouseX, mouseY);
-vertex(mouseX-20, mouseY-20);
-vertex(mouseX, mouseY-40);
-endShape();
+noStroke();
+fill(r, rr, rrr, t);
+drawBird();
 } else if
-((key == '4') && (mouseY >= 200) && (mouseY <= 400)) {
+((key == '4') && (mouseY >= 225) && (mouseY <= 400)) {
+frameRate((g/2));
 a = '4';
-fill(255);
-ellipse(mouseX, mouseY, 50, 50);
+noStroke();
+fill(r, rr, rrr, t);
+drawButterfly();
 } else if
-((key == '2') && (mouseY > 400)) {
+((key == '4') && (mouseY > 400)) {
+frameRate(g/2);
 a = '4';
-ellipse(mouseX, mouseY, 100, 100);
+noStroke();
+fill(r, rr, rrr, t);
+drawCat();
 }
 }
 
@@ -186,10 +189,8 @@ f = '0';
 //pulls up Help window
 void checkInstr() {
 if ((e == true) && (key == '1')) {
-
 } else if (e== true) {
 key = 'i';
-
 }
 }
 
@@ -201,7 +202,6 @@ void checkG() {
 if (h > 0) {
 h = '0';
 frameRate(g);
-key = '2';
 }
 }
 
@@ -245,6 +245,22 @@ key = '3';
 } else if ((key == 'z') && (g > (60)) && (a == '3')) {
 h = '3';
 key = '3';
+}else if ((key == 'x') && (g >= (10)) && (a == '4')) {
+key = '4';
+h = '1';
+g = (g - 3);
+checkG();
+} else if ((key == 'z') && (g <= (60)) && (a == '4')) {
+key = '4';
+h = '2';
+g = (g + 3);
+checkG();
+} else if ((key == 'x') && (g < (10)) && (a == '4')) {
+h = '3';
+key = '4';
+} else if ((key == 'z') && (g > (60)) && (a == '4')) {
+h = '3';
+key = '4';
 }
 }
 
@@ -492,6 +508,101 @@ bezierVertex(mouseX-30*k, mouseY+40*k, mouseX, mouseY, mouseX+10*k, mouseY-20*k)
 endShape();
 }
 
+void drawCat() {
+noStroke();
+beginShape();
+vertex(mouseX+5*k,mouseY+30*k);
+vertex(mouseX+10*k, mouseY);
+vertex(mouseX+20*k, mouseY+15*k);
+vertex(mouseX+30*k, mouseY+15*k);
+vertex(mouseX+40*k, mouseY);
+vertex(mouseX+45*k, mouseY+30*k);
+vertex(mouseX+40*k, mouseY+40*k);
+vertex(mouseX+40*k, mouseY+45*k);
+vertex(mouseX+80*k, mouseY+43*k);
+vertex(mouseX+95*k, mouseY+47*k);
+vertex(mouseX+115*k, mouseY);
+vertex(mouseX+123*k, mouseY);
+vertex(mouseX+103*k, mouseY+53*k);
+vertex(mouseX+110*k, mouseY+70*k);
+vertex(mouseX+105*k, mouseY+85*k);
+vertex(mouseX+110*k, mouseY+100*k);
+vertex(mouseX+102*k, mouseY+130*k);
+vertex(mouseX+95*k, mouseY+130*k);
+vertex(mouseX+97*k, mouseY+103*k);
+vertex(mouseX+90*k, mouseY+90*k);
+vertex(mouseX+88*k, mouseY+90*k);
+vertex(mouseX+92*k, mouseY+103*k);
+vertex(mouseX+87*k, mouseY+130*k);
+vertex(mouseX+80*k, mouseY+130*k);
+vertex(mouseX+80*k, mouseY+103*k);
+vertex(mouseX+70*k, mouseY+85*k);
+vertex(mouseX+55*k, mouseY+85*k);
+vertex(mouseX+48*k, mouseY+130*k);
+vertex(mouseX+41*k, mouseY+130*k);
+vertex(mouseX+40*k, mouseY+92*k);
+vertex(mouseX+38*k, mouseY+92*k);
+vertex(mouseX+37*k, mouseY+130*k);
+vertex(mouseX+30*k, mouseY+130*k);
+vertex(mouseX+25*k, mouseY+92*k);
+vertex(mouseX+15*k, mouseY+75*k);
+vertex(mouseX+15*k, mouseY+50*k);
+vertex(mouseX+12*k, mouseY+40*k);
+vertex(mouseX+5*k, mouseY+30*k);
+endShape();
+}
+
+void drawButterfly() {
+noStroke();
+beginShape();
+vertex(mouseX, mouseY);
+vertex(mouseX+10*k, mouseY+5*k);
+vertex(mouseX+15*k, mouseY+13*k);
+vertex(mouseX+15*k, mouseY+5*k);
+vertex(mouseX+16*k, mouseY+5*k);
+vertex(mouseX+16*k, mouseY+15*k);
+vertex(mouseX+17*k, mouseY+15*k);
+vertex(mouseX+18*k, mouseY+5*k);
+vertex(mouseX+19*k, mouseY+5*k);
+vertex(mouseX+19*k, mouseY+13*k);
+vertex(mouseX+24*k, mouseY+5*k);
+vertex(mouseX+34*k, mouseY+0*k);
+vertex(mouseX+29*k, mouseY+15*k);
+vertex(mouseX+19*k, mouseY+15*k);
+vertex(mouseX+29*k, mouseY+18*k);
+vertex(mouseX+29*k, mouseY+28*k);
+vertex(mouseX+19*k, mouseY+24*k);
+vertex(mouseX+19*k, mouseY+20*k);
+vertex(mouseX+17*k, mouseY+25*k);
+vertex(mouseX+16*k, mouseY+25*k);
+vertex(mouseX+16*k, mouseY+15*k);
+vertex(mouseX+14*k, mouseY+25*k);
+vertex(mouseX+5*k, mouseY+28*k);
+vertex(mouseX+5*k, mouseY+18*k);
+vertex(mouseX+16*k, mouseY+15*k);
+vertex(mouseX+5*k, mouseY+15*k);
+vertex(mouseX, mouseY);
+
+endShape();
+}
+
+void drawBird() {
+noStroke();
+beginShape();
+vertex(mouseX+50*k, mouseY+10*k);
+vertex(mouseX+80*k, mouseY+30*k);
+vertex(mouseX+90*k, mouseY+25*k);
+vertex(mouseX+100*k, mouseY+30*k);
+vertex(mouseX+125*k, mouseY+10*k);
+vertex(mouseX+175*k, mouseY);
+vertex(mouseX+100*k, mouseY+60*k);
+vertex(mouseX+105*k, mouseY+75*k);
+vertex(mouseX+75*k, mouseY+75*k);
+vertex(mouseX+80*k, mouseY+60*k);
+vertex(mouseX+5*k, mouseY);
+vertex(mouseX+50*k, mouseY+10*k);
+endShape();
+}
 
 void newCanvas() {
 //save and reset
