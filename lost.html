@@ -7,16 +7,21 @@
   <link rel="stylesheet" href="assets/style.css" />
   <!-- <script type="text/javascript" src="assets/script.js"></script> -->
   <script type="text/javascript" src="assets/jquery-1.5.1.js"></script>
-
-
-
+  <style>
+  .brightness{
+      filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'brightness\'><feColorMatrix type=\'matrix\' values=\'1.2 0 0 0 0 0 1.2 0 0 0 0 0 1.2 0 0 0 0 0 1.2 0\'/></filter></svg>#brightness"); /* Firefox 3.5+ */
+      -webkit-filter:brightness(108.5%); /* Chrome 19+ & Safari 6+ */
+  }
+  </style>
   <title> l ost . ART75 f inal</title>
 </head>
 <body>
-  <video style="max-width: 100%; padding: 20%;" muted autoplay loop preload>
+  <div class="brightness">
+  <video style="max-width: 100%;" muted autoplay loop preload>
     <source src="lost.mp4">
+    </video>
+  </div>
 
-    </script>
 </body>
 
 </html>
