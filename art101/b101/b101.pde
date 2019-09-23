@@ -67,8 +67,12 @@ void draw() {
     newKeyChoice();
     //println("Draw Type: " + drawType + " Key:" + key);
     }
-}
 
+
+if(keyPressed){
+  newKeyAction();
+}
+}
 void displayText(String j, int k, int l) {
   fill(255);
   text(j, k, l);
@@ -120,5 +124,59 @@ void newKeyChoice() {
     imageSize++;
     key = '2';
     }
+}
+
+void newKeyAction(){
+    if ((key == 'z') && (drawType == 1)) {
+    placeRandomFlowerOne();
+    key = '1';
+    }
+    else if ((key == 'x') && (drawType == 1)) {
+    placeRandomFlowerTwo();
+    key = '1';
+    }
+    else if ((key == 'z') && (drawType == 2)) {
+    placeRandomFlowerOne();
+    key = '2';
+    }
+    else if ((key == 'x') && (drawType == 2)) {
+    placeRandomFlowerTwo();
+    key = '2';
+    }
+    else if ((key == 'z') && (drawType == 0)) {
+    placeRandomFlowerOne();
+    key = '1';
+    }
+    else if ((key == 'x') && (drawType == 0)) {
+    placeRandomFlowerTwo();
+    key = '2';
+    }
+    else if (key == 'q'){
+      cover();
+      key = '0';
+    }
+     else if (key == 'w'){
+       talk();
+       key = '0';
+    }
   }
   
+  void placeRandomFlowerOne(){
+    ellipse(a, b, 100, 100);
+    image(flowerOne, a, b, width/imageSize*r, height/imageSize*r);
+    //println("working 1");
+  }
+  
+  void placeRandomFlowerTwo(){
+    rect(a, b, 100, 100);
+    image(flowerTwo, a, b, width/imageSize*r, height/imageSize*r);
+  }
+  
+  void cover(){
+      size(1100, 900);
+      background(150);
+  }
+  
+  void talk(){
+    println("I'm really just trying to fill a 6th function. It's hard to make functions for the sake of just making them without any specific purpose in mind.");
+  }
