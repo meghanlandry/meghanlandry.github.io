@@ -191,6 +191,6 @@ class Shine {
     this.x;
     this.y;
     this.len;
-    
+
   }
 }
