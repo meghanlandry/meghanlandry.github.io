@@ -1,14 +1,19 @@
-let drawType;
-let imageSize = 3;
-let windowColor = 200;
-let r;
-let a;
-let b;
-let c = 0.0;
-let inc = TWO_PI/25;
-let flowerOne;
-let flowerTwo;
-let f;
+var drawType;
+var imageSize = 3;
+var windowColor = 200;
+var r;
+var a;
+var b;
+var c = 0.0;
+
+var flowerOne;
+var flowerTwo;
+var f;
+
+function preload() {
+  flowerOne = loadImage("https://i.imgur.com/gWMkGCK.png");
+  flowerTwo = loadImage("https://i.imgur.com/o8oT6ZI.png");
+}
 
 function setup() {
   createCanvas(1100, 900);
@@ -18,23 +23,19 @@ function setup() {
   noStroke();
   rectMode(CENTER);
 
-  f = createFont("Ariel", 72);
+  f = loadFont("Ariel", 72);
   textFont(f);
 
-  for (let i = 0; i < 1300; i += 120) {
-     for (let j = 0; j < 900; j += 120) {
+  for (var i = 0; i < 1300; i += 120) {
+     for (var j = 0; j < 900; j += 120) {
       fill(windowColor);
       rect(i, j, 50, 50);
      }
   }
-
-
-  flowerOne = loadImage("https://i.imgur.com/gWMkGCK.png");
-  flowerTwo = loadImage("https://i.imgur.com/o8oT6ZI.png");
 }
 
 function draw() {
-
+  var inc = TWO_PI / 25;
    for (let i=0; i<1200; i+=4) {
      strokeWeight(2);
      stroke(255);
@@ -47,10 +48,10 @@ function draw() {
   a = random(1200);
   b = random(900);
 
-  if(mousePressed) {
+  if(mouseIsPressed) {
     windowColor = 235;
-    for (let i = 0; i < 1300; i += 120) {
-     for (let j = 0; j < 900; j += 120) {
+    for (var i = 0; i < 1300; i += 120) {
+     for (var j = 0; j < 900; j += 120) {
       fill(windowColor);
       rect(i, j, 50, 50);
       ellipse(a, b, r*10, r*10);
@@ -60,23 +61,24 @@ function draw() {
 
     fill(255);
     textAlign(CENTER);
-    displayText("h i . b y e", width/2, height/2);
+    text("h i . b y e", width/2, height/2);
 
 
 
     newKeyChoice();
-    //prletln("Draw Type: " + drawType + " Key:" + key);
+    //prvarln("Draw Type: " + drawType + " Key:" + key);
     }
 
 
-if(keyPressed){
+if(keyIsPressed){
   newKeyAction();
 }
 }
-function displayText(String j, let k, let l) {
-  fill(255);
-  text(j, k, l);
-}
+
+// function displayText(var j, var k, var l) {
+//   fill(255);
+//   text(j, k, l);
+// }
 
 function newKeyChoice() {
   //Flower One Brush
@@ -164,7 +166,7 @@ function newKeyAction(){
   function placeRandomFlowerOne(){
     ellipse(a, b, 100, 100);
     image(flowerOne, a, b, width/imageSize*r, height/imageSize*r);
-    //prletln("working 1");
+    //prvarln("working 1");
   }
 
   function placeRandomFlowerTwo(){
@@ -173,10 +175,10 @@ function newKeyAction(){
   }
 
   function cover(){
-      size(1100, 900);
+      createCanvas(1100, 900);
       background(150);
   }
 
   function talk(){
-    prletln("I'm really just trying to fill a 6th function. It's hard to make functions for the sake of just making them without any specific purpose in mind.");
+    prvarln("I'm really just trying to fill a 6th function. It's hard to make functions for the sake of just making them without any specific purpose in mind.");
   }
