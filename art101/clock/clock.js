@@ -15,6 +15,7 @@ let mapDeg;
 let mapRay;
 let hrCt;
 let label;
+
 let setUpCheck = true;
 
 //arrays of objects
@@ -22,7 +23,7 @@ stars = [];
 rays = [];
 cloudList = [];
 
-
+//cloud images
 function preload() {
   clouds[0] = loadImage('cloud_1.png');
   clouds[1] = loadImage('cloud_2.png');
@@ -63,12 +64,9 @@ function setup() {
       label = (i + 1);
       cloudList[i] = new Cloud(label);
       cloudList[i].move();
-      //cloudList[i].display();
-      //console.log("b: " + cloudList.length + " , " + label);
     }
   }
   setUpCheck = false;
-  circletest();
 }
 
 //loop
@@ -120,7 +118,7 @@ function draw() {
     }
     skyNight.display();
   }
-  circletest();
+  circleRays();
 }
 
 //FUNCTIONS
@@ -133,21 +131,26 @@ function ampmChecker() {
   }
 }
 
-function circletest() {
-  console.log("circle running");
-  circles = 13;
+//draws ring of minute rays
+function circleRays() {
+  circles = 12;
   angle = 360 / circles;
+  let typeC;
+  if ((hr >= 6) && (hr <= 17)) {
+    typeC = skyDay.r;
+  } else {
+    typeC = skyNight.r;
+  }
 
-for(var i = 0; i < circles; i++){
-
-    xCircle = windowWidth/2 + cos(angle*i) * 130;
-    yCircle = windowHeight/2 + sin(angle*i) * 130;
-    xCircle2 = windowWidth/2 + cos(angle*i) * (130+10*i);
-    yCircle2 = windowHeight/2 + sin(angle*i) * (130+10*i);
+  for (var i = 0; i < circles; i++) {
+    xCircle = windowWidth / 2 + cos(angle * i) * (typeC * 1.2);
+    yCircle = windowHeight / 2 + sin(angle * i) * (typeC * 1.2);
+    xCircle2 = windowWidth / 2 + cos(angle * i) * ((typeC * 1.2) + sec * 2);
+    yCircle2 = windowHeight / 2 + sin(angle * i) * ((typeC * 1.2) + sec * 2);
     strokeWeight(10);
-    stroke(255, 25);
+    stroke(255, 200);
     line(xCircle, yCircle, xCircle2, yCircle2);
-}
+  }
 }
 
 
@@ -168,10 +171,10 @@ class Sun {
   display() {
     noStroke();
     fill(255, 255, 255, 255)
-    ellipse(this.x, this.y, this.r*2);
+    ellipse(this.x, this.y, this.r * 2);
     fill(255, 255, 255, 50)
-    ellipse(this.x, this.y, (this.r*2) + random(50));
-    ellipse(this.x, this.y, (this.r*2) + random(100));
+    ellipse(this.x, this.y, (this.r * 2) + random(50));
+    ellipse(this.x, this.y, (this.r * 2) + random(100));
   }
 }
 
@@ -220,12 +223,12 @@ class Stars {
 class Cloud {
   constructor(label) {
     this.x = mapDeg;
-    this.y = (windowWidth * (random(.5, .9)));
+    this.y = (windowHeight * (random(.5, .9)));
     this.tint = random(230, 255);
     this.type = floor(random(4));
     this.endPoint = false;
     this.label = label;
-    this.stop = (windowWidth - (this.label*(windowWidth/12)));
+    this.stop = (windowWidth - (this.label * (windowWidth / 12)));
   }
 
   move() {
@@ -247,23 +250,6 @@ class Cloud {
 
   display() {
     tint(this.tint);
-    image(clouds[this.type], this.x, this.y, width / 2, height / 3);
-  }
-}
-
-class Shine {
-  constructor() {
-    this.x;
-    this.y;
-    this.len;
-    strokeWeight(5);
-  }
-
-  display() {
-    line(this.x, this.y)
-  }
-
-  grow(){
-
+    image(clouds[this.type], this.x, this.y, width / 3, height / 3);
   }
 }
