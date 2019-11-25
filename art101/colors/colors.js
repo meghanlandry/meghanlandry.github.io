@@ -319,18 +319,36 @@ smflower_line.resize(windowWidth/6.5, 0);
 image(smflower_line, windowWidth*.43, windowHeight*.8);
 pop();
 
-
+//displays inspirational quotes
 push();
 fill("#" + colD)
 strokeWeight(5);
 stroke("#" + colE)
-textSize(windowWidth/47);
+textSize(windowWidth/45);
 textAlign(CENTER);
-text(quoteString, windowWidth/4, windowHeight/6, windowWidth/2, windowWidth/2);
+text(quoteString, windowWidth/4, windowHeight/6, windowWidth/2);
 pop();
 
-}
+//displays character prompts
+push();
+textFont("Courier New");
+fill("#" + colD)
+noStroke();
+textSize(windowWidth/100);
+textAlign(CENTER);
+text(promptString, windowWidth/2.5, windowHeight/2, windowWidth/6);
+pop();
 
+//displays cat facts
+push();
+textFont("Playball");
+fill("#" + colD)
+noStroke();
+textSize(windowWidth/115);
+textAlign(CENTER);
+text(catString, 0, windowHeight/3, windowWidth/1);
+pop();
+}
 
 
 //callback
