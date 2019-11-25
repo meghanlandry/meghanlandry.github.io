@@ -59,7 +59,7 @@ let catString;
 function preload() {
   let proxyurl = "https://cors-anywhere.herokuapp.com/"; //use proxy to get around http problem
 
-  let url = "http://www.colourlovers.com/api/palettes/new?format=json"; //colourlovers API
+  let url = "http://www.colourlovers.com/api/palettes/random?format=json"; //colourlovers API
   palettes = loadJSON(proxyurl + url, gotData);
 
   //backup static JSON because site is sometimes unresponsive
