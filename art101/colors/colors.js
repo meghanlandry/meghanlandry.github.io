@@ -27,6 +27,10 @@ let rE;
 let gE;
 let bE;
 
+let font_1;
+let font_2;
+let font_3;
+
 let cat_1;
 let cat_2;
 let cat_3;
@@ -74,6 +78,11 @@ function preload() {
 
   let urlFour = "https://catfact.ninja/fact?max_length=140" //cat fact generator
   facts = loadJSON(proxyurl + urlFour, gotData);
+
+  //preload fonts
+  font_1 = loadFont("fonts/Megrim.ttf");
+  font_2 = loadFont("fonts/cour.ttf");
+  font_3 = loadFont("fonts/Playball.ttf");
 
   //preload images
   cat_1 = loadImage("images/cat_1.png");
@@ -169,7 +178,7 @@ function setup() {
   //tint(reds[2], greens[2], blues[2], 100);
   background(reds[2], greens[2], blues[2], 200);
   pop();
-  textFont("Megrim");
+  textFont(font_1);
   imageMode(CENTER);
 
   //*tests*
@@ -331,17 +340,17 @@ pop();
 
 //displays character prompts
 push();
-textFont("Courier New");
+textFont(font_2);
 fill("#" + colD)
 noStroke();
 textSize(windowWidth/100);
 textAlign(CENTER);
-text(promptString, windowWidth/2.5, windowHeight/2, windowWidth/6);
+text(promptString, windowWidth/2, windowHeight/2, windowWidth/6);
 pop();
 
 //displays cat facts
 push();
-textFont("Playball");
+textFont(font_3);
 fill("#" + colD)
 noStroke();
 textSize(windowWidth/115);
