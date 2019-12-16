@@ -38,7 +38,11 @@ var deliveredCats = 0;
 
 //preload
 function preload() {
-
+  soundFormats("mp3");
+  enter_sound = loadSound("sounds/enter_sound.mp3");
+  collect_sound = loadSound("sounds/collect_sound.mp3");
+  give_sound = loadSound("sounds/give_sound.mp3");
+  end_sound = loadSound("sounds/end_sound.mp3");
 
   idleWitch_01 = loadImage("images/catwitch_idle_01.png");
   idleWitch_02 = loadImage("images/catwitch_idle_02.png");
@@ -99,6 +103,7 @@ function preload() {
   garden_iconb = loadImage("images/gardenb.png");
   lake_iconb = loadImage("images/lakeb.png");
   forest_iconb = loadImage("images/forestb.png");
+  cat_icon = loadImage("images/cat_icon.png");
 }
 
 function setup() {
@@ -138,6 +143,7 @@ function setup() {
   garden_iconb.resize(windowHeight / 10, 0);
   lake_iconb.resize(windowHeight / 10, 0);
   forest_iconb.resize(windowHeight / 10, 0);
+  cat_icon.resize(windowHeight / 18, 0);
 
   createCanvas(windowHeight, windowHeight * .98);
   background(100);

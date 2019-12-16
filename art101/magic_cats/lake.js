@@ -25,14 +25,17 @@ function Lake() {
         this.sceneManager.showScene(Home);
       } else if (key === " ") {
         if (m1 === true && r === 1) {
+          collect_sound.play();
           new_cats++;
           remainingCatsLake--;
           m1 = false;
         } else if (m2 === true && r === 2) {
+          collect_sound.play();
           new_cats++;
           remainingCatsLake--;
           m2 = false
         } else if (m3 === true && r === 3) {
+          collect_sound.play();
           new_cats++;
           remainingCatsLake--;
           m3 = false

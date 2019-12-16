@@ -47,9 +47,9 @@ body {
 
 .modal-content {
   text-align: center;
-  background-color: #f6dada;
+  background-color: #676565;
   letter-spacing: 2px;
-  color: #c0baba;
+  color: #f6dada;
   font-family: Helvetica;
   /* font-variant: small-caps; */
 }

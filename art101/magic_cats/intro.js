@@ -20,6 +20,7 @@ function Intro() {
 
     this.keyPressed = function() {
       if (key === "w") {
+        enter_sound.play();
         current = "intro";
         this.sceneManager.showScene(Home);
       }

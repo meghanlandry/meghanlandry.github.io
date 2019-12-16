@@ -6,11 +6,20 @@ function Home() {
   }
 
   this.draw = function() {
+    if (remainingCatsLake === 0 && remainingCatsForest === 0 && remainingCatsGarden === 0 && new_cats === 0){
+      deliveredCats = 11
+    }
     if (deliveredCats === 11) {
+      end_sound.play();
       this.sceneManager.showScene(Win);
     }
-    background(80);
+
     imageMode(CENTER);
+
+    background(80);
+    for(i = 0; i < new_cats; i++){
+      image(cat_icon, windowHeight*((i+1)*.1), windowHeight*.1 );
+    }
     if (remainingCatsLake > 0) {
       image(lake_icon, windowHeight * .1, windowHeight / 2);
     } else {
@@ -35,6 +44,7 @@ function Home() {
       switch (key) {
         case "w":
           if (new_cats > 0) {
+            give_sound.play();
             happy_witch = true;
             new_cats--;
           }
@@ -53,6 +63,7 @@ function Home() {
           break;
         case " ":
           if (new_cats > 0) {
+            give_sound.play();
             happy_witch = true;
             new_cats--;
             deliveredCats++;

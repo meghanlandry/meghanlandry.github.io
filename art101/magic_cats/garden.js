@@ -26,14 +26,17 @@ function Garden() {
         this.sceneManager.showScene(Home);
       } else if (key === " ") {
         if (p === true && r === 1) {
+          collect_sound.play();
           new_cats++;
           remainingCatsGarden--;
           p = false;
         } else if (s === true && r === 2) {
+          collect_sound.play();
           new_cats++;
           remainingCatsGarden--;
           s = false;
         } else if (d === true && r === 3) {
+          collect_sound.play();
           new_cats++;
           remainingCatsGarden--;
           d = false;
@@ -49,7 +52,7 @@ function Garden() {
 }
 
   function randomCat() {
-    if (p === true || s === true || s == true) {
+    if (p === true || s === true || d == true) {
       r = random(3);
       r = Math.ceil(r);
     }

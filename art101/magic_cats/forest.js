@@ -28,22 +28,27 @@ function Forest() {
         this.sceneManager.showScene(Home);
       } else if (key === " ") {
         if (h1 === true && r === 1) {
+          collect_sound.play();
           new_cats++;
           remainingCatsForest--;
           h1 = false;
         } else if (h2 === true && r === 2) {
+          collect_sound.play();
           new_cats++;
           remainingCatsForest--;
           h2 = false;
         } else if (f1 === true && r === 3) {
+          collect_sound.play();
           new_cats++;
           remainingCatsForest--;
           f1 = false;
         } else if (f2 === true && r === 4) {
+          collect_sound.play();
           new_cats++;
           remainingCatsForest--;
           f2 = false;
         } else if (f3 === true && r === 5) {
+          collect_sound.play();
           new_cats++;
           remainingCatsForest--;
           f3 = false;
@@ -75,7 +80,7 @@ function Forest() {
       animation(fairy3, windowHeight / 4, windowHeight / 4);
     } else if (f2 === true && r === 4) {
       animation(fairy2, windowHeight / 2, windowHeight / 3);
-    } else if (f2 === true && r === 5) {
+    } else if (f3 === true && r === 5) {
       animation(fairy1, windowHeight / 1.5, windowHeight / 1.8);
     }
   }
