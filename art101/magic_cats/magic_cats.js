@@ -36,6 +36,8 @@ var remainingCatsGarden = 3;
 var new_cats = 0;
 var deliveredCats = 0;
 
+var grade;
+
 //preload
 function preload() {
   soundFormats("mp3");
