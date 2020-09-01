@@ -1,0 +1,41 @@
+body {
+  color: #FFFFFF;
+  text-align: center;
+  background-image: url("images/starry.jpg");
+  background-size: 100%;
+  font: 15px Courier, sans-serif;
+  font-weight: light;
+  letter-spacing: 10px;
+}
+
+h1 {
+  padding-top: 5%;
+  text-shadow: 0px 0px 10px white;
+  animation: 5s ease infinite glow;
+}
+
+img {
+  animation: 5s ease infinite bob;
+}
+
+@keyframes bob {
+  50% {
+    transform: translate(0, 5%);
+  }
+  100% {
+    transform: translate(0, 0%);
+  }
+}
+
+@keyframes glow {
+    0% {
+      text-shadow: 0px 0px 10px white;
+    }
+    50% {
+      text-shadow: 0px 0px 20px white;
+    }
+    75% {
+      text-shadow: 0px 0px 10px white;
+    }
+
+}
