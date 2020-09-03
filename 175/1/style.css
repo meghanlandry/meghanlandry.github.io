@@ -7,19 +7,7 @@ body {
   letter-spacing: 10px;
 }
 
-a:link    {
-  color: #FFF;
-  text-decoration: none;
-}
-a:visited {
-  color: #FFF;
-  text-decoration: none;
-}
-a:hover   {
-  color: #FFF;
-  text-decoration: none;
-}
-a:active  {
+a:link, a:visited, a:hover, a:active {
   color: #FFF;
   text-decoration: none;
 }
