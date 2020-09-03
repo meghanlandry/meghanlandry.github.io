@@ -31,13 +31,15 @@ h1 {
   animation: 5s ease infinite glow;
 }
 
-img {
+#alien {
   animation: 5s ease infinite bob;
+  width: 30%;
 }
 
 article {
   padding: 25%;
   letter-spacing: 5px;
+  text-shadow: 0px 0px 10px #FFF;
   animation: 5s ease infinite glow;
 }
 
