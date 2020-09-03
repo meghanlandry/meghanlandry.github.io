@@ -27,7 +27,7 @@ a:active  {
 
 h1 {
   padding-top: 5%;
-  text-shadow: 0px 0px 10px white;
+  text-shadow: 0px 0px 10px #FFF;
   animation: 5s ease infinite glow;
 }
 
