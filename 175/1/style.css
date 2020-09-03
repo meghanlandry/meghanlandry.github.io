@@ -1,5 +1,5 @@
 body {
-  color: #FFFFFF;
+  color: #FFF;
   text-align: center;
   background-image: url("images/starry.jpg");
   background-size: 100%;
@@ -9,20 +9,20 @@ body {
 }
 
 a:link    {
-  color: #FFF !important;
-  text-decoration: none !important;
+  color: #FFF;
+  text-decoration: none;
 }
 a:visited {
-  color: #FFF !important;
-  text-decoration: none !important;
+  color: #FFF;
+  text-decoration: none;
 }
 a:hover   {
-  color: #FFF !important;
-  text-decoration: none !important;
+  color: #FFF;
+  text-decoration: none;
 }
 a:active  {
-  color: #FFF !important;
-  text-decoration: none !important;
+  color: #FFF;
+  text-decoration: none;
 }
 
 h1 {
@@ -38,6 +38,7 @@ img {
 article {
   padding: 25%;
   letter-spacing: 5px;
+  animation: 5s ease infinite glow;
 }
 
 @keyframes bob {
