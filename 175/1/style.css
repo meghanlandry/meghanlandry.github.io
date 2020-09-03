@@ -4,7 +4,6 @@ body {
   background-image: url("images/starry.jpg");
   background-size: 100%;
   font: 15px Courier, sans-serif;
-  font-weight: light;
   letter-spacing: 10px;
 }
 
@@ -26,7 +25,7 @@ a:active  {
 }
 
 h1 {
-  padding-top: 5%;
+  padding-top: 3%;
   text-shadow: 0px 0px 10px #FFF;
   animation: 5s ease infinite glow;
 }
@@ -39,8 +38,8 @@ h1 {
 article {
   padding: 25%;
   letter-spacing: 5px;
-  text-shadow: 0px 0px 10px #FFF;
-  animation: 5s ease infinite glow;
+  text-shadow: 0px 0px 5px #FFF;
+  animation: 5s ease infinite smallglow;
 }
 
 @keyframes bob {
@@ -61,6 +60,19 @@ article {
     }
     75% {
       text-shadow: 0px 0px 10px white;
+    }
+
+}
+
+@keyframes smallglow {
+    0% {
+      text-shadow: 0px 0px 5px white;
+    }
+    50% {
+      text-shadow: 0px 0px 20px white;
+    }
+    75% {
+      text-shadow: 0px 0px 5px white;
     }
 
 }
