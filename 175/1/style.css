@@ -18,17 +18,17 @@ h1 {
   animation: 5s ease infinite glow;
 }
 
-#alien {
-  animation: 5s ease infinite bob;
-  width: 28%;
-}
-
 article {
   padding: 25%;
   font: 18px Courier, sans-serif;
   letter-spacing: 5px;
   text-shadow: 0px 0px 5px #FFF;
   animation: 5s ease infinite smallglow;
+}
+
+#alien {
+  animation: 5s ease infinite bob;
+  width: 28%;
 }
 
 @keyframes bob {
