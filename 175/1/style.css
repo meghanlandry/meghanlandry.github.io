@@ -20,7 +20,7 @@ h1 {
 
 article {
   padding: 25%;
-  font: 18px Courier, sans-serif;
+  font: 18px Courier;
   letter-spacing: 5px;
   text-shadow: 0px 0px 5px #FFF;
   animation: 5s ease infinite smallglow;
