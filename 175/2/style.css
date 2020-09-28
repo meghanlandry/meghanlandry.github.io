@@ -1,0 +1,158 @@
+* {
+  background-color: #5d6a72;
+  color: #dedfe1;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+  font-size: 30px;
+}
+
+ul {
+  list-style-type: none;
+
+}
+
+li {
+  text-decoration: none;
+  display: inline;
+  padding: 16px;
+  border-style: double;
+  border-radius: 10px;
+  border-width: 3px;
+}
+
+a {
+  text-decoration: none;
+}
+
+main {
+  margin: 1%;
+}
+
+img {
+  border-radius: 25px;
+}
+
+/* our mission page styling */
+
+#mission {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-areas:
+  "a b"
+  "a d";
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
+#missionimage {
+  grid-area: a;
+  padding: 5%;
+
+}
+
+#missiontext {
+  text-align: justify;
+  line-height: 200%;
+  font-size: 18px;
+  grid-area: b;
+  margin: 5%;
+}
+
+#missionfooter {
+  text-align: right;
+
+  font-size: 50px;
+  font-style: italic;
+  grid-area: d;
+  margin: 5%;
+  margin-top: 1%;
+}
+
+#tagline {
+  font-size: 16px;
+  text-align: right;
+}
+
+/* contact page styling */
+
+#contact {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-areas:
+  "a e"
+  "a f";
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
+#contactform {
+  grid-area: a;
+  text-align: left;
+}
+
+form {
+  text-align: left;
+
+}
+
+input {
+  width: 90%;
+  text-align: left;
+  margin: 2%;
+  font-size: 25px;
+  font-style: italic;
+  border-radius: 25px;
+  text-indent: 2%;
+}
+
+textarea {
+  /* Don't understand: When I try to combine the similar attributes with a Class for input and textarea, it breaks my CSS. */
+  width: 90%;
+  height: 90%;
+  text-align: left;
+  margin: 2%;
+  font-size: 25px;
+  font-style: italic;
+  border-radius: 25px;
+  text-indent: 2%;
+}
+
+#contacttext {
+  grid-area: e;
+  margin: 5%;
+  font-size: 18px;
+  text-align: justify;
+}
+
+#social {
+  grid-area: f;
+  margin-left: 5%
+}
+
+#send {
+  width: 200px;
+  height: 40px;
+  border-radius: 25px;
+  margin: 5%;
+  margin-right: 10%;
+  float: right;
+  text-align: center;
+}
+
+
+.home {
+  border-style: none;
+  line-height: 60px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 40px;
+  letter-spacing: 5px;
+  padding: 0;
+
+}
+
+#splash {
+  width: 80%;
+  padding: 1%;
+}
