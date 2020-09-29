@@ -47,13 +47,37 @@ img {
   font-size: 40px;
   letter-spacing: 5px;
   padding: 0;
+  text-shadow: 2px 2px 0px #42454c;
+
 }
 
 #shoplink {
   font-weight: bold;
+
+}
+
+li {
+  text-shadow: 0px 0px 1px #dedfe1;
+}
+
+li:hover{
+    animation: 1s ease forwards navhover;
 }
 
 /* animations */
+
+@keyframes titleani {
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes navhover {
+  100% {
+    background-color: #dedfe1;
+    color: #42454c;
+  }
+}
 
 @keyframes bob {
   50% {
@@ -113,13 +137,39 @@ img {
   }
 }
 
+@keyframes productani {
+  50% {
+    position: relative;
+    z-index: 12;
+  }
+  100% {
+    background-color: transparent;
+    transform: scale(1.5, 1.5);
+    position: relative;
+    z-index: 12;
+  }
+}
+
+@keyframes shopani {
+  50% {
+    position: relative;
+    z-index: 12;
+  }
+  100% {
+    background-color: transparent;
+    transform: scale(1.2, 1.2);
+    position: relative;
+    z-index: 12;
+  }
+}
+
 /* index page styling */
 
 /* doesn't respond well to different window sizes :( */
 #splash {
   background-color: transparent;
   width: 78%;
-  animation: 3s ease infinite bob;
+  animation: 4s ease infinite bob;
   position: absolute;
   right: 1%;
   margin-top: 4%;
@@ -129,7 +179,7 @@ img {
 #maskshut {
   background-color: transparent;
   width: 8%;
-  animation: 3s ease infinite launch;
+  animation: 4s ease infinite launch;
   position: absolute;
   left: 22%;
   margin-top: 9%;
@@ -138,7 +188,7 @@ img {
 }
 
 #extraanimation {
-  animation: 3s ease infinite launch2;
+  animation: 4s ease infinite launch2;
 }
 
 #maskopen {
@@ -149,21 +199,35 @@ img {
   left: 15%;
   z-index: 6;
   opacity: 0;
-  animation: 3s ease infinite unfold;
+  animation: 4s ease infinite unfold;
 }
+
+#title {
+  background-color: transparent;
+  color: #dedfe1;
+  font-weight: bold;
+  width:100%;
+  font-size: 10vw;
+  position: fixed;
+  margin-top: 28%;
+  opacity: 0;
+  border-style: double;
+  animation: 4s ease forwards titleani;
+}
+
+#title
 
 /* product page styling */
 
 .info {
-  background-color: transparent;
+  background-color: #dedfe1;
   color: #38393e;
   font-weight: bold;
   font-size: 15px;
-  position: absolute;
-  z-index: 10;
-  background-color: #dedfe1;
   padding: 5px;
   border-radius: 4px;
+  position: absolute;
+  z-index: 10;
 }
 
 #product {
@@ -178,6 +242,11 @@ img {
 
 #product img {
   width: 100%;
+  background-color: transparent;
+}
+
+#product img:hover {
+  animation: 1s ease-in-out forwards productani;
 }
 
 #product1 {
@@ -368,15 +437,15 @@ textarea {
 }
 
 #shop img {
+  background-color: transparent;
   width: 100%;
 }
 
 /* #cart{
-  grid-area: i;
   text-align: right;
 } */
 
-/* Dead add to cart number idea. */
+/* Dead add to cart number idea. :( :( */
 /* #cart::before {
   content: var(--varCart);
 }
@@ -384,6 +453,11 @@ textarea {
 #addcart:active {
   --varCart: calc(var(--varCart) + 1);
 } */
+
+#shop1:hover, #shop2:hover, #shop3:hover, #shop4:hover,
+#shop5:hover, #shop6:hover, #shop7:hover, #shop8:hover  {
+  animation: 1s ease-in-out forwards shopani;
+}
 
 #shop1{
   grid-row-start: 1;
