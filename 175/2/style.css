@@ -1,3 +1,8 @@
+/* Trying to make a cart number that goes up by one when you press a button. No CSS functionality to print a variable (apparently). */
+/* :root {
+  --varCart: 0;
+} */
+
 * {
   background-color: #5d6a72;
   color: #dedfe1;
@@ -18,6 +23,7 @@ li {
   display: inline;
   padding: 16px;
   border-style: double;
+  border-top-style: none;
   border-radius: 10px;
   border-width: 3px;
 }
@@ -34,6 +40,202 @@ img {
   border-radius: 25px;
 }
 
+.home {
+  border-style: none;
+  line-height: 60px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 40px;
+  letter-spacing: 5px;
+  padding: 0;
+}
+
+#shoplink {
+  font-weight: bold;
+}
+
+/* animations */
+
+@keyframes bob {
+  50% {
+    transform: translate(0, 5%);
+  }
+  100% {
+    transform: translate(0, 0%);
+  }
+}
+
+@keyframes launch {
+  0% {
+    transform: rotate(90deg);
+    opacity: 0;
+  }
+  10%{
+    opacity: 1
+  }
+  40% {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+  75% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes launch2 {
+  0% {
+    transform: translate(10%, 15%);
+  }
+  40% {
+    transform: translate(0%, 0%);
+  }
+}
+
+@keyframes unfold {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 0;
+    transform: rotate(10deg);
+  }
+  60% {
+    opacity: 1;
+    transform: rotate(0deg);
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* index page styling */
+
+/* doesn't respond well to different window sizes :( */
+#splash {
+  background-color: transparent;
+  width: 78%;
+  animation: 3s ease infinite bob;
+  position: absolute;
+  right: 1%;
+  margin-top: 4%;
+  z-index: 0;
+}
+
+#maskshut {
+  background-color: transparent;
+  width: 8%;
+  animation: 3s ease infinite launch;
+  position: absolute;
+  left: 22%;
+  margin-top: 9%;
+  z-index: 5;
+  opacity: 0;
+}
+
+#extraanimation {
+  animation: 3s ease infinite launch2;
+}
+
+#maskopen {
+  background-color: transparent;
+  width: 17%;
+  position: absolute;
+  margin-top: 4%;
+  left: 15%;
+  z-index: 6;
+  opacity: 0;
+  animation: 3s ease infinite unfold;
+}
+
+/* product page styling */
+
+.info {
+  background-color: transparent;
+  color: #38393e;
+  font-weight: bold;
+  font-size: 15px;
+  position: absolute;
+  z-index: 10;
+  background-color: #dedfe1;
+  padding: 5px;
+  border-radius: 4px;
+}
+
+#product {
+  margin-top: 5%;
+  margin-left: 15%;
+  margin-right: 15%;
+  display: grid;
+  grid-template-rows: repeat(3, 300px);
+  grid-template-columns: repeat(10, 1fr);
+  grid-gap: 10px;
+}
+
+#product img {
+  width: 100%;
+}
+
+#product1 {
+  grid-row-start: 1;
+  grid-column-start: 1;
+  grid-row-end: 2;
+  grid-column-end: 3;
+}
+
+#product2 {
+  grid-row-start: 1;
+  grid-column-start: 3;
+  grid-row-end: 1;
+  grid-column-end: 7;
+}
+
+#product3 {
+  grid-row-start: 1;
+  grid-column-start: 7;
+  grid-row-end: 1;
+  grid-column-end: 9;
+}
+
+#product4 {
+  grid-row-start: 1;
+  grid-column-start: 9;
+  grid-row-end: 1;
+  grid-column-end: 11;
+}
+
+#product5 {
+  grid-row-start: 2;
+  grid-column-start: 2;
+  grid-row-end: 3;
+  grid-column-end: 5;
+}
+
+#product6 {
+  grid-row-start: 2;
+  grid-column-start: 5;
+  grid-row-end: 3;
+  grid-column-end: 7;
+}
+
+#product7 {
+  grid-row-start: 2;
+  grid-column-start: 7;
+  grid-row-end: 3;
+  grid-column-end: 10;
+}
+
+#product8 {
+  grid-row-start: 3;
+  grid-column-start: 3;
+  grid-row-end: 4;
+  grid-column-end: 9;
+}
+
 /* our mission page styling */
 
 #mission {
@@ -42,6 +244,7 @@ img {
   grid-template-areas:
   "a b"
   "a d";
+  margin: 5%;
   margin-left: 15%;
   margin-right: 15%;
 }
@@ -49,7 +252,6 @@ img {
 #missionimage {
   grid-area: a;
   padding: 5%;
-
 }
 
 #missiontext {
@@ -94,7 +296,6 @@ img {
 
 form {
   text-align: left;
-
 }
 
 input {
@@ -108,9 +309,7 @@ input {
 }
 
 textarea {
-  /* Don't understand: When I try to combine the similar attributes with a Class for input and textarea, it breaks my CSS. */
   width: 90%;
-  height: 90%;
   text-align: left;
   margin: 2%;
   font-size: 25px;
@@ -126,11 +325,6 @@ textarea {
   text-align: justify;
 }
 
-#social {
-  grid-area: f;
-  margin-left: 5%
-}
-
 #send {
   width: 200px;
   height: 40px;
@@ -141,18 +335,108 @@ textarea {
   text-align: center;
 }
 
-
-.home {
-  border-style: none;
-  line-height: 60px;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 40px;
-  letter-spacing: 5px;
-  padding: 0;
-
+#social {
+  border-radius: 0;
+  width: 9%;
 }
 
-#splash {
-  width: 80%;
-  padding: 1%;
+/* shop page styling */
+
+.shopdescriptions {
+  font-size: 20px;
+  text-align: left;
+  text-indent: 10%;
+}
+
+.addcart {
+  font-size: 18px;
+  float: right;
+  margin-right: 10%;
+  border-radius: 5px;
+  line-height: 25px;
+}
+
+#shop {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-rows: repeat(2, 250px);
+  grid-template-columns: repeat(4, 1fr);
+  margin: 5%;
+  margin-left: 15%;
+  margin-right: 15%;
+  width: 70%;
+}
+
+#shop img {
+  width: 100%;
+}
+
+/* #cart{
+  grid-area: i;
+  text-align: right;
+} */
+
+/* Dead add to cart number idea. */
+/* #cart::before {
+  content: var(--varCart);
+}
+
+#addcart:active {
+  --varCart: calc(var(--varCart) + 1);
+} */
+
+#shop1{
+  grid-row-start: 1;
+  grid-column-start: 1;
+  grid-row-end: 2;
+  grid-column-end: 2;
+}
+
+#shop2{
+  grid-row-start: 1;
+  grid-column-start: 2;
+  grid-row-end: 2;
+  grid-column-end: 3;
+}
+
+#shop3{
+  grid-row-start: 1;
+  grid-column-start: 3;
+  grid-row-end: 2;
+  grid-column-end: 4;
+}
+
+#shop4{
+  grid-row-start: 1;
+  grid-column-start: 4;
+  grid-row-end: 2;
+  grid-column-end: 5;
+}
+
+#shop5{
+  grid-row-start: 2;
+  grid-column-start: 1;
+  grid-row-end: 3;
+  grid-column-end: 2;
+}
+
+#shop6{
+  grid-row-start: 2;
+  grid-column-start: 2;
+  grid-row-end: 3;
+  grid-column-end: 3;
+}
+
+#shop7{
+  grid-row-start: 2;
+  grid-column-start: 3;
+  grid-row-end: 3;
+  grid-column-end: 4;
+}
+
+#shop8{
+  grid-row-start: 2;
+  grid-column-start: 4;
+  grid-row-end: 3;
+  grid-column-end: 5;
 }
