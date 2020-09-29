@@ -15,7 +15,6 @@
 
 ul {
   list-style-type: none;
-
 }
 
 li {
@@ -53,12 +52,10 @@ img {
   letter-spacing: 5px;
   padding: 0;
   text-shadow: 2px 2px 0px #42454c;
-
 }
 
 #shoplink {
   font-weight: bold;
-
 }
 
 /* animations */
@@ -301,33 +298,40 @@ img {
 #mission {
   display: grid;
   grid-gap: 10px;
-  grid-template-areas:
-  "a b"
-  "a d";
+  grid-template-rows: 2;
+  grid-template-columns: 2;
   margin: 5%;
   margin-left: 15%;
   margin-right: 15%;
 }
 
 #missionimage {
-  grid-area: a;
+  grid-row-start: 1;
+  grid-column-start: 1;
+  grid-row-end: 3;
+  grid-column-end: 1;
   padding: 5%;
 }
 
 #missiontext {
+  grid-row-start: 1;
+  grid-column-start: 2;
+  grid-row-end: 2;
+  grid-column-end: 3;
   text-align: justify;
   line-height: 200%;
   font-size: 18px;
-  grid-area: b;
   margin: 5%;
 }
 
 #missionfooter {
+  grid-row-start: 2;
+  grid-column-start: 2;
+  grid-row-end: 3;
+  grid-column-end: 3;
   text-align: right;
-
   font-size: 50px;
   font-style: italic;
-  grid-area: d;
   margin: 5%;
   margin-top: 1%;
 }
@@ -342,16 +346,17 @@ img {
 #contact {
   display: grid;
   grid-gap: 10px;
-  grid-template-areas:
-  "a e"
-  "a f";
+  grid-template-rows: 1;
+  grid-template-columns: 2;
   margin-left: 15%;
   margin-right: 15%;
 }
 
 #contactform {
-  grid-area: a;
-  text-align: left;
+  grid-row-start: 1;
+  grid-column-start: 1;
+  grid-row-end: 2;
+  grid-column-end: 2;
 }
 
 form {
@@ -370,19 +375,25 @@ input {
 
 textarea {
   width: 90%;
+  height: 35vh;
+  /* I thought I understood how vh units worked, but here I found out I do not. */
   text-align: left;
   margin: 2%;
   font-size: 25px;
   font-style: italic;
   border-radius: 25px;
   text-indent: 2%;
+  resize: vertical;
 }
 
 #contacttext {
-  grid-area: e;
-  margin: 5%;
-  font-size: 18px;
+  margin-top: 5%;
   text-align: justify;
+  font-size: 22px;
+  grid-row-start: 1;
+  grid-column-start: 2;
+  grid-row-end: 2;
+  grid-column-end: 3;
 }
 
 #send {
