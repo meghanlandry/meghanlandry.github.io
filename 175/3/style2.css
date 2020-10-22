@@ -1,0 +1,123 @@
+/*clears existing box styling*/
+* {
+  margin: 0;
+  padding: 0;
+
+}
+
+/* adds background image and positions and scales it responsively */
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 1.8vw;
+  font-family: serif;
+  background-image: url("images/demo_background.png");
+  background-repeat: no-repeat;
+  background-position: center 200;
+  background-size: 160vh;
+}
+
+/*styling for title text*/
+
+h1.title { /* This is janky and I don't know how to fix it. If I edit text or change title size, I have to adjust margins */
+  font-size: 3.5vw;
+  color: #3d3f4e;
+  position: absolute;
+  margin: 50 50;
+  z-index: 2;
+}
+
+/* nav bar styling for desktop*/
+nav {
+  margin: 55vh auto;
+  /*positions nav bar to lower on page, responsive*/
+  color: #f6e0e0;
+}
+
+ul.rightnav {
+  /*splits nav bar into two on either side*/
+  float: right;
+  width: 25vw;
+  margin-right: 15vw;
+  border-right: solid 5px #f6e0e0;
+}
+
+ul.leftnav {
+  /*splits nav bar into two on either side*/
+  float: left;
+  width: 25vw;
+  margin-left: 15vw;
+  border-left: solid 5px #f6e0e0;
+}
+
+ul li a {
+  /*just styling on the nav bar items*/
+  display: block;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+}
+
+ul {
+  /*remove bullet points from list*/
+  list-style-type: none;
+}
+
+li > a {
+  /*aligns items left in dropdown*/
+  text-align: left !important;
+  margin-left: 1vw;
+}
+
+ul.navdd {
+  /*makes nav bad into a flex box*/
+  display: flex;
+}
+
+ul li:hover {
+  /*changes nav bar color when hovering over*/
+  color: #3d3f4e !important;
+  background-color: #fff !important;
+}
+
+a:hover {
+  color: #3d3f4e !important;
+  cursor: pointer;
+  /*forces cursor to pointer over links*/
+}
+
+ul.navdd li {
+  flex: 1;
+  /*makes nav bar links responsive*/
+  position: relative;
+  /*necessary for dropdown links size*/
+  text-align: center;
+  background-color: #bbb;
+  margin-bottom: 2px;
+}
+
+ul.navdd > li {
+    padding: 12px 0px;
+}
+
+ul.ddcontent {
+  padding-top: 12px;
+  /*accounting for ul padding*/
+  position: absolute;
+  /*necessary for dropdown links size*/
+  display: none;
+  /*hides dropdown by default*/
+  font-size: 1.2vw;
+}
+
+.dropdown:hover .ddcontent {
+  display: block;
+  /*displays dropdown on hover*/
+  width: 100%;
+}
+
+@media all and (max-width: 700px) {
+  nav {
+    display: none;
+  }
+}

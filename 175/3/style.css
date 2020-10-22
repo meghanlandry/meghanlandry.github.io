@@ -1,0 +1,138 @@
+/* clear automatic formatting  */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url("images/demo_background.png");
+  background-repeat: no-repeat;
+  background-position: center 60;
+  background-size: 180vh;
+  font-size: 1.8vw;
+  font-family: sans-serif;
+}
+
+nav {
+  position: relative
+}
+
+li {
+  display: flex;
+}
+
+.dropdowncontainer {
+  margin: auto auto;
+  color: #f6e0e0;
+
+}
+
+.dropdowncontainer:hover .dropdown{
+  font-size: 2vw;
+  display: flex;
+  flex-direction: column;
+}
+
+.dropdowntop:hover {
+  cursor: pointer;
+  color: white;
+}
+
+.dropdown {
+  background: white;
+  color: lightgray;
+  position: absolute;
+  display: none;
+}
+
+.dropdowntop:hover {
+}
+
+.container {
+  background-color: #BBB;
+  margin: 40vh auto;
+  list-style: none;
+  width: 25vw;
+  height: 7vh;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.leftnav {
+  border-left: solid 10px;
+  border-color: #f6e0e0;
+  margin-left: 15vw;
+  float: left;
+}
+
+.rightnav {
+  border-right: solid 10px;
+  border-color: #f6e0e0;
+  margin-right: 15vw;
+  float: right;
+}
+
+a {
+  margin: auto auto;
+  text-decoration: none;
+  color: #f6e0e0;
+}
+
+@media all and (max-width: 1200px) {
+  .container {
+    height: 14vh;
+    border: none;
+    border-color: #f6e0e0;
+    flex-flow: column;
+  }
+
+  .container li {
+    margin: 0 auto;
+    font-size: 3vw;
+    float: none;
+  }
+
+  .rightnav {
+    border-right: solid 10px;
+    border-color: #f6e0e0;
+  }
+
+  .leftnav {
+    border-left: solid 10px;
+    border-color: #f6e0e0;
+  }
+}
+
+@media all and (max-width: 500px) {
+  .container {
+    height: 20vh;
+    width: 15vh;
+    border: none;
+  }
+
+  .container li {
+    margin: 0 auto;
+    font-size: 4vw;
+    float: none;
+  }
+
+  .rightnav {
+    margin: auto auto;
+    margin-bottom: 40vh;
+    float: none;
+  }
+
+  .leftnav {
+    margin: auto auto;
+    margin-top: 40vh;
+    float: none;
+  }
+}
+
+@media all and (min-width: 1950px) {
+  .container li {
+    font-size: 5vh;
+  }
+}
