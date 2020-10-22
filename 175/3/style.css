@@ -59,9 +59,13 @@ h2.subtitle {
 nav {
   border-left: 5px solid;
   border-right: 5px solid;
-  margin: 55vh 20vw 0 20vw;
+  margin: 55vh 20vw 0vh 20vw;
   /*positions nav bar to lower on page, responsive*/
   color: #f6e0e0;
+}
+
+nav.indexfit {
+  margin: 55vh 20vw;
 }
 
 ul {
