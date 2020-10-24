@@ -4,48 +4,74 @@
   <meta charset="utf-8">
   <title>megh.e.la.art</title>
   <link rel="stylesheet" href="style.css">
+  <!-- <script src="script.js"></script> -->
 </head>
 
-<body class="indexbody">
+<body>
   <div class="imagepositoning">
     <header>
       <h1 class="title">
-        <a href="index.html">meghan.landry.art</a>
+        <a target="_blank" href="images/website.jpg">meghan.landry.art</a>
       </h1>
-      <h2 class="subtitle">welcome</h2>
+      <h2 class="subtitle">..................</h2>
     </header>
-    <nav class="indexfit">
-      <ul class="navdd">
-        <li class="dropdown"><a href="about.html">about</a>
-          <ul class="ddcontent">
-            <li><a href="about.html">about</a></li>
-            <li><a href="about.html#events">events</a></li>
-          </ul>
-        </li>
-        <li class="dropdown"><a href="contact.html">contact</a>
-          <ul class="ddcontent">
-            <li><a href="contact.html">contact</a></li>
-            <li><a href="contact.html#social">social</a></li>
-            <li><a href="contact.html#updates">updates</a></li>
-          </ul>
-        </li>
-        <li class="skip"> </li>
-        <li class="dropdown" ><a href="artwork.html">artworks</a>
-          <ul class="ddcontent">
-            <li><a href="art.html">illustrations</a></li>
-            <li><a href="art.html#animations">animations</a></li>
-            <li><a href="art.html#other">other</a></li>
-          </ul>
-        <li class="dropdown"><a href="buy.html">buy</a>
-          <ul class="ddcontent">
-            <li><a href="buy.html">commission</a></li>
-            <li><a href="buy.html#prints">prints</a></li>
-            <li><a href="buy.html#merch">merch</a></li>
-          </ul>
-        </li>
+  </div>
+  <a href="#gallery"><div id="arrow"></div></a>
+
+  <div class="wrapper" id="navbar">
+    <nav>
+      <ul>
+        <li><a href="#gallery">gallery</a></li>
+        <li><a href="#about">about</a></li>
+        <li><a href="#contact">contact</a></li>
       </ul>
     </nav>
   </div>
+
+<main id="gallery">
+  <section id="art">
+    <img src="https://via.placeholder.com/1500x1300">
+    <img src="https://via.placeholder.com/1000x1300">
+    <img src="https://via.placeholder.com/1700x900">
+    <img src="https://via.placeholder.com/1400x1300">
+    <img src="https://via.placeholder.com/1500x1300">
+    <img src="https://via.placeholder.com/1500x1300">
+    <img src="https://via.placeholder.com/1100x1300">
+    <img src="https://via.placeholder.com/2500x1300">
+  </section>
+  <br>
+  <content id="about">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  </content>
+  <br>
+  <content id="contact">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  </content>
+</main>
+  <!-- This doesn't work unless it's inline because the page hasn't loaded and it can't get the ID values. Don't know how to make it work from a separate file. :( -->
+  <!-- Code from here: https://www.w3schools.com/howto/howto_js_navbar_sticky.asp -->
+  <script>
+    // When the user scrolls the page, execute myFunction
+    window.onscroll = function() {
+      stickyNav()
+    };
+
+    // Get the navbar
+    var navbar = document.getElementById("navbar");
+
+    // Get the offset position of the navbar
+    var sticky = navbar.offsetTop;
+
+    // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+    function stickyNav() {
+      if (window.pageYOffset >= sticky) {
+        navbar.classList.add("sticky")
+      } else {
+        navbar.classList.remove("sticky");
+      }
+    }
+  </script>
+
 </body>
 
 </html>

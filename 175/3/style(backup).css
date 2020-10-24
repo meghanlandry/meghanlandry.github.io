@@ -1,0 +1,203 @@
+/*clears existing box styling*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* adds background image and positions and scales it responsively */
+
+body {
+  background-image: url("images/moon_demo.png");
+  background-repeat: no-repeat;
+  background-position: center 0;
+  background-size: 60vh;
+  margin: 0;
+  padding: 0;
+  font-size: 28px;
+  letter-spacing: 2px;
+  font-family: serif;
+}
+
+body.indexbody {
+    overflow: hidden;
+}
+
+body.indexbody > div.imagepositoning {
+  width: 100%;
+  position: absolute;
+  background-image: url("images/demo_background.png");
+  background-repeat: no-repeat;
+  background-position: center 200;
+  background-size: 150vh;
+  z-index: -3;
+}
+
+
+/*styling for title text*/
+
+header {
+  position: absolute;
+  line-height: .7;
+  text-align: center;
+  width: 100%; /*for centering*/
+  top: 12%;
+  z-index: 2;
+}
+
+h1.title > a {
+  font-size: 50px;
+  color: #3d3f4e;
+}
+
+h2.subtitle {
+  font-size: 20px;
+  color: #bbb;
+}
+
+/* nav bar styling for desktop*/
+
+nav {
+  border-left: 5px solid;
+  border-right: 5px solid;
+  margin: 55vh 20vw 0vh 20vw;
+  /*positions nav bar to lower on page, responsive*/
+  color: #f6e0e0;
+}
+
+nav.indexfit {
+  margin: 55vh 20vw;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: #f6e0e0;
+}
+
+ul.ddcontent > li > a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  text-align: left;
+  margin-left: 1vw;
+}
+
+ul.navdd {
+  /*makes nav bar into a flex box*/
+  display: flex;
+}
+
+ul li:hover {
+  /*changes nav bar color when hovering over*/
+  color: #3d3f4e !important;
+  background-color: #fff !important;
+}
+
+a:hover {
+  color: #3d3f4e !important;
+  cursor: pointer;
+  /*forces cursor to pointer over links*/
+}
+
+ul.navdd li {
+  flex: 1;
+  /*makes nav bar links responsive*/
+  position: relative;
+  /*necessary for dropdown links size*/
+  text-align: center;
+  background-color: #bbb;
+}
+
+li.skip{
+  opacity: 0;
+}
+
+li.moon {
+  background-color: rgba(0, 0, 0, 0) !important;
+}
+
+li.moon > a > img {
+  width: 130%;
+  text-align: center;
+  top: -15vh;
+  left: -15%;
+  position: absolute;
+  overflow: hidden;
+}
+
+ul.navdd > li {
+    padding: 12px 0px;
+}
+
+ul.ddcontent {
+  padding-top: 12px;
+  /*accounting for ul padding*/
+  position: absolute;
+  /*necessary for dropdown links size*/
+  display: none;
+  /*hides dropdown by default*/
+  font-size: 1.2vw;
+}
+
+.dropdown:hover .ddcontent {
+  display: block;
+  /*displays dropdown on hover*/
+  width: 100%;
+}
+
+/* gallery grid */
+
+#illustrations {
+  display: grid;
+  margin: 100px auto;
+  grid-gap: 10px;
+  grid-template-columns: repeat(3, 1fr);
+  max-width: 90%;
+}
+
+.illust {
+  height: 50%;
+}
+
+.illust > img {
+  max-width: 100%;
+  opacity: .8;
+}
+
+.illust > img:hover {
+  opacity: 1;
+}
+
+/* breakpoints */
+
+@media all and (max-width: 800px) {
+  nav {
+    margin-left: 30vw;
+    margin-right: 30vw;
+    text-align: center;
+  }
+  ul.navdd {
+    flex-direction: column !important;
+  }
+
+  ul.ddcontent {
+    display: none;
+    font-size: 24px;
+}
+
+.dropdown:hover .ddcontent  {
+  display: none;
+}
+
+  li.skip {
+    display: none;
+  }
+
+  li.moon {
+  display: none;
+}
+  /*I'm going to make a hamburger menu here.*/
+}
