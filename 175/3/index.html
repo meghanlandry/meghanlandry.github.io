@@ -3,22 +3,24 @@
 <head>
   <meta charset="utf-8">
   <title>megh.e.la.art</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="grid.css">
   <!-- <script src="script.js"></script> -->
 </head>
 
 <body>
-  <div class="imagepositoning">
+  <div class="landing">
     <header>
       <h1 class="title">
-        <a target="_blank" href="images/website.jpg">meghan.landry.art</a>
+        meghan.landry.art
       </h1>
       <h2 class="subtitle">..................</h2>
     </header>
+    <a href="#gallery">
+      <div class="arrow"></div>
+    </a>
   </div>
-  <a href="#gallery"><div id="arrow"></div></a>
 
-  <div class="wrapper" id="navbar">
+  <div class="nav" id="navbar">
     <nav>
       <ul>
         <li><a href="#gallery">gallery</a></li>
@@ -28,26 +30,35 @@
     </nav>
   </div>
 
-<main id="gallery">
-  <section id="art">
-    <img src="https://via.placeholder.com/1500x1300">
-    <img src="https://via.placeholder.com/1000x1300">
-    <img src="https://via.placeholder.com/1700x900">
-    <img src="https://via.placeholder.com/1400x1300">
-    <img src="https://via.placeholder.com/1500x1300">
-    <img src="https://via.placeholder.com/1500x1300">
-    <img src="https://via.placeholder.com/1100x1300">
-    <img src="https://via.placeholder.com/2500x1300">
+  <section class="art" id="gallery">
+    <img id="img1" class="lowdesat" src="images/ailurie.png">
+    <img class="desat" id="img3" src="images/iori.jpg">
+    <div id=img2>
+      <img class="desat" src="images/diluc.jpg">
+      <img class="desat" src="images/kaeya.jpg">
+      <img class="desat" src="images/zhongli2.jpg">
+    </div>
+    <img id="img4" class="lowdesat" src="images/schwarz.png">
+    <img id="img5" class="lowdesat" src="images/siege.png">
+    <img id="img6" class="lowdesat" src="images/skadi.png">
+    <img id="img7" class="lowdesat" src="images/ailurie_f.png">
+    <iframe id="img8" src="https://drive.google.com/file/d/1b9X3LRdhmESNXEkhr9uQrVK4rV1ThvL8/preview" width="640" height="480"></iframe>
+    <iframe id="img9" src="https://drive.google.com/file/d/1UMWFxOUfgfZzSeWeOsCeo7AwSk4EdOi7/preview"></iframe>
   </section>
   <br>
-  <content id="about">
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-  </content>
+  <section class="about" id="about">
+    <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+    irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </p>
+  </section>
   <br>
-  <content id="contact">
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-  </content>
-</main>
+  <section class="contact" id="contact">
+    <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+    irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </p>
+  </section>
   <!-- This doesn't work unless it's inline because the page hasn't loaded and it can't get the ID values. Don't know how to make it work from a separate file. :( -->
   <!-- Code from here: https://www.w3schools.com/howto/howto_js_navbar_sticky.asp -->
   <script>

@@ -5,11 +5,7 @@
   scroll-behavior: smooth;
 }
 
-html {
-}
-
 /* adds background image and positions and scales it responsively */
-
 body {
   background-image: url("images/moon_demo.png");
   background-repeat: no-repeat;
@@ -22,18 +18,17 @@ body {
   font-family: serif;
 }
 
-body > div.imagepositoning {
+body>div.imagepositoning {
   width: 100%;
   height: 105vh;
   background-image: url("images/demo_background.png");
   background-repeat: no-repeat;
   background-position: center 25vh;
-  background-size: auto 70vh ;
+  background-size: auto 70vh;
   z-index: -3;
 }
 
 /*styling for title text*/
-
 header {
   position: absolute;
   line-height: .7;
@@ -43,7 +38,7 @@ header {
   z-index: 2;
 }
 
-h1.title > a {
+h1.title>a {
   font-size: 50px;
   color: #3d3f4e;
 }
@@ -54,11 +49,10 @@ h2.subtitle {
 }
 
 /* nav bar styling for desktop*/
-
-div.wrapper {
+div.nav {
   font-size: 24px;
   background-color: #aaa;
-  float:left;
+  float: left;
   z-index: 5;
   top: 0;
   width: 100%;
@@ -80,8 +74,6 @@ a {
   text-decoration: none;
 }
 
-
-
 .sticky {
   position: fixed;
   top: 0 !important;
@@ -99,43 +91,28 @@ a {
   transform: rotate(45deg);
 }
 
-main {
-  padding-top: 10%;
-  padding: 20%;
+main#gallery {
+  padding-top: 15%;
   text-align: center;
 }
 
 /* gallery grid */
-
-#art{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
+#art {
+  display: grid;
+  grid-template-columns: 50% 50%;
 }
 
 /* breakpoints */
-
 @media all and (min-width: 800px) {
-
-section > img {
-  box-sizing: border-box;
-  object-fit: cover;
-  min-width: 45% !important;
-  height: 50vh;
-  width: auto;
+  section>img {
+    object-fit: cover;
+    height: 50vh;
+  }
 }
-
-}
-
 
 @media all and (max-width: 800px) {
-  section > img {
-    padding 5%;
-    padding-bottom: 10px;
+  section>img {
     object-fit: cover;
     height: 35vh;
-    max-width: 100%;
-    min-width: 90% !important;
   }
-
 }
