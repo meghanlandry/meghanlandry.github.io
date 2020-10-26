@@ -1,20 +1,30 @@
+//Some of code from here: https://www.w3schools.com/howto/howto_js_navbar_sticky.asp 
 // When the user scrolls the page, execute myFunction
-window.onscroll = function() {stickyNav()};
+window.onload = runScript;
 
-// Get the navbar
-var navbar = document.getElementById("navbar");
-console.log("done1")
+function runScript(){
+  window.onscroll = function() {
+    stickyNav()
+  };
 
-// Get the offset position of the navbar
-var sticky = navbar.offsetTop;
-console.log("done2")
+  var navbar = document.getElementById("navbar");
+  var sticky = navbar.offsetTop;
 
-// Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
-function stickyNav() {
-  if (window.pageYOffset >= sticky) {
-    navbar.classList.add("sticky")
-    console.log("done3")
-  } else {
-    navbar.classList.remove("sticky");
+  // Used understanding of above example to make a expand button
+  var gallery = document.getElementById("gallery");
+  var more = document.getElementById("more"); document.getElementById("more").addEventListener("click", expand);
+
+  function stickyNav() {
+    if (window.pageYOffset >= sticky) {
+      navbar.classList.add("sticky")
+    } else {
+      navbar.classList.remove("sticky");
+    }
+  }
+
+  function expand() {
+    gallery.classList.add("artexpand");
+    gallery.classList.remove("art");
+    more.classList.add("hidebutton");
   }
 }

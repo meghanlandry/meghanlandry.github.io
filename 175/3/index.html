@@ -1,14 +1,22 @@
+<!-- Concerns: When displaying images as "object-fit: cover," it centers the image and will cut off edges on the long axis.
+This sometimes leads to characters' heads being cut off.
+Unsure how to approach styling to avoid this. I would ideally like to be able to manually decide what part of the long axis I'd like to crop. -->
+
+<!-- Landing page illustration and navbar icon are unfinished standins that will take more time than I have right now to finish. -->
+
 <html lang="en" dir="ltr">
 
 <head>
   <meta charset="utf-8">
   <title>megh.e.la.art</title>
   <link rel="stylesheet" href="grid.css">
-  <!-- <script src="script.js"></script> -->
+  <script type="text/javascript" src="script.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@300&family=Dancing+Script&display=swap" rel="stylesheet">
 </head>
 
 <body>
-  <div class="landing">
+  <!-- This is the landing screen. -->
+  <div class="landing" id="landing">
     <header>
       <h1 class="title">
         meghan.landry.art
@@ -20,9 +28,11 @@
     </a>
   </div>
 
+  <!-- This is the navigation bar. -->
   <div class="nav" id="navbar">
     <nav>
       <ul>
+        <li><a href="#landing"><img id="icon" src="images/moon_demo.png"></a></li>
         <li><a href="#gallery">gallery</a></li>
         <li><a href="#about">about</a></li>
         <li><a href="#contact">contact</a></li>
@@ -30,19 +40,15 @@
     </nav>
   </div>
 
+  <!-- These are the images and videos in the gallery section. -->
   <section class="art" id="gallery">
-    <img id="img1" class="lowdesat" src="images/ailurie.png">
+    <!-- img 1 -->
+    <img id="img1" class="desat" src="images/ailurie.png">
     <p id="text1" class="overlay">
       A portrait of my FFXIV Dragoon Miqo'te character Eithle Ailurie.
-      <br><br>
       <a target="_blank" href="images/ailurie.png"><img src="images/popout.png"></a>
     </p>
-    <img class="desat" id="img3" src="images/iori.jpg">
-    <p id="text3" class="overlay">
-      Commissioned character illustration of Iori (original character credit Ryushiko)
-      <br><br>
-      <a target="_blank" href="images/Iori.jpg"><img src="images/popout.png"></a>
-    </p>
+    <!-- img 2, these images are in a flexbox -->
     <div id=img2>
       <img class="desat" src="images/diluc.jpg">
       <img class="desat" src="images/kaeya.jpg">
@@ -50,36 +56,45 @@
     </div>
     <p id="text2" class="overlay">
       Sketch portraits of characters from mobile game Genshin Impact.
-      <br><br>
       <a target="_blank" href="https://imgur.com/a/7fs8HDf"><img src="images/popout.png"></a>
     </p>
+    <!-- img 3 -->
+    <img class="desat" id="img3" src="images/iori.jpg">
+    <p id="text3" class="overlay">
+      Commissioned character illustration of Iori (original character credit Ryushiko)
+      <a target="_blank" href="images/Iori.jpg"><img src="images/popout.png"></a>
+    </p>
+    <!-- img 4 -->
     <img id="img4" class="lowdesat" src="images/schwarz.png">
     <p id="text4" class="overlay">
       Commissioned character illustration of Schwarz from the mobile game Arknights.
-      <br><br>
       <a target="_blank" href="images/schwarz.jpg"><img src="images/popout.png"></a>
     </p>
+    <!-- img 5 -->
     <img id="img5" class="lowdesat" src="images/siege.png">
     <p id="text5" class="overlay">
       Commissioned character illustration of Siege from the mobile game Arknights.
-      <br><br>
       <a target="_blank" href="images/siege.png"><img src="images/popout.png"></a>
     </p>
+    <!-- img 6 -->
     <img id="img6" class="lowdesat" src="images/skadi.png">
     <p id="text6" class="overlay">
       Commissioned character illustration of Skadi and the Doctor from the mobile game Arknights.
-      <br><br>
       <a target="_blank" href="images/skadi.png"><img src="images/popout.png"></a>
     </p>
+    <!-- img 7 -->
     <img id="img7" class="lowdesat" src="images/poinnte.png">
     <p id="text7" class="overlay">
       Original character Poinnte reference art.
-      <br><br>
       <a target="_blank" href="images/poinnte.png"><img src="images/popout.png"></a>
     </p>
+    <!-- img 8, this is an embedded video -->
     <iframe id="img8" src="https://www.youtube.com/embed/m04RbBZEGYY?vq=hd1&modestbranding=1&color=white"></iframe>
+    <!-- img 9, this is an embedded video -->
     <iframe id="img9" src="https://www.youtube.com/embed/zi7XNlo0V_k?vq=hd1&modestbranding=1&color=white"></iframe>
+    <!-- img 10, this is an embedded webpage -->
     <iframe class="desat" id="img10" src="https://meghanlandry.github.io/balance/balance.html" autoplay></iframe>
+    <!-- img 11, these are images in a flexbox-->
     <div id=img11>
       <img src="images/scrivener.png">
       <img src="images/quicksilver.jpg">
@@ -87,72 +102,59 @@
     </div>
     <p id="text11" class="overlay">
       Original character designs.
-      <br><br>
       <a target="_blank" href="images/mix.png"><img src="images/popout.png"></a>
     </p>
+    <!-- img 12 -->
     <img id="img12" class="desat" src="images/Alarissa.jpg">
     <p id="text12" class="overlay">
       Art for a friend of his FFXIV Dragoon Alarissa.
-      <br><br>
       <a target="_blank" href="images/Alarissa.jpg"><img src="images/popout.png"></a>
     </p>
+    <!-- img 13, this is and embedded video -->
     <iframe id="img13" src="https://www.youtube.com/embed/-H2muSLXS_8?vq=hd1&modestbranding=1&color=white"></iframe>
-    <video id="img14" autoplay class="desat" src="images/Fox_Phys.mp4"></video>
+    <!-- img 14, this is an MP4 because smaller than GIF -->
+    <video id="img14" autoplay loop src="images/Fox_Phys.mp4"></video>
     <p id="text14" class="overlay">
       Original character X Y movement demo animation.
-      <br><br>
       <a target="_blank" href="images/Fox_Phys.mp4"><img src="images/popout.png"></a>
     </p>
+    <!--This button expands an area with more images than are immediately shown on the page-->
+    <!-- controlled with javascript -->
+    <button id="more"> show more </button>
   </section>
-  <br>
+
+  <!-- This is an about section -->
   <section class="about" id="about">
 
-    <p>
-      I am a freelance 2D digital character artist and designer and a Digital Media Art student at San Jose State University.<br>
-      I've drawn and loved creating art all my life but have begun to take digital illustration more seriously over the past few years. <br>
-      Alongside continually working to improve my skills, I've recently been pursuing ways to augment my illustrations, presently as 2.5D animation through Live2D, After Effects, and other digital tools.<br>
+    <img id="intropic" src="images/moonbloom.jpg">
+    <p id="intro">
+      I am a freelance 2D digital character artist and designer and a Digital Media Art student at San Jose State University.
+      I've drawn and loved creating art for a really long time but have begun to take digital illustration more seriously over the past few years.
+      Alongside continually working to improve my basic illustration skills, I've recently been pursuing ways to augment my 2D drawings, presently through 2.5D animation using Live2D, After Effects, and other digital tools.<br>
       <br>
       <br>
-
     </p>
   </section>
   <br>
+  <!-- This section has contact information -->
   <section class="contact" id="contact">
     <p>
-      Email me at meghan.e.landry@gmail.com
+      email meghan.e.landry@gmail.com
       <br>
-      Or contact me on any of the sporadically checked and updated social media listed below.
+      discord Meghan#0857
+      </p>
+      <br><br><br>
+      <!-- social media icons by Shawn Rubel https://www.vecteezy.com/vector-art/95039-free-social-media-icons -->
+      <div id="socials">
+        <a target="_blank" href="https://twitter.com/mmmegh1"><img src="images/Twitter_1.png">
+        <a target="_blank" href="https://www.tumblr.com/blog/mmmegh"><img src="images/Tumblr_1.png">
+        <a target="_blank" href="https://www.instagram.com/mmmeghela/"><img src="images/Instagram_1.png">
+        <a target="_blank" href="https://www.deviantart.com/mmmegh"><img src="images/Deviantart_1.png">
+      </div>
 
-    </p>
   </section>
-
-  <section class="footer" id="contact">
-
-  </section>
-  <!-- This doesn't work unless it's inline because the page hasn't loaded and it can't get the ID values. Don't know how to make it work from a separate file. :( -->
-  <!-- Code from here: https://www.w3schools.com/howto/howto_js_navbar_sticky.asp -->
-  <script>
-    // When the user scrolls the page, execute myFunction
-    window.onscroll = function() {
-      stickyNav()
-    };
-
-    // Get the navbar
-    var navbar = document.getElementById("navbar");
-
-    // Get the offset position of the navbar
-    var sticky = navbar.offsetTop;
-
-    // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
-    function stickyNav() {
-      if (window.pageYOffset >= sticky) {
-        navbar.classList.add("sticky")
-      } else {
-        navbar.classList.remove("sticky");
-      }
-    }
-  </script>
-
+  <!-- This section is for end of page aesthetics -->
+  <section class="footer" id="footer">
 </body>
 
 </html>

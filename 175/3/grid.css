@@ -19,6 +19,7 @@ div.nav { /*sets position to below immediate viewframe*/
 ul {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 li {
@@ -27,9 +28,14 @@ li {
 }
 
 a {
-  flex: 1;
+  letter-spacing: 1.8px;
   color: #f6e0e0;
   text-decoration: none;
+}
+
+#icon {
+  margin: -25% 10%;
+  height: 60px;
 }
 
 .sticky {
@@ -54,6 +60,8 @@ a {
 body {
   display: grid;
   grid-template: 100vh minmax(min-content, max-content)/ repeat(3, 1fr);
+  font-family: 'Cormorant', serif;
+  font-size: 22px;
 }
 
 /*main page styling*/
@@ -77,6 +85,8 @@ header {
 }
 
 header > h1 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 40px;
   color: #3d3f4e;
 }
 
@@ -107,15 +117,51 @@ section.art {
     "i10 i10 i14"
     "i7 i13 i13"
     "i7 i13 i13"
+    ". b ."
     "i5 i5 i12"
     "i2 i2 i12"
     "i6 i3 i4"
     "i6 i3 i4";
-  grid-template-rows: 10vh;
-  grid-auto-rows: 40vh;
+  grid-template-rows: 10vh repeat(12, 40vh) 30px repeat(4, 0);
   grid-template-columns: repeat(3, 1fr);
   padding: 0 5% 0 5%;
   font-size: 2vh;
+}
+
+section.artexpand { /*I know this is the messiest, most unnecessary code ever, but I am so tired of messing with this part*/
+  box-sizing: border-box;
+  grid-column: 1 / 4;
+  grid-row: 2 / 3;
+  display: grid;
+  width: 100%;
+  justify-content: center;
+  grid-template-areas:
+    "t t t"
+    "i1 i1 i1"
+    "i1 i1 i1"
+    "i11 i11 i11"
+    "i11 i11 i11"
+    "i9 i9 i9"
+    "i9 i9 i9"
+    "i8 i8 i8"
+    "i8 i8 i8"
+    "i10 i10 i14"
+    "i10 i10 i14"
+    "i7 i13 i13"
+    "i7 i13 i13"
+    "i5 i5 i12"
+    "i2 i2 i12"
+    "i6 i3 i4"
+    "i6 i3 i4";
+  grid-template-rows: 10vh repeat(12, 40vh) repeat(4, 30vh);
+  grid-template-columns: repeat(3, 1fr);
+  padding: 0 5% 0 5%;
+  font-size: 2vh;
+}
+
+.hidebutton {
+  width: 0px;
+  opacity: 0 !important;
 }
 
 /*desat high contrast images to avoid unwanted clash*/
@@ -128,7 +174,8 @@ section.art {
 }
 
 /*popout icon styling*/
-section.art > p > a > img {
+section.art > p > a > img,
+section.artexpand > p > a > img {
   width: 4vh;
   float: right;
 }
@@ -145,14 +192,14 @@ p.overlay {
 }
 
 /*grid image styling*/
-#img1, #img3, #img4, #img5, #img6, #img7, #img12, #img14 {
+#img1, #img3, #img4, #img5, #img6, #img7, #img14 {
   position: relative;
   object-fit: cover;
   width: 100%;
   max-height: 100%;
 }
 
-#img6 {
+#img6, #img12, #img7 {
   position: relative;
   object-fit: cover;
   height: 100%;
@@ -254,32 +301,66 @@ p.overlay {
   object-fit: cover;
 }
 
+#more {
+  position: relative;
+  z-index: 20;
+  grid-area: b;
+  margin: 0 30% 0 30%;
+}
+
 /*about section styling*/
 
 section.about {
-  margin-top: 10vh;
+  margin: 10vh 20% 0 20%;
   height: 100vh;
   grid-column: 1 / 4;
   grid-row: 3 / 4;
+  display: flex;
 }
 
-section.about > p {
-  padding: 5% 20% 0 20%;
+#intro {
+  color: #3d3f4e;
+  text-align: justify;
+  font-size: 2.5vh;
+  letter-spacing: .8px;
+  width: 50%;
+  padding-top: 35%;
 }
+
+#intropic {
+  object-fit: contain;
+  width: 50%;
+}
+
+
 
 /*contact section styling*/
 
 section.contact {
-  margin-top: 10vh;
+  margin-top: 50%;
   height: 100vh;
   grid-column: 1 / 4;
   grid-row: 4 / 5;
 }
 
 section.contact > p {
-  padding: 5% 20% 0 20%;
+  margin: 5% 0 0 0;
+  font-size: 2.5vh;
+  letter-spacing: .8px;
+  word-spacing: 50px;
+  text-align: center;
 }
 
+#socials {
+  width: 100%;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
+#socials > a > img {
+  width: 30%;
+}
 /*footer section styling*/
 
 footer {
@@ -289,21 +370,63 @@ footer {
 
 @media all and (max-width: 800px) {
   section.art {
-    grid-auto-rows: 20vh;
+    margin: 0 !important;
+    padding: 0 !important;
+    grid-template-rows: 10vh repeat(8, 20vh) 10vh repeat(6, 0vh) !important;
+    grid-template-columns: 100vw;
+    grid-template-areas:
+      "t"
+      "i1 "
+      "i11"
+      "i9"
+      "i8"
+      "i10"
+      "i14"
+      "i7"
+      "i13"
+      "b"
+      "i5"
+      "i12"
+      "i2"
+      "i6"
+      "i3"
+      "i4" !important;
   }
 
-  #img1, #img3, #img4, #img7, #img12 {
-    height: 100% !important;
+  section.artexpand {
+    margin: 0 !important;
+    padding: 0 !important;
+    grid-template-rows: 10vh repeat(8, 20vh) repeat(6, 15vh) !important;
+    grid-template-columns: 100vw;
+    grid-template-areas:
+      "t"
+      "i1 "
+      "i11"
+      "i9"
+      "i8"
+      "i10"
+      "i14"
+      "i7"
+      "i13"
+      "i5"
+      "i12"
+      "i2"
+      "i6"
+      "i3"
+      "i4" !important;
+  }
+
+  #img5, #img1, #img3, #img7, #img12, #img4, #img14 {
     max-width: 100% !important;
+    height: 100% !important;
   }
-
-  #img1 {
-    padding-top: 15% !important;
-  }
-
-  #img8, #img9, #img10, #img13 {
+  #img8, #img9, #img10, #img12, #img13 {
     width: 100% !important;
     max-height: 100% !important;
+  }
+
+  section.about {
+    margin: 10vh 2% 0 2%;
   }
 
 }
