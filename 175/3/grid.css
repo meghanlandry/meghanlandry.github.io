@@ -97,6 +97,8 @@ section.art {
     "t t t"
     "i1 i1 i1"
     "i1 i1 i1"
+    "i11 i11 i11"
+    "i11 i11 i11"
     "i9 i9 i9"
     "i9 i9 i9"
     "i5 i5 i7"
@@ -106,7 +108,8 @@ section.art {
     "i8 i8 i8"
     "i8 i8 i8"
     "i10 i10 i10"
-    "i10 i10 i10";
+    "i10 i10 i10"
+    ;
   grid-template-rows: 10vh;
   grid-auto-rows: 40vh;
   grid-template-columns: repeat(3, 1fr);
@@ -196,8 +199,8 @@ p.overlay {
 #img3 {
   grid-area: i3;
   object-fit: cover;
-  height: 100%;
-  max-width: 100%;
+  width: 100%;
+  max-height: 100%;
 }
 
 #text3 {
@@ -215,8 +218,8 @@ p.overlay {
 #img4 {
   grid-area: i4;
   object-fit: cover;
-  height: 100%;
-  max-width: 100%;
+  width: 100%;
+  max-height: 100%;
 }
 
 #text4 {
@@ -312,6 +315,35 @@ p.overlay {
   height: 100%;
 }
 
+#img11 {
+  grid-area: i11;
+  object-fit: cover;
+  max-width: 100% !important;
+  max-height: 100%;
+  display: flex;
+}
+
+#img11 > img {
+  box-sizing: border-box;
+  padding: 1px;
+  height: auto;
+  width: 33.33%;
+  display: block;
+  object-fit: cover;
+}
+
+#text11 {
+    grid-area: i11;
+}
+
+#img11:hover ~ #text11  {
+  opacity: 2;
+}
+
+#img11 ~ #text11:hover  {
+  opacity: 2;
+}
+
 video:hover {
   cursor: pointer;
 }
@@ -350,9 +382,10 @@ footer {
 }
 
 @media all and (max-width: 800px) {
-  #img1 #img7 {
+  #img1 #img3 #img4 #img7 {
     height: 100% !important;
     max-width: 100% !important;
+    border: 10px dotted;
   }
 
   #img1 {
@@ -368,14 +401,19 @@ footer {
     grid-template-areas:
       "t t t"
       "i1 i1 i1"
+      "i1 i1 i1"
+      "i11 i11 i11"
+      "i11 i11 i11"
       "i9 i9 i9"
       "i5 i5 i7"
       "i2 i2 i7"
       "i6 i3 i4"
       "i6 i3 i4"
       "i8 i8 i8"
-      "i10 i10 i10" !important;
-    grid-auto-rows: 25vh;
+      "i10 i10 i10"
+ !important;
+    grid-auto-rows: 20vh;
+    border: 10px dotted;
 
 
   }
