@@ -61,10 +61,8 @@ body {
 div.landing {
   grid-column: 1 / 4;
   grid-row: 1 / 2;
-  background-image: url("images/demo_background.png");
-  background-repeat: no-repeat;
-  background-position: center 85%;
-  background-size: 165vh;
+  background: url("images/demo_background.png") center 85% no-repeat, url("images/moon_demo.png") center -60% no-repeat;
+  background-size: 165vh, 80vh;
 }
 
 /*title styling*/
@@ -110,7 +108,7 @@ section.art {
     "i10 i10 i10"
     "i10 i10 i10";
   grid-template-rows: 10vh;
-  grid-auto-rows: 50vh;
+  grid-auto-rows: 40vh;
   grid-template-columns: repeat(3, 1fr);
   padding: 0 5% 0 5%;
   font-size: 2vh;
@@ -352,7 +350,7 @@ footer {
 }
 
 @media all and (max-width: 800px) {
-  #img1 #img9 #img7 {
+  #img1 #img7 {
     height: 100% !important;
     max-width: 100% !important;
   }
@@ -361,16 +359,25 @@ footer {
     padding-top: 15% !important;
   }
 
+  #img8 #img9 #img10 {
+    width: 100% !important;
+    max-height: 100% !important;
+  }
+
   section.art {
     grid-template-areas:
+      "t t t"
       "i1 i1 i1"
       "i9 i9 i9"
       "i5 i5 i7"
       "i2 i2 i7"
       "i6 i3 i4"
       "i6 i3 i4"
-      "i8 i8 i8";
+      "i8 i8 i8"
+      "i10 i10 i10" !important;
     grid-auto-rows: 25vh;
+
+
   }
 
 }
