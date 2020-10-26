@@ -101,15 +101,16 @@ section.art {
     "i11 i11 i11"
     "i9 i9 i9"
     "i9 i9 i9"
-    "i5 i5 i7"
-    "i2 i2 i7"
-    "i6 i3 i4"
-    "i6 i3 i4"
     "i8 i8 i8"
     "i8 i8 i8"
-    "i10 i10 i10"
-    "i10 i10 i10"
-    ;
+    "i10 i10 i14"
+    "i10 i10 i14"
+    "i7 i13 i13"
+    "i7 i13 i13"
+    "i5 i5 i12"
+    "i2 i2 i12"
+    "i6 i3 i4"
+    "i6 i3 i4";
   grid-template-rows: 10vh;
   grid-auto-rows: 40vh;
   grid-template-columns: repeat(3, 1fr);
@@ -117,6 +118,7 @@ section.art {
   font-size: 2vh;
 }
 
+/*desat high contrast images to avoid unwanted clash*/
 .desat {
   filter: saturate(50%);
 }
@@ -125,16 +127,13 @@ section.art {
   filter: saturate(70%)
 }
 
-section.art > img {
-  box-sizing: border-box;
-  padding: 1px !important;
-}
-
+/*popout icon styling*/
 section.art > p > a > img {
   width: 4vh;
   float: right;
 }
 
+/*text overlay styling*/
 p.overlay {
   opacity: 0;
   color: #F6E0E0 !important;
@@ -145,207 +144,114 @@ p.overlay {
   justify-content: flex-end;
 }
 
-#img1 {
+/*grid image styling*/
+#img1, #img3, #img4, #img5, #img6, #img7, #img12, #img14 {
   position: relative;
-  box-sizing: border-box;
-  grid-area: i1;
   object-fit: cover;
   width: 100%;
   max-height: 100%;
-}
-
-#text1 {
-  grid-area: i1;
-}
-
-#img1:hover ~ #text1  {
-  opacity: 1;
-}
-
-#img1 ~ #text1:hover  {
-  opacity: 1;
-}
-
-#img2 {
-  grid-area: i2;
-  object-fit: cover;
-  max-width: 100% !important;
-  max-height: 100%;
-  display: flex;
-}
-
-#img2 > img {
-  box-sizing: border-box;
-  padding: 1px;
-  height: auto;
-  width: 33.33%;
-  display: block;
-  object-fit: cover;
-}
-
-#text2 {
-    grid-area: i2;
-}
-
-#img2:hover ~ #text2  {
-  opacity: 2;
-}
-
-#img2 ~ #text2:hover  {
-  opacity: 2;
-}
-
-
-#img3 {
-  grid-area: i3;
-  object-fit: cover;
-  width: 100%;
-  max-height: 100%;
-}
-
-#text3 {
-    grid-area: i3;
-}
-
-#img3:hover ~ #text3  {
-  opacity: 1;
-}
-
-#img3 ~ #text3:hover  {
-  opacity: 1;
-}
-
-#img4 {
-  grid-area: i4;
-  object-fit: cover;
-  width: 100%;
-  max-height: 100%;
-}
-
-#text4 {
-  grid-area: i4;
-}
-
-#img4:hover ~ #text4  {
-  opacity: 1;
-}
-
-#img4 ~ #text4:hover  {
-  opacity: 1;
-}
-
-#img5 {
-  grid-area: i5;
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
-}
-
-#text5 {
-  grid-area: i5;
-}
-
-#img5:hover ~ #text5  {
-  opacity: 1;
-}
-
-#img5 ~ #text5:hover  {
-  opacity: 1;
 }
 
 #img6 {
-  grid-area: i6;
+  position: relative;
   object-fit: cover;
+  height: 100%;
   max-width: 100%;
+}
+
+#img8, #img9, #img10, #img13 {
+  border: none;
+  object-fit: cover;
+  width: 100%;
   height: 100%;
 }
 
-#text6 {
+/*grid fill*/
+#img1, #text1 {
+  grid-area: i1;
+}
+
+#img2, #text2 {
+  grid-area: i2;
+}
+
+#img3, #text3 {
+  grid-area: i3;
+}
+
+#img4, #text4 {
+  grid-area: i4;
+}
+
+#img5, #text5 {
+  grid-area: i5;
+}
+
+#img6, #text6 {
   grid-area: i6;
 }
 
-#img6:hover ~ #text6  {
-  opacity: 1;
-}
-
-#img6 ~ #text6:hover  {
-  opacity: 1;
-}
-
-#img7 {
+#img7, #text7 {
   grid-area: i7;
-  object-fit: cover;
-  width: 100%;
-  max-height: 100%;
-}
-
-#text7 {
-  grid-area: i7;
-}
-
-#img7:hover ~ #text7  {
-  opacity: 1;
-}
-
-#img7 ~ #text7:hover  {
-  opacity: 1;
 }
 
 #img8 {
-  border: none;
   grid-area: i8;
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
 }
 
 #img9 {
-  border: none;
   grid-area: i9;
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
 }
 
 #img10 {
-  border: none;
   grid-area: i10;
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
 }
 
-#img11 {
+#img11, #text11 {
   grid-area: i11;
+}
+
+#img12, #text12 {
+  grid-area: i12;
+}
+
+#img13 {
+  grid-area: i13;
+}
+
+#img14, #text14 {
+  grid-area: i14;
+}
+
+/*show image text overlays on mouseover*/
+#img1:hover ~ #text1, #img1 ~ #text1:hover,
+#img2:hover ~ #text2, #img2 ~ #text2:hover,
+#img3:hover ~ #text3, #img3 ~ #text3:hover,
+#img4:hover ~ #text4, #img4 ~ #text4:hover,
+#img5:hover ~ #text5, #img5 ~ #text5:hover,
+#img6:hover ~ #text6, #img6 ~ #text6:hover,
+#img7:hover ~ #text7, #img7 ~ #text7:hover,
+#img11:hover ~ #text11, #img11 ~ #text11:hover,
+#img12:hover ~ #text12, #img12 ~ #text12:hover,
+#img14:hover ~ #text14, #img14 ~ #text14:hover  {
+  opacity: 1;
+}
+
+/*flexbox specific styling*/
+#img2, #img11 {
   object-fit: cover;
   max-width: 100% !important;
   max-height: 100%;
   display: flex;
 }
 
-#img11 > img {
+#img2 > img, #img11 > img {
   box-sizing: border-box;
   padding: 1px;
   height: auto;
   width: 33.33%;
   display: block;
   object-fit: cover;
-}
-
-#text11 {
-    grid-area: i11;
-}
-
-#img11:hover ~ #text11  {
-  opacity: 2;
-}
-
-#img11 ~ #text11:hover  {
-  opacity: 2;
-}
-
-video:hover {
-  cursor: pointer;
 }
 
 /*about section styling*/
@@ -382,40 +288,22 @@ footer {
 }
 
 @media all and (max-width: 800px) {
-  #img1 #img3 #img4 #img7 {
+  section.art {
+    grid-auto-rows: 20vh;
+  }
+
+  #img1, #img3, #img4, #img7, #img12 {
     height: 100% !important;
     max-width: 100% !important;
-    border: 10px dotted;
   }
 
   #img1 {
     padding-top: 15% !important;
   }
 
-  #img8 #img9 #img10 {
+  #img8, #img9, #img10, #img13 {
     width: 100% !important;
     max-height: 100% !important;
-  }
-
-  section.art {
-    grid-template-areas:
-      "t t t"
-      "i1 i1 i1"
-      "i1 i1 i1"
-      "i11 i11 i11"
-      "i11 i11 i11"
-      "i9 i9 i9"
-      "i5 i5 i7"
-      "i2 i2 i7"
-      "i6 i3 i4"
-      "i6 i3 i4"
-      "i8 i8 i8"
-      "i10 i10 i10"
- !important;
-    grid-auto-rows: 20vh;
-    border: 10px dotted;
-
-
   }
 
 }
