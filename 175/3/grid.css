@@ -159,11 +159,6 @@ section.artexpand { /*I know this is the messiest, most unnecessary code ever, b
   font-size: 2vh;
 }
 
-.hidebutton {
-  width: 0px;
-  opacity: 0 !important;
-}
-
 /*desat high contrast images to avoid unwanted clash*/
 .desat {
   filter: saturate(50%);
@@ -220,22 +215,27 @@ p.overlay {
 
 #img2, #text2 {
   grid-area: i2;
+  display: none;
 }
 
 #img3, #text3 {
   grid-area: i3;
+  display: none;
 }
 
 #img4, #text4 {
   grid-area: i4;
+  display: none;
 }
 
 #img5, #text5 {
   grid-area: i5;
+  display: none;
 }
 
 #img6, #text6 {
   grid-area: i6;
+  display: none;s
 }
 
 #img7, #text7 {
@@ -260,6 +260,7 @@ p.overlay {
 
 #img12, #text12 {
   grid-area: i12;
+  display: none;
 }
 
 #img13 {
@@ -308,6 +309,12 @@ p.overlay {
   margin: 0 30% 0 30%;
 }
 
+.hidebutton {
+  width: 0px;
+  height: 0px;
+  opacity: 0 !important;
+}
+
 /*about section styling*/
 
 section.about {
@@ -319,6 +326,7 @@ section.about {
 }
 
 #intro {
+  background-image: linear-gradient(to bottom, white, lightgray);
   color: #3d3f4e;
   text-align: justify;
   font-size: 2.5vh;
@@ -332,12 +340,10 @@ section.about {
   width: 50%;
 }
 
-
-
 /*contact section styling*/
 
 section.contact {
-  margin-top: 50%;
+  margin-top: 100px;
   height: 100vh;
   grid-column: 1 / 4;
   grid-row: 4 / 5;
@@ -361,6 +367,7 @@ section.contact > p {
 #socials > a > img {
   width: 30%;
 }
+
 /*footer section styling*/
 
 footer {
