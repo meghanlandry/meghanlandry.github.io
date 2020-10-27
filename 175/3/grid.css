@@ -129,7 +129,7 @@ section.art {
     "i2 i2 i12"
     "i6 i3 i4"
     "i6 i3 i4";
-  grid-template-rows: 20vh repeat(12, 40vh) 30px repeat(4, 0);
+  grid-template-rows: 15vh repeat(12, 40vh) 30px repeat(4, 0);
   grid-template-columns: repeat(3, 1fr);
   padding: 0 5% 0 5%;
   font-size: 2vh;
@@ -160,7 +160,7 @@ section.artexpand { /*I know this is the messiest, most unnecessary code ever, b
     "i2 i2 i12"
     "i6 i3 i4"
     "i6 i3 i4";
-  grid-template-rows: 20vh repeat(12, 40vh) repeat(4, 30vh);
+  grid-template-rows: 15vh repeat(12, 40vh) repeat(4, 30vh);
   grid-template-columns: repeat(3, 1fr);
   padding: 0 5% 0 5%;
   font-size: 2vh;
@@ -200,6 +200,10 @@ p.overlay {
   width: 100%;
   position: relative;
   text-align: center;
+}
+
+#img14 {
+  object-position: 0 40%;
 }
 
 /*grid image styling*/
