@@ -10,6 +10,7 @@ div.nav { /*sets position to below immediate viewframe*/
   position: absolute;
   font-size: 24px;
   background-color: #aaa;
+  border-bottom: 2px solid #f6e0e0;
   float: left;
   z-index: 5;
   top: 100vh;
@@ -31,6 +32,11 @@ a {
   letter-spacing: 1.8px;
   color: #f6e0e0;
   text-decoration: none;
+}
+
+a:hover {
+  color: #fff;
+  text-shadow: 2px 0 8px #fff;
 }
 
 #icon {
@@ -84,14 +90,14 @@ header {
   flex-direction: column;
 }
 
-header > h1 {
+h1 {
   font-family: 'Dancing Script', cursive;
   font-size: 40px;
   color: #3d3f4e;
   opacity: 0.8;
 }
 
-header > h2 {
+h2 {
   color: #bbb;
 }
 
@@ -185,6 +191,13 @@ p.overlay {
   display: flex;
   align-items: flex-end;
   justify-content: flex-end;
+}
+
+#arttitle {
+  grid-area: t;
+  width: 100%;
+  position: relative;
+  text-align: center;
 }
 
 /*grid image styling*/
