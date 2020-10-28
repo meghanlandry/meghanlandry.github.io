@@ -342,8 +342,8 @@ div.responsiveiframe > iframe {
   position: relative;
   z-index: 10;
   grid-area: b;
-  width: 15vw;
-  left: 25%;
+  /* width: 15vw;
+  left: 25%; */
 }
 
 #more:hover {
@@ -475,9 +475,7 @@ footer {
   }
 
   #more {
-    width: 35vw;
     height: 5vh !important;
-    left: 33vw;
   }
 
   section.artexpand {
