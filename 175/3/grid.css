@@ -1,12 +1,12 @@
 * { /*remove existing styling*/
   margin: 0;
   padding: 0;
-  scroll-behavior: smooth;
+  scroll-behavior: smooth; /*makes jumping between ids less jarring*/
 }
 
 /*navigation bar styling */
 
-div.nav { /*sets position to below immediate viewframe*/
+nav { /*sets position to below immediate viewframe*/
   position: absolute;
   font-size: 24px;
   background-color: #aaa;
@@ -17,41 +17,41 @@ div.nav { /*sets position to below immediate viewframe*/
   width: 100%;
 }
 
-ul {
+nav > ul { /*makes a flexbox for the navbar and centers it, aligns text with the icon by center*/
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-li {
+nav > ul > li { /*removes bullet points*/
   padding: 5px;
   list-style: none;
 }
 
-a {
+nav > ul> li> a { /*text styling for nav links, gets rid of ugly link styling*/
   letter-spacing: 1.8px;
   color: #f6e0e0;
   text-decoration: none;
 }
 
-a:hover {
+a:hover { /* makes nav text white and glowy on hover*/
   color: #fff;
   text-shadow: 2px 0 8px #fff;
 }
 
-#icon {
-  margin: -25% 10%;
+#icon { /*makes icon overlap a bit*/
+  margin: -50% 10%;
   height: 60px;
 }
 
-.sticky {
+.sticky { /*borrowed code controlled and sourced in script.js file, makes navbar fixed when page reaches a certain point by adding this class*/
   position: fixed !important;
   z-index: 20 !important;
   top: 0 !important;
   width: 100%;
 }
 
-.arrow {
+.arrow { /*uses border and padding on an empty div to make an arrow*/
   position: absolute;
   bottom: 2vh;
   left: 48.7vw;
@@ -64,16 +64,16 @@ a:hover {
 
 /*grid setup*/
 
-body {
+body { /*set up a grid, each row is a display length page divided into 3 equal columns*/
   display: grid;
-  grid-template: 100vh minmax(min-content, max-content)/ repeat(3, 1fr);
+  grid-template: 100vh / repeat(3, 1fr);
   font-family: 'Cormorant', serif;
   font-size: 22px;
 }
 
 /*main page styling*/
 
-div.landing {
+div.landing { /*designates first row and all colums for first "page". background is two stacked images, these will eventaully be animated, resizes bgimage responsively based on window height.*/
   grid-column: 1 / 4;
   grid-row: 1 / 2;
   background: url("images/demo_background.png") center 85% no-repeat, url("images/moon_demo.png") center -60% no-repeat;
@@ -82,7 +82,7 @@ div.landing {
 
 /*title styling*/
 
-#landheader {
+#landheader { /*puts title headers into a flexbox, will expand on this later when background is done*/
   margin-top: 2vh;
   line-height: 75%;
   text-align: center;
@@ -91,20 +91,20 @@ div.landing {
   flex-direction: column;
 }
 
-h1 {
+h1 { /*styles font of main title. Opacity will matter more when bg is properly painted. Not totally sold on this font, but fine for now.*/
   font-family: 'Dancing Script', cursive;
   font-size: 40px;
   color: #3d3f4e;
   opacity: 0.8;
 }
 
-h2 {
+h2 { /*styling for second line of header, just a decoration now, but probably will have better text when I can*/
   color: #bbb;
 }
 
 /*gallery section styling*/
 
-section.art {
+section.art { /*styling for gallery section, used grid template area styling because it's easiest to change layout quickly or swap things out (in my opinion) because I want a specific orientation of images. Hides lower section of grid by default and displays button*/
   box-sizing: border-box;
   grid-column: 1 / 4;
   grid-row: 2 / 3;
@@ -136,7 +136,7 @@ section.art {
   font-size: 2vh;
 }
 
-section.artexpand { /*I know this is the messiest, most unnecessary code ever, but I am so tired of messing with this part*/
+section.artexpand { /*I know this is the messiest, most unnecessary code ever, but I am so tired of messing with this part, basically this just gets rid of button and allows lower grid spaces to have height when see more button is pressed, really awkward, I know, but it works. The above class is swapped with this one with javascript on button blick*/
   box-sizing: border-box;
   grid-column: 1 / 4;
   grid-row: 2 / 3;
@@ -176,14 +176,14 @@ section.artexpand { /*I know this is the messiest, most unnecessary code ever, b
   filter: saturate(70%)
 }
 
-/*popout icon styling*/
+/*popout icon styling, this is not very noticeable and needs work*/
 section.art > p > a > img,
 section.artexpand > p > a > img {
   width: 4vh;
   float: right;
 }
 
-/*text overlay styling*/
+/*text overlay styling, makes a gradient from bottom of image when hovered over to show some info about the image, realize the lack of symmetry with video items is weird, would like to fix that eventually, but right now it would make videos unplayable. Opactiy is 0 so it's hidden unless hovered*/
 p.overlay {
   opacity: 0;
   color: #F6E0E0 !important;
@@ -194,6 +194,7 @@ p.overlay {
   justify-content: flex-end;
 }
 
+/* makes flexboxes work with breakpoints by putting it in a div*/
 div.responsiveiframe {
   border: none;
   position: relative;
@@ -201,6 +202,7 @@ div.responsiveiframe {
   overflow: hidden;
 }
 
+/*position can be absolute because container is relative and maintains place in grid*/
 div.responsiveiframe > iframe {
   border: none;
   position: absolute;
@@ -210,6 +212,7 @@ div.responsiveiframe > iframe {
   height: 100%;
 }
 
+/*styling for title of this page, same as main title but designates grid area*/
 #arttitle {
   line-height: 75%;
   margin-top: 10vh;
@@ -219,11 +222,12 @@ div.responsiveiframe > iframe {
   text-align: center;
 }
 
+/*object fit causes view to center over abdomen for this image, changes to face view*/
 #img14 {
   object-position: 0 40%;
 }
 
-/*grid image styling*/
+/*grid image styling, object fit lets things line up nicely with the grid boxes, width and height prevents blank spaces when resizing window*/
 #img1, #img3, #img4, #img5, #img6, #img7, #img14 {
   position: relative;
   object-fit: cover;
@@ -231,6 +235,7 @@ div.responsiveiframe > iframe {
   max-height: 100%;
 }
 
+/*same as above except for horizontal items*/
 #img6, #img12, #img7 {
   position: relative;
   object-fit: cover;
@@ -238,6 +243,7 @@ div.responsiveiframe > iframe {
   max-width: 100%;
 }
 
+/*styling for iframes*/
 #img8, #img9, #img10, #img13 {
   border: none;
   object-fit: cover;
@@ -245,7 +251,7 @@ div.responsiveiframe > iframe {
   height: 100%;
 }
 
-/*grid fill*/
+/*designates grid areas*/
 #img1, #text1 {
   grid-area: i1;
 }
@@ -316,7 +322,7 @@ div.responsiveiframe > iframe {
   opacity: 1;
 }
 
-/*flexbox specific styling*/
+/*flexbox specific styling for the image triads*/
 #img2, #img11 {
   object-fit: cover;
   max-width: 100% !important;
@@ -324,16 +330,15 @@ div.responsiveiframe > iframe {
   display: flex;
 }
 
+/*flexbox styling for images within the image triads*/
 #img2 > img, #img11 > img {
   box-sizing: border-box;
-  padding: 1px;
   height: auto;
-  width: 33.33%;
-  display: block;
+  width: 33.33%; /*it feels like this is wrong*/
   object-fit: cover;
 }
 
-/*see more button styling*/
+/*see more button styling, would like to change width, but it ignores sizing and messing with padding/margins screws up the page because of total being greater than 100%, unsure how to manage this*/
 #more {
   font-family: 'Cormorant', serif;
   letter-spacing: 5px;
@@ -342,15 +347,14 @@ div.responsiveiframe > iframe {
   position: relative;
   z-index: 10;
   grid-area: b;
-  /* width: 15vw;
-  left: 25%; */
 }
 
+/*button is subtle so changed to a pointer to make interactiveness more forward*/
 #more:hover {
   cursor: pointer;
 }
 
-/*added and removed with Javascript to make see more button work*/
+/*added and removed with Javascript to text sections and the button to make see more button work*/
 .hide {
   font-size: 0px;
   width: 0px;
@@ -358,8 +362,7 @@ div.responsiveiframe > iframe {
   opacity: 0 !important;
 }
 
-/*about section styling*/
-
+/*about section styling, same as above more or less, added margins to make text look less sparse*/
 section.about {
   margin: 0 20% 0 20%;
   height: 100vh;
@@ -367,11 +370,13 @@ section.about {
   grid-row: 3 / 4;
 }
 
+/*flexbox for image and text*/
 #abouttext {
   padding-top: 10vh;
   display: flex;
 }
 
+/*styling for about section title*/
 #abouttitle {
   line-height: 75%;
   margin-top: 10vh;
@@ -380,6 +385,7 @@ section.about {
   text-align: center;
 }
 
+/*styling for about section font*/
 #intro {
   background-image: linear-gradient(to bottom, white, lightgray);
   color: #3d3f4e;
@@ -387,23 +393,25 @@ section.about {
   font-size: 2.5vh;
   letter-spacing: .8px;
   width: 50%;
-  padding```-top: 35%;
+  padding-top: 15%;
 }
 
+/*styling for decorative image on about section*/
 #intropic {
   object-fit: contain;
   width: 50%;
 }
 
-/*contact section styling*/
-
+/*contact section styling and grid designation, height at 75 for color block at bottom*/
 section.contact {
   margin-top: 100px;
   height: 75vh !important;
   grid-column: 1 / 4;
   grid-row: 4 / 5;
+  overflow: hidden;
 }
 
+/*styling for contact section text*/
 section.contact > p {
   margin: 5% 0 0 0;
   font-size: 2.5vh;
@@ -413,10 +421,12 @@ section.contact > p {
   text-align: center;
 }
 
+/*unsure if b tag counts as inline styling, but I like it more than font weight */
 b {
   color: gray;
 }
 
+/*title styling like the ones above, probably should make this one class tag with about styling*/
 #contacttitle {
   line-height: 75%;
   margin-top: 10vh;
@@ -425,29 +435,30 @@ b {
   text-align: center;
 }
 
+/*flexbox for social media icons, icons are borrowed and sourced in HTML doc, will make my own after finishing the rest of my page's illustrations*/
 #socials {
   width: 100%;
   display: flex;
   text-align: center;
   justify-content: center;
+
 }
 
+/*resizing icons*/
 #socials > a > img {
-  width: 30%;
+  width: 5vh;
 }
 
 /*footer section styling*/
 
 footer {
-  bottom: 0;
   width: 100%;
-  height: 100%;
+  height: 25vh;
   background-color: #3d3f4e;
   grid-column: 1 / 4;
   grid-row: 5 / 7;
-  height: 25vh !important;
-  object-fit: cover;
-}
+  overflow: hidden;
+  }
 
 @media all and (max-width: 900px) {
   section.art {
@@ -553,11 +564,7 @@ footer {
   }
 
   #socials > a > img {
-    width: 50%;
-    padding-bottom: 10vh;
-  }
-  #socials {
-    flex-wrap: wrap;
+    width: 10vh;
   }
 
 }
