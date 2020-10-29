@@ -46,6 +46,7 @@ a:hover {
 }
 
 /*makes icon overlap a bit*/
+/*This is screwed up on Mac. Looks like I want it to on PC. Unsure about the disparity*/
 #icon {
   margin: -50% 10%;
   height: 60px;
@@ -85,8 +86,15 @@ body {
 div.landing {
   grid-column: 1 / 4;
   grid-row: 1 / 2;
-  background: url("images/demo_background.png") center 85% no-repeat, url("images/moon_demo.png") center -60% no-repeat, url("images/cloud_demo.png") right -40vh top 30vh no-repeat, url("images/cloud_demo2.png") left -40vh top 30vh no-repeat;
-  background-size: 165vh, 80vh, 150vh, 150vh;
+  background:
+    url("images/moon_demo.png") right 43vw bottom 20vh no-repeat,
+    url("images/moon_demo.png") left 43vw bottom 15vh no-repeat,
+    url("images/moon_demo.png") center bottom 8vh no-repeat,
+    url("images/demo_background.png") center 80% no-repeat,
+    url("images/moon_demo.png") center -60% no-repeat,
+    url("images/cloud_demo.png") right -40vh top 30vh no-repeat,
+    url("images/cloud_demo2.png") left -40vh top 30vh no-repeat;
+  background-size: 12vh, 8vh, 10vh, 170vh, 80vh, 150vh, 150vh;
 }
 
 /*title styling*/
@@ -102,7 +110,7 @@ div.landing {
 
 /*styles font of main title. Opacity will matter more when bg is properly painted. Not totally sold on this font, but fine for now.*/
 h1 {
-  font-family: 'Dancing Script', cursive;
+  font-family: 'Dancing Script', serif;
   font-size: 40px;
   color: #3d3f4e;
   opacity: 0.8;
