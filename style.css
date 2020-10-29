@@ -1,5 +1,5 @@
+/*remove existing styling*/
 * {
-  /*remove existing styling*/
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
@@ -91,8 +91,8 @@ div.landing {
     url("images/moon_demo.png") right 43vw bottom 20vh no-repeat,
     url("images/moon_demo.png") left 43vw bottom 15vh no-repeat,
     url("images/moon_demo.png") center bottom 8vh no-repeat,
-    url("images/demo_background.png") center 80% no-repeat,
-    url("images/moon_demo.png") center -60% no-repeat,
+    url("images/demo_background.png") center 11vh no-repeat,
+    url("images/moon_demo.png") center -60vh no-repeat,
     url("images/cloud_demo.png") right -40vh top 30vh no-repeat,
     url("images/cloud_demo2.png") left -40vh top 30vh no-repeat;
   background-size: 12vh, 8vh, 10vh, 170vh, 80vh, 150vh, 150vh;
@@ -126,8 +126,7 @@ h2 {
 /*styling for gallery section, used grid template area styling because it's easiest to change layout quickly or swap things out (in my opinion) because I want a specific orientation of images. Hides lower section of grid by default and displays button*/
 section.art {
   box-sizing: border-box;
-  grid-column: 1 / 4;
-  grid-row: 2 / 3;
+  grid-area: 2 / 1 / 3 / 4;
   display: grid;
   width: 100%;
   justify-content: center;
@@ -159,8 +158,7 @@ section.art {
 /*I know this is the messiest, most unnecessary code ever, but I am so tired of messing with this part, basically this just gets rid of button and allows lower grid spaces to have height when see more button is pressed, really awkward, I know, but it works. The above class is swapped with this one with javascript on button blick*/
 section.artexpand {
   box-sizing: border-box;
-  grid-column: 1 / 4;
-  grid-row: 2 / 3;
+  grid-area: 2 / 1 / 3 / 4;
   display: grid;
   width: 100%;
   justify-content: center;
@@ -388,8 +386,7 @@ div.responsiveiframe>iframe {
 section.about {
   margin: 0 20% 0 20%;
   height: 100vh;
-  grid-column: 1 / 4;
-  grid-row: 3 / 4;
+  grid-area: 3 / 1 / 4 / 4;
   overflow: hidden;
 }
 
@@ -431,8 +428,7 @@ section.about {
 section.contact {
   margin-top: 100px;
   height: 75vh;
-  grid-column: 1 / 4;
-  grid-row: 4 / 5;
+  grid-area: 4 / 1 / 5 / 4;
   overflow: hidden;
 }
 
@@ -478,8 +474,7 @@ footer {
   width: 100%;
   height: 25vh;
   background-color: #3d3f4e;
-  grid-column: 1 / 4;
-  grid-row: 5 / 7;
+  grid-area: 5 / 1 / 7 / 4;
   overflow: hidden;
 }
 
