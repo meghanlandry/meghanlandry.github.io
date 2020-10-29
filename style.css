@@ -92,7 +92,7 @@ div.landing {
     url("images/moon_demo.png") left 43vw bottom 15vh no-repeat,
     url("images/moon_demo.png") center bottom 8vh no-repeat,
     url("images/demo_background.png") center 11vh no-repeat,
-    url("images/moon_demo.png") center -60vh no-repeat,
+    url("images/moon_demo.png") center -30vh no-repeat,
     url("images/cloud_demo.png") right -40vh top 30vh no-repeat,
     url("images/cloud_demo2.png") left -40vh top 30vh no-repeat;
   background-size: 12vh, 8vh, 10vh, 170vh, 80vh, 150vh, 150vh;
