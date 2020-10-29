@@ -479,12 +479,18 @@ footer {
 }
 
 /* individual art page template */
+/* page is beyond 100vw, can't figure out why. Cropped with overflow tag, but nav and content are not centered and not aligned with other page */
 main.artpage {
   font-size: 2.5vh;
-  width: 100vw;
+  width: 100vw !important;
   display: grid;
-  grid-template: auto;
+  grid-auto-rows: auto;
+  grid-template-columns: 100vw;
   overflow-x: hidden;
+}
+
+nav.artpagenav {
+  width: 100vw !important;
 }
 
 header.individualtitle {
