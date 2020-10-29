@@ -542,7 +542,7 @@ p.supplmentalimagetext {
 huge grid section is here twice for the same reason as above, to be controlled with the button
 positioning section is to make sure the faces are showing when the window gets resized
 rest is just minor size styling*/
-@media all and (max-width: 900px) {
+@media all and (max-width: 800px) {
   section.art {
     margin: 0 !important;
     padding: 0 !important;
@@ -636,8 +636,29 @@ rest is just minor size styling*/
     object-position: 0 18%;
   }
 
+  /* changes about section to column and stlyes around it. */
   section.about {
     margin: 0 2% 0 2%;
+    height: 115vh;
+  }
+
+  #abouttext {
+    flex-direction: column;
+    width: 100%;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  #intro {
+    width: 100%;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  #intropic {
+    padding-top: 20px;
+    object-fit: contain;
+    width: 100vw;
   }
 
   .arrow {
