@@ -38,7 +38,7 @@ header {
   z-index: 2;
 }
 
-h1.title>a {
+h1.title > a {
   font-size: 50px;
   color: #3d3f4e;
 }
@@ -91,7 +91,7 @@ a {
   transform: rotate(45deg);
 }
 
-main#gallery {
+#gallery {
   padding-top: 15%;
   text-align: center;
 }
@@ -104,14 +104,14 @@ main#gallery {
 
 /* breakpoints */
 @media all and (min-width: 800px) {
-  section>img {
+  section > img {
     object-fit: cover;
     height: 50vh;
   }
 }
 
 @media all and (max-width: 800px) {
-  section>img {
+  section > img {
     object-fit: cover;
     height: 35vh;
   }

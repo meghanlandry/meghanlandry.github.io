@@ -1,12 +1,14 @@
-* { /*remove existing styling*/
+* {
+  /*remove existing styling*/
   margin: 0;
   padding: 0;
-  scroll-behavior: smooth; /*makes jumping between ids less jarring*/
+  scroll-behavior: smooth;
+  /*makes jumping between ids less jarring*/
 }
 
 /*navigation bar styling */
-
-nav { /*sets position to below immediate viewframe*/
+/*sets position to below immediate viewframe*/
+nav {
   position: absolute;
   font-size: 24px;
   background-color: #aaa;
@@ -17,41 +19,48 @@ nav { /*sets position to below immediate viewframe*/
   width: 100%;
 }
 
-nav > ul { /*makes a flexbox for the navbar and centers it, aligns text with the icon by center*/
+/*makes a flexbox for the navbar and centers it, aligns text with the icon by center*/
+nav>ul {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-nav > ul > li { /*removes bullet points*/
+/*removes bullet points*/
+nav>ul>li {
   padding: 5px;
   list-style: none;
 }
 
-nav > ul> li> a { /*text styling for nav links, gets rid of ugly link styling*/
+/*text styling for nav links, gets rid of ugly link styling*/
+nav>ul>li>a {
   letter-spacing: 1.8px;
   color: #f6e0e0;
   text-decoration: none;
 }
 
-a:hover { /* makes nav text white and glowy on hover*/
+/* makes nav text white and glowy on hover*/
+a:hover {
   color: #fff;
   text-shadow: 2px 0 8px #fff;
 }
 
-#icon { /*makes icon overlap a bit*/
+/*makes icon overlap a bit*/
+#icon {
   margin: -50% 10%;
   height: 60px;
 }
 
-.sticky { /*borrowed code controlled and sourced in script.js file, makes navbar fixed when page reaches a certain point by adding this class*/
+/*borrowed code controlled and sourced in script.js file, makes navbar fixed when page reaches a certain point by adding this class*/
+.sticky {
   position: fixed !important;
   z-index: 20 !important;
   top: 0 !important;
   width: 100%;
 }
 
-.arrow { /*uses border and padding on an empty div to make an arrow*/
+/*uses border and padding on an empty div to make an arrow*/
+.arrow {
   position: absolute;
   bottom: 2vh;
   left: 48.7vw;
@@ -63,8 +72,8 @@ a:hover { /* makes nav text white and glowy on hover*/
 }
 
 /*grid setup*/
-
-body { /*set up a grid, each row is a display length page divided into 3 equal columns*/
+/*set up a grid, each row is a display length page divided into 3 equal columns*/
+body {
   display: grid;
   grid-template: 100vh / repeat(3, 1fr);
   font-family: 'Cormorant', serif;
@@ -72,8 +81,8 @@ body { /*set up a grid, each row is a display length page divided into 3 equal c
 }
 
 /*main page styling*/
-
-div.landing { /*designates first row and all colums for first "page". background is two stacked images, these will eventaully be animated, resizes bgimage responsively based on window height.*/
+/*designates first row and all colums for first "page". background is two stacked images, these will eventaully be animated, resizes bgimage responsively based on window height.*/
+div.landing {
   grid-column: 1 / 4;
   grid-row: 1 / 2;
   background: url("images/demo_background.png") center 85% no-repeat, url("images/moon_demo.png") center -60% no-repeat;
@@ -81,8 +90,8 @@ div.landing { /*designates first row and all colums for first "page". background
 }
 
 /*title styling*/
-
-#landheader { /*puts title headers into a flexbox, will expand on this later when background is done*/
+/*puts title headers into a flexbox, will expand on this later when background is done*/
+#landheader {
   margin-top: 2vh;
   line-height: 75%;
   text-align: center;
@@ -91,20 +100,22 @@ div.landing { /*designates first row and all colums for first "page". background
   flex-direction: column;
 }
 
-h1 { /*styles font of main title. Opacity will matter more when bg is properly painted. Not totally sold on this font, but fine for now.*/
+/*styles font of main title. Opacity will matter more when bg is properly painted. Not totally sold on this font, but fine for now.*/
+h1 {
   font-family: 'Dancing Script', cursive;
   font-size: 40px;
   color: #3d3f4e;
   opacity: 0.8;
 }
 
-h2 { /*styling for second line of header, just a decoration now, but probably will have better text when I can*/
+/*styling for second line of header, just a decoration now, but probably will have better text when I can*/
+h2 {
   color: #bbb;
 }
 
 /*gallery section styling*/
-
-section.art { /*styling for gallery section, used grid template area styling because it's easiest to change layout quickly or swap things out (in my opinion) because I want a specific orientation of images. Hides lower section of grid by default and displays button*/
+/*styling for gallery section, used grid template area styling because it's easiest to change layout quickly or swap things out (in my opinion) because I want a specific orientation of images. Hides lower section of grid by default and displays button*/
+section.art {
   box-sizing: border-box;
   grid-column: 1 / 4;
   grid-row: 2 / 3;
@@ -136,7 +147,8 @@ section.art { /*styling for gallery section, used grid template area styling bec
   font-size: 2vh;
 }
 
-section.artexpand { /*I know this is the messiest, most unnecessary code ever, but I am so tired of messing with this part, basically this just gets rid of button and allows lower grid spaces to have height when see more button is pressed, really awkward, I know, but it works. The above class is swapped with this one with javascript on button blick*/
+/*I know this is the messiest, most unnecessary code ever, but I am so tired of messing with this part, basically this just gets rid of button and allows lower grid spaces to have height when see more button is pressed, really awkward, I know, but it works. The above class is swapped with this one with javascript on button blick*/
+section.artexpand {
   box-sizing: border-box;
   grid-column: 1 / 4;
   grid-row: 2 / 3;
@@ -177,8 +189,8 @@ section.artexpand { /*I know this is the messiest, most unnecessary code ever, b
 }
 
 /*popout icon styling, this is not very noticeable and needs work*/
-section.art > p > a > img,
-section.artexpand > p > a > img {
+section.art>p>a>img,
+section.artexpand>p>a>img {
   width: 4vh;
   float: right;
 }
@@ -187,7 +199,7 @@ section.artexpand > p > a > img {
 p.overlay {
   opacity: 0;
   color: #F6E0E0 !important;
-  background-image: linear-gradient(to bottom, rgba( 0, 0, 0, 0), rgba( 0, 0, 0, 0), rgba(150, 150, 150, 0.8));
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(150, 150, 150, 0.8));
   position: relative;
   display: flex;
   align-items: flex-end;
@@ -203,10 +215,10 @@ div.responsiveiframe {
 }
 
 /*position can be absolute because container is relative and maintains place in grid*/
-div.responsiveiframe > iframe {
+div.responsiveiframe>iframe {
   border: none;
   position: absolute;
-  top:0;
+  top: 0;
   left: 0;
   width: 100%;
   height: 100%;
@@ -309,16 +321,16 @@ div.responsiveiframe > iframe {
 }
 
 /*show image text overlays on mouseover*/
-#img1:hover ~ #text1, #img1 ~ #text1:hover,
-#img2:hover ~ #text2, #img2 ~ #text2:hover,
-#img3:hover ~ #text3, #img3 ~ #text3:hover,
-#img4:hover ~ #text4, #img4 ~ #text4:hover,
-#img5:hover ~ #text5, #img5 ~ #text5:hover,
-#img6:hover ~ #text6, #img6 ~ #text6:hover,
-#img7:hover ~ #text7, #img7 ~ #text7:hover,
-#img11:hover ~ #text11, #img11 ~ #text11:hover,
-#img12:hover ~ #text12, #img12 ~ #text12:hover,
-#img14:hover ~ #text14, #img14 ~ #text14:hover  {
+#img1:hover~#text1, #img1~#text1:hover,
+#img2:hover~#text2, #img2~#text2:hover,
+#img3:hover~#text3, #img3~#text3:hover,
+#img4:hover~#text4, #img4~#text4:hover,
+#img5:hover~#text5, #img5~#text5:hover,
+#img6:hover~#text6, #img6~#text6:hover,
+#img7:hover~#text7, #img7~#text7:hover,
+#img11:hover~#text11, #img11~#text11:hover,
+#img12:hover~#text12, #img12~#text12:hover,
+#img14:hover~#text14, #img14~#text14:hover {
   opacity: 1;
 }
 
@@ -331,10 +343,11 @@ div.responsiveiframe > iframe {
 }
 
 /*flexbox styling for images within the image triads*/
-#img2 > img, #img11 > img {
+#img2>img, #img11>img {
   box-sizing: border-box;
   height: auto;
-  width: 33.33%; /*it feels like this is wrong*/
+  width: 33.33%;
+  /*it feels like this is wrong*/
   object-fit: cover;
 }
 
@@ -368,12 +381,14 @@ section.about {
   height: 100vh;
   grid-column: 1 / 4;
   grid-row: 3 / 4;
+  overflow: hidden;
 }
 
 /*flexbox for image and text*/
 #abouttext {
   padding-top: 10vh;
   display: flex;
+  justify-content: center;
 }
 
 /*styling for about section title*/
@@ -399,20 +414,21 @@ section.about {
 /*styling for decorative image on about section*/
 #intropic {
   object-fit: contain;
+  height: 60vh;
   width: 50%;
 }
 
 /*contact section styling and grid designation, height at 75 for color block at bottom*/
 section.contact {
   margin-top: 100px;
-  height: 75vh !important;
+  height: 75vh;
   grid-column: 1 / 4;
   grid-row: 4 / 5;
   overflow: hidden;
 }
 
 /*styling for contact section text*/
-section.contact > p {
+section.contact>p {
   margin: 5% 0 0 0;
   font-size: 2.5vh;
   letter-spacing: .8px;
@@ -441,16 +457,14 @@ b {
   display: flex;
   text-align: center;
   justify-content: center;
-
 }
 
-/*resizing icons*/
-#socials > a > img {
+/*resizing social media icons based on screen height*/
+#socials>a>img {
   width: 5vh;
 }
 
 /*footer section styling*/
-
 footer {
   width: 100%;
   height: 25vh;
@@ -458,8 +472,76 @@ footer {
   grid-column: 1 / 4;
   grid-row: 5 / 7;
   overflow: hidden;
-  }
+}
 
+/* individual art page template */
+main.artpage {
+  font-size: 2.5vh;
+  width: 100vw;
+  display: grid;
+  grid-template: auto;
+  overflow-x: hidden;
+}
+
+header.individualtitle {
+  line-height: 75%;
+  margin-top: 10vh;
+  margin-bottom: 5vh;
+  grid-area: 1 / 1 / 2 / 2;
+  width: 100%;
+  position: relative;
+  text-align: center;
+}
+
+div.mainimagecontainer {
+  width: 100vw !important;
+  grid-area: 2 / 1 / 3 / 2;
+}
+
+img.mainimage {
+  object-fit: cover;
+  width: 100%;
+}
+
+p.mainimagedescription {
+  text-align: justify;
+  letter-spacing: 1px;
+  padding: 25px 25vw;
+}
+
+header.progresstitle {
+  padding-top: 5vh;
+  line-height: 75%;
+  grid-area: 4 / 1 / 5 / 2;
+  width: 100%;
+  position: relative;
+  text-align: center;
+}
+
+div.supplementalimagecontainer {
+  width: 100vw !important;
+  height: 100vh;
+  grid-area: 5 / 1 / 6 / 2;
+  display: flex;
+  justify-content: space-around;
+}
+
+div.supplementalimagecontainer>img {
+  max-width: 50vw;
+  object-fit: cover;
+}
+
+p.supplmentalimagetext {
+  grid-area: 6 / 1 / 7 / 2;
+  text-align: justify;
+  letter-spacing: 1px;
+  padding: 25px 25vw;
+}
+
+/*changes orientation of images to be screenwidth horizontal bars
+huge grid section is here twice for the same reason as above, to be controlled with the button
+positioning section is to make sure the faces are showing when the window gets resized
+rest is just minor size styling*/
 @media all and (max-width: 900px) {
   section.art {
     margin: 0 !important;
@@ -516,6 +598,7 @@ footer {
     max-width: 100% !important;
     height: 100% !important;
   }
+
   #img8, #img9, #img10, #img12, #img13 {
     width: 100% !important;
     max-height: 100% !important;
@@ -553,8 +636,6 @@ footer {
     object-position: 0 18%;
   }
 
-
-
   section.about {
     margin: 0 2% 0 2%;
   }
@@ -563,8 +644,17 @@ footer {
     border-width: 0 .5vw .5vw 0;
   }
 
-  #socials > a > img {
+  #socials>a>img {
     width: 10vh;
   }
 
+  /*changes progress images to column display*/
+  div.supplementalimagecontainer {
+    flex-direction: column;
+  }
+
+  div.supplementalimagecontainer>img {
+    max-width: 100vw;
+    width: 100vw;
+  }
 }
