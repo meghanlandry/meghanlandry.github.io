@@ -85,8 +85,8 @@ body {
 div.landing {
   grid-column: 1 / 4;
   grid-row: 1 / 2;
-  background: url("images/demo_background.png") center 85% no-repeat, url("images/moon_demo.png") center -60% no-repeat;
-  background-size: 165vh, 80vh;
+  background: url("images/demo_background.png") center 85% no-repeat, url("images/moon_demo.png") center -60% no-repeat, url("images/cloud_demo.png") right -40vh top 30vh no-repeat, url("images/cloud_demo2.png") left -40vh top 30vh no-repeat;
+  background-size: 165vh, 80vh, 150vh, 150vh;
 }
 
 /*title styling*/
