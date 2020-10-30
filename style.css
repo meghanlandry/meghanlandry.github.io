@@ -479,10 +479,6 @@ footer {
 }
 
 /* individual art page template */
-/* page is beyond 100vw, can't figure out why. Cropped with overflow tag, but nav and content are not centered and not aligned with other page */
-body.why {
-  box-sizing: border-box !important;
-}
 
 main.artpage {
   font-size: 2.5vh;
@@ -498,13 +494,17 @@ nav.artpagenav {
 }
 
 header.individualtitle {
-  line-height: 75%;
+  line-height: 95%;
   margin-top: 10vh;
   margin-bottom: 5vh;
   grid-area: 1 / 1 / 2 / 2;
   width: 100%;
   position: relative;
   text-align: center;
+}
+
+header.individualtitle > h2 {
+  font-size: 20px !important;
 }
 
 div.mainimagecontainer {
@@ -520,6 +520,7 @@ img.mainimage {
 }
 
 p.mainimagedescription {
+  color: #3d3f4e;
   grid-area: 3 / 1 / 4 / 2;
   text-align: justify;
   letter-spacing: 1px;
@@ -535,6 +536,7 @@ header.progresstitle {
   text-align: center;
 }
 
+
 div.supplementalimagecontainer {
   width: 100% !important;
   grid-area: 5 / 1 / 6 / 2;
@@ -548,6 +550,7 @@ div.supplementalimagecontainer>img {
 }
 
 p.supplmentalimagetext {
+  color: #3d3f4e;
   grid-area: 6 / 1 / 7 / 2;
   text-align: justify;
   letter-spacing: 1px;
