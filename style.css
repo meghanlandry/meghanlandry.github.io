@@ -9,6 +9,7 @@
 /*navigation bar styling */
 /*sets position to below immediate viewframe*/
 nav {
+  font-family: 'Cormorant', serif;
   position: absolute;
   font-size: 24px;
   background-color: #aaa;
@@ -47,7 +48,7 @@ a:hover {
 
 /*makes icon overlap a bit*/
 /*This is screwed up on Mac. Looks like I want it to on PC. Unsure about the disparity*/
-#icon {
+.icon {
   margin: -50% 10%;
   height: 60px;
 }
@@ -57,7 +58,7 @@ a:hover {
   position: fixed !important;
   z-index: 20 !important;
   top: 0 !important;
-  width: 100%;
+  width: 100vw;
 }
 
 /*uses border and padding on an empty div to make an arrow*/
@@ -74,7 +75,7 @@ a:hover {
 
 /*grid setup*/
 /*set up a grid, each row is a display length page divided into 3 equal columns*/
-body {
+#mainpage {
   display: grid;
   grid-template: 100vh / repeat(3, 1fr);
   font-family: 'Cormorant', serif;
@@ -85,8 +86,7 @@ body {
 /*designates first row and all colums for first "page". background is two stacked images, these will eventaully be animated, resizes bgimage responsively based on window height.*/
 /*all images for this background are placeholders until illustration is finished*/
 div.landing {
-  grid-column: 1 / 4;
-  grid-row: 1 / 2;
+  grid-area: 1 / 1 / 2 / 4;
   background:
     url("images/moon_demo.png") right 43vw bottom 20vh no-repeat,
     url("images/moon_demo.png") left 43vw bottom 15vh no-repeat,
@@ -480,17 +480,21 @@ footer {
 
 /* individual art page template */
 /* page is beyond 100vw, can't figure out why. Cropped with overflow tag, but nav and content are not centered and not aligned with other page */
+body.why {
+  box-sizing: border-box !important;
+}
+
 main.artpage {
   font-size: 2.5vh;
-  width: 100vw !important;
+  width: 100% !important;
   display: grid;
-  grid-auto-rows: auto;
-  grid-template-columns: 100vw;
-  overflow-x: hidden;
+  grid-auto-rows: max-content;
+  grid-auto-columns: 100vw;
+  /* overflow-x: hidden; */
 }
 
 nav.artpagenav {
-  width: 100vw !important;
+  width: 100% !important;
 }
 
 header.individualtitle {
@@ -504,16 +508,19 @@ header.individualtitle {
 }
 
 div.mainimagecontainer {
-  width: 100vw !important;
+  width: 100% !important;
+  max-height: 100%;
   grid-area: 2 / 1 / 3 / 2;
+  overflow: hidden;
 }
 
 img.mainimage {
-  object-fit: cover;
   width: 100%;
+  object-fit: contain;
 }
 
 p.mainimagedescription {
+  grid-area: 3 / 1 / 4 / 2;
   text-align: justify;
   letter-spacing: 1px;
   padding: 25px 25vw;
@@ -529,15 +536,14 @@ header.progresstitle {
 }
 
 div.supplementalimagecontainer {
-  width: 100vw !important;
-  height: 100vh;
+  width: 100% !important;
   grid-area: 5 / 1 / 6 / 2;
   display: flex;
   justify-content: space-around;
 }
 
 div.supplementalimagecontainer>img {
-  max-width: 50vw;
+  max-width: 50%;
   object-fit: cover;
 }
 
