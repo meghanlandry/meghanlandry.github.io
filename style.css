@@ -359,19 +359,41 @@ div.responsiveiframe>iframe {
 }
 
 /*see more button styling, would like to change width, but it ignores sizing and messing with padding/margins screws up the page because of total being greater than 100%, unsure how to manage this*/
+#buttonwrapper {
+  grid-area: b;
+  display: flex;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 100%;
+  justify-content: center;
+}
+
 #more {
   font-family: 'Cormorant', serif;
   letter-spacing: 5px;
   border-radius: 90px;
-  border: 2px solid #f6e0e0;
-  position: relative;
+  border: 3px solid #f6e0e0;
+  position: absolute;
   z-index: 10;
-  grid-area: b;
+  width: 10vw;
+  height: 50px;
 }
 
 /*button is subtle so changed to a pointer to make interactiveness more forward*/
 #more:hover {
   cursor: pointer;
+}
+
+#more:before {
+  content: " ";
+  position: absolute;
+  z-index: -5;
+  border-radius: 90px;
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
+  border: 1px solid #3d3f4e;
 }
 
 /*added and removed with Javascript to text sections and the button to make see more button work*/
@@ -479,7 +501,6 @@ footer {
 }
 
 /* individual art page template */
-
 main.artpage {
   font-size: 2.5vh;
   width: 100% !important;
@@ -503,7 +524,7 @@ header.individualtitle {
   text-align: center;
 }
 
-header.individualtitle > h2 {
+header.individualtitle>h2 {
   font-size: 20px !important;
 }
 
@@ -527,34 +548,58 @@ p.mainimagedescription {
   padding: 25px 25vw;
 }
 
-header.progresstitle {
+header.extratitle {
   padding-top: 5vh;
   line-height: 75%;
-  grid-area: 4 / 1 / 5 / 2;
   width: 100%;
   position: relative;
   text-align: center;
 }
 
-
-div.supplementalimagecontainer {
-  width: 100% !important;
-  grid-area: 5 / 1 / 6 / 2;
+div.extraimagecontainer {
+  width: 100%;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
 }
 
-div.supplementalimagecontainer>img {
-  max-width: 50%;
+div.extraimagecontainer>img {
   object-fit: cover;
 }
 
-p.supplmentalimagetext {
+p.extraimagetext {
   color: #3d3f4e;
-  grid-area: 6 / 1 / 7 / 2;
   text-align: justify;
   letter-spacing: 1px;
   padding: 25px 25vw;
+}
+
+div.extratitle1 {
+  grid-area: 4 / 1 / 5 / 2;
+}
+
+div.extraimg1 {
+  grid-area: 5 / 1 / 6 / 2;
+}
+
+div.extratext1 {
+  grid-area: 6 / 1 / 7 / 2;
+}
+
+div.extratitle2 {
+  grid-area: 7 / 1 / 8 / 2;
+}
+
+div.extraimg2 {
+  grid-area: 8 / 1 / 9 / 2;
+}
+
+div.extratext2 {
+  grid-area: 9 / 1 / 10 / 2;
+}
+
+/* Any extra image specific styling for individual art pages */
+#FFstuff>img {
+  max-height: 80vh;
 }
 
 /*changes orientation of images to be screenwidth horizontal bars
@@ -587,7 +632,8 @@ rest is just minor size styling*/
   }
 
   #more {
-    height: 5vh !important;
+    height: 50px !important;
+    width: 30vw;
   }
 
   section.artexpand {
