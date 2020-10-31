@@ -200,11 +200,6 @@ section.artexpand {
   filter: saturate(70%)
 }
 
-/*popout icon styling, this is not very noticeable and needs work*/
-/* section.art>p>a>img,
-section.artexpand>p>a>img,
-section.art>div>p>a>img,
-section.artexpand>div>p>a>img  */
 div.popout {
   margin: 5vh;
   height: 8vh;
@@ -216,6 +211,7 @@ div.popout {
   position: absolute;
   bottom: 0%;
   right: 0%;
+  border: 2px solid #f6e0e0;
   border-radius: 25px;
   display: flex;
   justify-content: center;
