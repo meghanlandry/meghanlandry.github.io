@@ -49,10 +49,12 @@ a:hover {
 /*makes icon overlap a bit*/
 /*This is screwed up on Mac. Looks like I want it to on PC. Unsure about the disparity*/
 .icon {
+  display: inline-block;
   margin: -50% 10%;
   height: 60px;
 }
 
+/* scale doesn't work in chrome, not even with webkit */
 .icon:hover {
   transform: scale(110%);
   transition: all 150ms ease-in;
@@ -219,10 +221,11 @@ div.popout {
 }
 
 div.popout>a {
-    text-align: right;
+  text-align: right;
 }
 
 div.popout>a>img {
+  display: inline-block;
   height: 60%;
   width: 60%;
   right: 1.3vh;
@@ -231,9 +234,9 @@ div.popout>a>img {
 }
 
 div.popout:hover {
-padding-left: 25vh;
-transition: 150ms ease-in;
-border-radius: 25px;
+  padding-left: 25vh;
+  transition: 150ms ease-in;
+  border-radius: 25px;
 }
 
 p.popouttitle {
@@ -245,17 +248,17 @@ p.popouttitle {
 }
 
 /* need this wrapper to stop text stuttering, makes fixed clickable area */
+
 div.clickbox {
   position: absolute;
   z-index: 25;
   width: 8vh;
-  height: 8vh;
+  height: 9vh;
   right: 0;
   bottom: -1vh;
-
 }
 
-div.clickbox:hover ~ .popouttitle  {
+div.clickbox:hover~.popouttitle {
   color: #3d3f4e;
   opacity: 1 !important;
   transition: 150ms ease-in;
@@ -266,15 +269,17 @@ div.clickbox:hover {
   width: 33vh !important;
 }
 
-div.clickbox:hover ~ .popoutimg {
+/* scale doesn't work in chrome, not even with webkit */
+div.clickbox:hover~.popoutimg {
+  display: inline-block;
   transform: scale(120%);
+  -webkit-transform: scale(120%);
   right: 1.5vh;
-  transition: 150ms ease-in;
+  transition: 100ms ease-in;
 }
 
 /*text overlay styling, makes a gradient from bottom of image when hovered over to show some info about the image, realize the lack of symmetry with video items is weird, would like to fix that eventually, but right now it would make videos unplayable. Opactiy is 0 so it's hidden unless hovered*/
 /*10/30 update: disabled gradient and text for now, trying out just the simple popout button*/
-
 div.overlaycontainer {
   pointer-events: none;
   position: relative;
