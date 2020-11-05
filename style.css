@@ -47,16 +47,15 @@ a:hover {
 }
 
 /*makes icon overlap a bit*/
-/*This is screwed up on Mac. Looks like I want it to on PC. Unsure about the disparity*/
 .icon {
   display: inline-block;
-  margin: -50% 10%;
+  margin: -40% -10;
   height: 60px;
 }
 
-/* scale doesn't work in chrome, not even with webkit */
+/* makes bigger on hover */
 .icon:hover {
-  transform: scale(110%);
+  height: 70px;
   transition: all 150ms ease-in;
 }
 
@@ -269,11 +268,11 @@ div.clickbox:hover {
   width: 33vh !important;
 }
 
-/* scale doesn't work in chrome, not even with webkit */
+/* makes bigger on hover */
 div.clickbox:hover~.popoutimg {
   display: inline-block;
-  transform: scale(120%);
-  -webkit-transform: scale(120%);
+  height: 70%;
+  width: 70%;
   right: 1.5vh;
   transition: 100ms ease-in;
 }
