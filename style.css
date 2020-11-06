@@ -589,8 +589,7 @@ main.artpage {
   width: 100% !important;
   display: grid;
   grid-auto-rows: max-content;
-  grid-auto-columns: 100vw;
-  /* overflow-x: hidden; */
+  grid-auto-columns: 100%;
 }
 
 nav.artpagenav {
@@ -619,14 +618,15 @@ div.mainimagecontainer {
 }
 
 img.mainimage {
-  width: 100%;
+  width: 90%;
+  margin: 0 5%;
   object-fit: contain;
 }
 
 p.mainimagedescription {
   color: #3d3f4e;
   grid-area: 3 / 1 / 4 / 2;
-  text-align: justify;
+  text-align: center;
   letter-spacing: 1px;
   padding: 25px 25vw;
 }
@@ -640,18 +640,20 @@ header.extratitle {
 }
 
 div.extraimagecontainer {
-  width: 100%;
+  width: 90%;
+  margin: 0 5%;
   display: flex;
   justify-content: center;
 }
 
 div.extraimagecontainer>img {
-  object-fit: cover;
+  max-height: 80vh;
+  object-fit: contain;
 }
 
 p.extraimagetext {
   color: #3d3f4e;
-  text-align: justify;
+  text-align: center;
   letter-spacing: 1px;
   padding: 25px 25vw;
 }
