@@ -59,7 +59,7 @@ a:hover {
 /* makes bigger on hover, janky way of keeping nav links from moving*/
 .icon:hover {
   height: 65px;
-  margin: -35px 8;
+  margin: -35px 7.8;
   transition: all 150ms ease-in;
 }
 
@@ -68,7 +68,7 @@ a:hover {
   position: fixed !important;
   z-index: 20 !important;
   top: 0 !important;
-  width: 100vw;
+  width: 100%;
 }
 
 /*uses border and padding on an empty div to make an arrow*/
@@ -102,12 +102,12 @@ div.landing {
     url("images/moon_demo.png") left 43vw bottom 15vh no-repeat,
     url("images/moon_demo.png") center bottom 8vh no-repeat,
     url("images/demo_background.png") center 18vh no-repeat,
-    url("images/moon.png") center -10vh no-repeat,
+    url("images/moon.png") center -5vh no-repeat,
     url("images/moon_glow.png") center -15vh no-repeat,
     /* url("images/cloud_demo.png") right -40vh top 30vh no-repeat,
     url("images/cloud_demo2.png") left -40vh top 30vh no-repeat, */
     url("images/clouds_bg.png") center top -50vh no-repeat;
-  background-size: 12vh, 8vh, 10vh, 150vh, 40vh, 55vh,
+  background-size: 12vh, 8vh, 10vh, 150vh, 38vh, 55vh,
   /* 150vh, 150vh,  */
   200vh;
 }
