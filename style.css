@@ -100,7 +100,7 @@ div.landing {
   grid-area: 1 / 1 / 2 / 4;
   background:
     url("images/jupiter.png") right 43vw bottom 20vh no-repeat,
-    url("images/neptune.png") left 43vw bottom 15vh no-repeat,
+    url("images/neptune.png") left 43vw bottom 14vh no-repeat,
     url("images/saturn.png") center bottom 8vh no-repeat,
     url("images/demo_background.png") center 18vh no-repeat,
     url("images/moon.png") center -5vh no-repeat,
