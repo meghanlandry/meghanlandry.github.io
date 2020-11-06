@@ -1,9 +1,9 @@
 /*remove existing styling*/
+/*makes jumping between ids less jarring*/
 * {
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
-  /*makes jumping between ids less jarring*/
 }
 
 /*navigation bar styling */
@@ -48,14 +48,18 @@ a:hover {
 
 /*makes icon overlap a bit*/
 .icon {
-  display: inline-block;
-  margin: -40% -10;
+  margin: -35px 10;
   height: 60px;
 }
 
-/* makes bigger on hover */
+#moonicon {
+  display: inline-block;
+}
+
+/* makes bigger on hover, janky way of keeping nav links from moving*/
 .icon:hover {
-  height: 70px;
+  height: 65px;
+  margin: -35px 8;
   transition: all 150ms ease-in;
 }
 
@@ -94,14 +98,18 @@ a:hover {
 div.landing {
   grid-area: 1 / 1 / 2 / 4;
   background:
-    url("images/moon_demo.png") right 43vw bottom 20vh no-repeat,
+    url("images/jupiter.png") right 43vw bottom 20vh no-repeat,
     url("images/moon_demo.png") left 43vw bottom 15vh no-repeat,
     url("images/moon_demo.png") center bottom 8vh no-repeat,
-    url("images/demo_background.png") center 11vh no-repeat,
-    url("images/moon_demo.png") center -30vh no-repeat,
-    url("images/cloud_demo.png") right -40vh top 30vh no-repeat,
-    url("images/cloud_demo2.png") left -40vh top 30vh no-repeat;
-  background-size: 12vh, 8vh, 10vh, 170vh, 80vh, 150vh, 150vh;
+    url("images/demo_background.png") center 18vh no-repeat,
+    url("images/moon.png") center -10vh no-repeat,
+    url("images/moon_glow.png") center -15vh no-repeat,
+    /* url("images/cloud_demo.png") right -40vh top 30vh no-repeat,
+    url("images/cloud_demo2.png") left -40vh top 30vh no-repeat, */
+    url("images/clouds_bg.png") center top -50vh no-repeat;
+  background-size: 12vh, 8vh, 10vh, 150vh, 40vh, 55vh,
+  /* 150vh, 150vh,  */
+  200vh;
 }
 
 /*title styling*/
