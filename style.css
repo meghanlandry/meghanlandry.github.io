@@ -100,17 +100,15 @@ div.landing {
   grid-area: 1 / 1 / 2 / 4;
   background:
     url("images/jupiter.png") right 43vw bottom 20vh no-repeat,
-    url("images/neptune.png") left 43vw bottom 14vh no-repeat,
+    url("images/neptune.png") left 43vw bottom 15vh no-repeat,
     url("images/saturn.png") center bottom 8vh no-repeat,
     url("images/demo_background.png") center 18vh no-repeat,
     url("images/moon.png") center -5vh no-repeat,
     url("images/moon_glow.png") center -15vh no-repeat,
-    /* url("images/cloud_demo.png") right -40vh top 30vh no-repeat,
-    url("images/cloud_demo2.png") left -40vh top 30vh no-repeat, */
-    url("images/clouds_bg.png") center top -50vh no-repeat;
-  background-size: 12vh, 6vh, 13vh, 150vh, 38vh, 55vh,
-  /* 150vh, 150vh,  */
-  200vh;
+    url("images/cloud_demo.png") right -12vh top 22vh no-repeat,
+    url("images/cloud_demo2.png") left -10vh top 30vh no-repeat,
+    url("images/clouds_bg.png") center top -30vh no-repeat;
+  background-size: 12vh, 6vh, 13vh, 150vh, 38vh, 55vh, 115vh, 120vh, 220vh;
 }
 
 /*title styling*/
@@ -256,7 +254,6 @@ p.popouttitle {
 }
 
 /* need this wrapper to stop text stuttering, makes fixed clickable area */
-
 div.clickbox {
   position: absolute;
   z-index: 25;
