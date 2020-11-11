@@ -103,12 +103,12 @@ div.landing {
   url("images/neptune.png") left 43vw bottom 15vh no-repeat,
   url("images/saturn.png") center bottom 5vh no-repeat,
   url("images/splash.png") center no-repeat,
-  url("images/moon.png") center -5vh no-repeat,
-  url("images/moon_glow.png") center -15vh no-repeat,
+  url("images/moon.png") center -15vh no-repeat,
+  url("images/moon_glow.png") center -25vh no-repeat,
   url("images/cloud_demo.png") right -10vh top 20vh no-repeat,
   url("images/cloud_demo2.png") left -8vh top 28vh no-repeat,
   url("images/clouds_bg.png") center top -30vh no-repeat;
-background-size: 12vh, 6vh, 13vh, 190vh, 38vh, 55vh, 125vh, 130vh, 220vh;
+background-size: 12vh, 6vh, 13vh, 190vh, 50vh, 70vh, 125vh, 130vh, 220vh;
 }
 
 /*title styling*/
