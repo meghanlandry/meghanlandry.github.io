@@ -581,13 +581,14 @@ footer {
   overflow: hidden;
 }
 
+
 /* individual art page template */
 main.artpage {
   font-size: 2.5vh;
   width: 100% !important;
   display: grid;
   grid-auto-rows: max-content;
-  grid-auto-columns: 100%;
+  grid-template-columns: 100%;
 }
 
 nav.artpagenav {
@@ -678,6 +679,11 @@ div.extraimg2 {
 
 div.extratext2 {
   grid-area: 9 / 1 / 10 / 2;
+}
+
+div.three {
+width: 65% !important;
+margin-left: 20%;
 }
 
 /* Any extra image specific styling for individual art pages */
