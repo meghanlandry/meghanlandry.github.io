@@ -1,3 +1,5 @@
+// erase code adapted from Daniel Harty's work here: https://codepen.io/mfranz2/details/vMGGzQ
+
 let space_1;
 let spaceRatio;
 let spaceHeight;
@@ -11,10 +13,13 @@ let space_6a;
 let space_6b;
 let space_6c;
 
-let spaceFaceErase;
+var alphaSpace;
+var spaceFaceErase;
+var rad = 5;
+var randomSpace;
 
 function preload() {
-  space_1 = loadImage('images/space_1.png')
+  space_1 = loadImage('images/space_1.png');
   space_2a = loadImage('images/space_2a.png')
   space_2b = loadImage('images/space_2b.png')
   space_3a = loadImage('images/space_3a.png')
@@ -27,18 +32,31 @@ function preload() {
 }
 
 function setup() {
-  var canvas = createCanvas(windowWidth, windowHeight);
-  canvas.parent('space');
+  smooth();
+  alphaSpace = color(0,0);
   spaceRatio = space_1.height / space_1.width;
   spaceHeight = windowWidth * spaceRatio;
-  spaceFaceErase = createGraphics(windowWidth, spaceHeight);
+  var canvas = createCanvas(windowWidth, spaceHeight);
+  canvas.parent('space');
+  spaceFaceErase = createGraphics(windowWidth, spaceHeight, [WEBGL]);
+  spaceFaceErase.image(space_5, 0, 0, windowWidth, spaceHeight);
 }
 
 function draw() {
+  randomSpace = random(20);
+  rad = 5*randomSpace*0.1;
+  var x = mouseX*random(20)*0.5;
+  var y = mouseY*random(20)*0.5;
+  noStroke();
   clear();
   drawBase();
   drawEyes();
   drawFace();
+  if (mouseIsPressed) {
+    noFill();
+    stroke("pink");
+    ellipse(x, y, rad*2, rad*2);
+  }
   drawHair();
 }
 
@@ -56,15 +74,34 @@ function drawEyes() {
 }
 
 function drawFace() {
-  spaceFaceErase.image(space_5, 0, 0, windowWidth, spaceHeight);
-  image(spaceFaceErase, 0, 0, windowWidth, spaceHeight);
+  image(spaceFaceErase, 0, 0, windowWidth,spaceHeight);
 }
-
 
 function drawHair() {
   image(space_6a, 0, 0, windowWidth, spaceHeight);
 }
 
-// function windowResized() {
-//   resizeCanvas(windowWidth, windowHeight);
-// }
+function mousePressed() {
+  var randomNum = random(20);
+  for (var x = mouseX - rad; x < mouseX+rad; x++) {
+    for (var y = mouseY - rad; y < mouseY+rad; y++) {
+      if ((dist(x,y, mouseX, mouseY) < rad) && x > 0 && x <= width) {
+        console.log(x, y)
+        spaceFaceErase.set(x+randomNum,y+randomNum,alphaSpace);
+      }
+    }
+  }
+  spaceFaceErase.updatePixels();
+}
+
+function mouseDragged() {
+  var randomNum = random(20);
+  for (var x = mouseX - rad; x < mouseX+rad; x++) {
+    for (var y = mouseY - rad; y < mouseY+rad; y++) {
+      if ((dist(x,y, mouseX, mouseY) < rad) && x > 0 && x <= width) {
+        spaceFaceErase.set(x+randomNum, y+randomNum,alphaSpace);
+      }
+    }
+  }
+  spaceFaceErase.updatePixels();
+}
