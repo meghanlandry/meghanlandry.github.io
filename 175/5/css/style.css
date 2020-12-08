@@ -4,6 +4,10 @@
   /* overflow-x: hidden; */
 }
 
+a {
+  text-decoration: none;
+}
+
 nav.select {
   position: absolute;
   bottom: 25%;
@@ -37,7 +41,38 @@ header.instruction {
   font-family: 'Advent Pro', sans-serif;
   font-size: 7vh;
   position: absolute;
+}
+
+#subtract {
+  transform: skew(-30deg);
   left: 15vw;
   top: 50vh;
-  transform: skew(-30deg);
+}
+
+#composite {
+  text-align: center;
+  left: 48vw;
+  top: 10vh;
+}
+
+#add {
+  transform: skew(30deg);
+  right: 15vw;
+  top: 50vh;
+}
+
+nav.backNav>a {
+  position: absolute;
+  top: 51vh;
+  left: 3%;
+  font-size: 7vh;
+  color: #e2aaaa;
+  font-family: 'Advent Pro', sans-serif;
+}
+
+img.tempClass {
+  width: 90%;
+  position: absolute;
+  bottom: 0;
+  left: 10%;
 }

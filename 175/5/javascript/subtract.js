@@ -46,12 +46,12 @@ function preload() {
 
 function setup() {
   smooth();
-  alphaSpace = color(0,0);
+  alphaSpace = color(0, 0);
   spaceRatio = space_1.height / space_1.width;
   spaceHeight = windowWidth * spaceRatio;
   var canvas = createCanvas(windowWidth, spaceHeight);
   canvas.parent('space');
-  spaceBase = createGraphics(windowWidth/2, spaceHeight, [WEBGL]);
+  spaceBase = createGraphics(windowWidth / 2, spaceHeight, [WEBGL]);
 
   cols = floor(width / scl);
   rows = floor(height / scl);
@@ -60,19 +60,19 @@ function setup() {
     particle[i] = new Particle();
   }
   for (var i = 0; i < 2000; i++) {
-      star[i] = new Star();
-            star[i].constructor();
-    }
+    star[i] = new Star();
+    star[i].constructor();
+  }
 
   spaceFaceErase = createGraphics(windowWidth, spaceHeight, [WEBGL]);
   spaceFaceErase.image(space_5, 0, 0, windowWidth, spaceHeight);
 }
 
 function draw() {
-  randomSpace = random(5,20);
-  rad = 5*randomSpace*0.1;
-  var x = mouseX*random(20)*0.5;
-  var y = mouseY*random(20)*0.5;
+  randomSpace = random(5, 20);
+  rad = 5 * randomSpace * 0.1;
+  var x = mouseX * random(20) * 0.5;
+  var y = mouseY * random(20) * 0.5;
   noStroke();
   clear();
   drawBase();
@@ -81,7 +81,7 @@ function draw() {
   if (mouseIsPressed) {
     noFill();
     stroke("pink");
-    ellipse(x, y, rad*2, rad*2);
+    ellipse(x, y, rad * 2, rad * 2);
   }
   drawHair();
 }
@@ -91,8 +91,8 @@ function drawBase() {
   resizeCanvas(windowWidth, spaceHeight);
   spaceHeight = windowWidth * spaceRatio;
   image(space_1, 0, 0, windowWidth, spaceHeight);
-  image(spaceBase, windowWidth/2, 0, windowWidth/2, spaceHeight);
-  image(spaceBase, windowWidth/2, 0, windowWidth/2, spaceHeight);
+  image(spaceBase, windowWidth / 2, 0, windowWidth / 2, spaceHeight);
+  image(spaceBase, windowWidth / 2, 0, windowWidth / 2, spaceHeight);
   image(space_4, 0, 0, windowWidth, spaceHeight);
 
   var yoff = 0;
@@ -116,7 +116,7 @@ function drawBase() {
     particle[i].show();
   }
   for (var i = 0; i < star.length; i++) {
-        star[i].display();
+    star[i].display();
   }
   image(space_mask, 0, 0, windowWidth, spaceHeight);
 }
@@ -127,7 +127,7 @@ function drawEyes() {
 }
 
 function drawFace() {
-  image(spaceFaceErase, 0, 0, windowWidth,spaceHeight);
+  image(spaceFaceErase, 0, 0, windowWidth, spaceHeight);
 }
 
 function drawHair() {
@@ -135,10 +135,10 @@ function drawHair() {
 }
 
 function mousePressed() {
-  for (var x = mouseX - rad; x < mouseX+rad; x++) {
-    for (var y = mouseY - rad; y < mouseY+rad; y++) {
-      if ((dist(x,y, mouseX, mouseY) < rad) && x > 0 && x <= width) {
-        spaceFaceErase.set(x,y,alphaSpace);
+  for (var x = mouseX - rad; x < mouseX + rad; x++) {
+    for (var y = mouseY - rad; y < mouseY + rad; y++) {
+      if ((dist(x, y, mouseX, mouseY) < rad) && x > 0 && x <= width) {
+        spaceFaceErase.set(x, y, alphaSpace);
       }
     }
   }
@@ -147,14 +147,14 @@ function mousePressed() {
 
 function mouseDragged() {
   var randomNum = random(20);
-  var randomNum2 = random(-10,10);
-  var randomNum3 = random(-10,10);
-  for (var x = mouseX - rad; x < mouseX+rad; x++) {
-    for (var y = mouseY - rad; y < mouseY+rad; y++) {
-      if ((dist(x,y, mouseX, mouseY) < rad) && x > 0 && x <= width) {
+  var randomNum2 = random(-10, 10);
+  var randomNum3 = random(-10, 10);
+  for (var x = mouseX - rad; x < mouseX + rad; x++) {
+    for (var y = mouseY - rad; y < mouseY + rad; y++) {
+      if ((dist(x, y, mouseX, mouseY) < rad) && x > 0 && x <= width) {
         spaceFaceErase.set(x, y, alphaSpace);
-        spaceFaceErase.set(x+randomNum, y+randomNum,alphaSpace);
-        spaceFaceErase.set(x+randomNum2, y+randomNum3, alphaSpace);
+        spaceFaceErase.set(x + randomNum, y + randomNum, alphaSpace);
+        spaceFaceErase.set(x + randomNum2, y + randomNum3, alphaSpace);
       }
     }
   }
@@ -165,8 +165,8 @@ function Star() {
 
   this.constructor = function() {
     noStroke();
-    this.x = random(windowWidth/2, windowWidth);
-    this.y = random(windowHeight*2);
+    this.x = random(windowWidth / 2, windowWidth);
+    this.y = random(windowHeight * 2);
     this.r = random(3);
   }
 
