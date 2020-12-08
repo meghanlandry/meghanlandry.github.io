@@ -31,3 +31,13 @@ div.Parts {
   position: absolute;
   bottom: 0;
 }
+
+header.instruction {
+  color: #7e808c;
+  font-family: 'Advent Pro', sans-serif;
+  font-size: 7vh;
+  position: absolute;
+  left: 15vw;
+  top: 50vh;
+  transform: skew(-30deg);
+}
