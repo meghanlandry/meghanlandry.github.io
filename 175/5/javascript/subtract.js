@@ -39,7 +39,7 @@ function preload() {
   space_4 = loadImage('images/space_4.png')
   space_5 = loadImage('images/space_5.png')
   space_6a = loadImage('images/space_6a.png')
-  space_6b = loadImage('images/space_6a.png')
+  space_6b = loadImage('images/space_6b.png')
   space_6c = loadImage('images/space_6c.png')
   space_mask = loadImage('images/space_mask.png')
 }
@@ -83,7 +83,7 @@ function draw() {
     stroke("pink");
     ellipse(x, y, rad * 2, rad * 2);
   }
-  drawHair();
+  //drawHair();
 }
 
 function drawBase() {

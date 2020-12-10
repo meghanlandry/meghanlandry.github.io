@@ -76,3 +76,66 @@ img.tempClass {
   bottom: 0;
   left: 10%;
 }
+
+#planets>img {
+  right: 0;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  overflow: hidden !important;
+  max-width: 100%;
+}
+
+div.planets {
+  pointer-events: none;
+  right: 0;
+  position: absolute;
+  width: 100%;
+  overflow: hidden;
+}
+
+div.container {
+  right: 0;
+  position: relative;
+}
+
+#orbit_1 {
+  pointer-events: none;
+  right: 0;
+  max-width: 99%;
+  max-height: 99vh;
+  animation: orbit 10s linear infinite;
+  overflow: hidden !important;
+}
+
+#orbit_2 {
+  pointer-events: none;
+  max-width: 99%;
+  max-height: 99vh;
+  animation: orbit 5s linear infinite;
+  overflow: hidden !important;
+}
+
+#orbit_3 {
+  pointer-events: none;
+  max-width: 99%;
+  max-height: 99vh;
+  animation: orbit 15s linear infinite;
+  overflow: hidden !important;
+}
+
+@keyframes orbit {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+#hair {
+  pointer-events: none;
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  background-image: url("../images/space_6ani.png");
+  background-size: 100%;
+  background-position: right bottom;
+}

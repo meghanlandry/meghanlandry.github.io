@@ -112,9 +112,23 @@ div.hov:hover {
   position: relative;
 }
 
+#char > img {
+  width: 100%;
+}
+
 #ref {
   padding: 10vh;
   position: relative;
+}
+
+div.referenceFlex {
+  display: flex;
+  width: 100%
+}
+
+div.referenceFlex > img {
+  max-width: 30%;
+  object-fit: cover;
 }
 
 #info {
