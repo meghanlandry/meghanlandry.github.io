@@ -139,3 +139,7 @@ div.container {
   background-size: 100%;
   background-position: right bottom;
 }
+
+header.temp {
+  text-decoration: line-through;
+}

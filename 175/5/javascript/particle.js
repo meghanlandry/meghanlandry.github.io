@@ -30,7 +30,7 @@ function Particle() {
     this.fadeOut();
 
     spaceBase.stroke(255, 200, 200, floor(fade));
-    spaceBase.strokeWeight(2);
+    spaceBase.strokeWeight(1);
 
     spaceBase.line(this.pos.x, this.pos.y, this.prevPos.x, this.prevPos.y)
     this.updatePrev();

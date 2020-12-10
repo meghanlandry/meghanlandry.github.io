@@ -1,4 +1,5 @@
 // erase code adapted from Daniel Harty's work here: https://codepen.io/mfranz2/details/vMGGzQ
+// perlin noise code adapted from The Coding Train here: https://www.youtube.com/watch?v=BjoM9oKOAKY
 
 let space_1;
 let spaceRatio;
@@ -102,7 +103,7 @@ function drawBase() {
       var index = x + y * cols;
       var angle = noise(xoff, yoff, zoff) * TWO_PI * 2;
       var v = p5.Vector.fromAngle(angle);
-      v.setMag(8); //sets how closely particles follow flor
+      v.setMag(8); //sets how closely particles follow flow
       flowfield[index] = v;
       xoff += inc;
     }
