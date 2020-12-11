@@ -61,6 +61,10 @@ main {
   position: relative;
 }
 
+#gallery {
+  width: 25%;
+}
+
 p.justify {
   text-align: justify !important;
   margin-left: 10vw;
