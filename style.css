@@ -46,6 +46,15 @@ a:hover {
   text-shadow: 2px 0 8px #fff;
 }
 
+a.pagelink {
+  color: #888;
+  text-decoration: none;
+}
+
+a.pagelink:hover {
+  color: #aaa;
+}
+
 /*makes icon overlap a bit*/
 .icon {
   margin: -35px 10;
@@ -466,6 +475,7 @@ div.responsiveiframe>iframe {
 
 #more {
   font-family: 'Cormorant', serif;
+  font-size: 2.3vh;
   letter-spacing: 5px;
   border-radius: 90px;
   border: 3px solid #f6e0e0;
@@ -630,12 +640,31 @@ div.mainimagecontainer {
   max-height: 100%;
   grid-area: 2 / 1 / 3 / 2;
   overflow: hidden;
+  justify-content: center;
+  text-align: center;
+}
+
+div.pagecontainer {
+  max-height: 80vh;
+  width: 100%;
 }
 
 img.mainimage {
   width: 90%;
   margin: 0 5%;
   object-fit: contain;
+}
+
+.mainimagethin {
+  position: relative;
+  object-fit: contain;
+  width: 50%;
+}
+
+.mainimagesmol {
+  position: relative;
+  object-fit: contain;
+  width: 25%;
 }
 
 p.mainimagedescription {
