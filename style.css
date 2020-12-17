@@ -707,6 +707,20 @@ div.extraimagecontainer {
   flex-wrap: wrap;
 }
 
+div.extraimagecontainernowrap {
+  width: 90%;
+  margin: 0 5%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+}
+
+div.extraimagecontainernowrap>img {
+  max-width: 12vw;
+  max-height: 80vh;
+  object-fit: cover;
+}
+
 div.extraimagecontainer>img {
   max-height: 80vh;
   object-fit: contain;
