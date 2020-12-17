@@ -181,12 +181,14 @@ section.art {
     "i10 i10 i14"
     "i7 i13 i13"
     "i7 i13 i13"
+    "i15 i15 i16"
+    "i15 i15 i16"
     ". b ."
     "i5 i5 i12"
     "i2 i2 i12"
     "i6 i3 i4"
     "i6 i3 i4";
-  grid-template-rows: 15vh repeat(12, 40vh) 30px repeat(4, 0);
+  grid-template-rows: 15vh repeat(14, 40vh) 30px repeat(4, 0);
   grid-template-columns: repeat(3, 1fr);
   padding: 0 5% 0 5%;
   font-size: 2vh;
@@ -213,11 +215,13 @@ section.artexpand {
     "i10 i10 i14"
     "i7 i13 i13"
     "i7 i13 i13"
+    "i15 i15 i16"
+    "i15 i15 i16"
     "i5 i5 i12"
     "i2 i2 i12"
     "i6 i3 i4"
     "i6 i3 i4";
-  grid-template-rows: 15vh repeat(12, 40vh) repeat(4, 30vh);
+  grid-template-rows: 15vh repeat(14, 40vh) repeat(4, 30vh);
   grid-template-columns: repeat(3, 1fr);
   padding: 0 5% 0 5%;
   font-size: 2vh;
@@ -350,7 +354,7 @@ div.responsiveiframe>iframe {
 }
 
 /*grid image styling, object fit lets things line up nicely with the grid boxes, width and height prevents blank spaces when resizing window*/
-#img1, #img3, #img4, #img5, #img6, #img7, #img14 {
+#img1, #img3, #img4, #img5, #img6, #img7, #img14{
   position: relative;
   object-fit: cover;
   width: 100%;
@@ -358,7 +362,7 @@ div.responsiveiframe>iframe {
 }
 
 /*same as above except for horizontal items*/
-#img6, #img12, #img7 {
+#img6, #img12, #img7, #img16  {
   position: relative;
   object-fit: cover;
   height: 100%;
@@ -366,7 +370,7 @@ div.responsiveiframe>iframe {
 }
 
 /*styling for iframes*/
-#img8, #img9, #img10, #img13 {
+#img8, #img9, #img10, #img13, #img15 {
   border: none;
   object-fit: cover;
   width: 100%;
@@ -430,6 +434,14 @@ div.responsiveiframe>iframe {
   grid-area: i14;
 }
 
+#img15, #text15 {
+  grid-area: i15;
+}
+
+#img16, #text16 {
+  grid-area: i16;
+}
+
 /*show image text overlays on mouseover*/
 #img1:hover~#text1, #img1~#text1:hover,
 #img2:hover~#text2, #img2~#text2:hover,
@@ -442,7 +454,9 @@ div.responsiveiframe>iframe {
 #img9:hover~#text9, #img9~#text9:hover,
 #img11:hover~#text11, #img11~#text11:hover,
 #img12:hover~#text12, #img12~#text12:hover,
-#img14:hover~#text14, #img14~#text14:hover {
+#img14:hover~#text14, #img14~#text14:hover,
+#img15:hover~#text15, #img15~#text15:hover,
+#img16:hover~#text16, #img16~#text16:hover {
   opacity: 1;
 }
 
@@ -756,6 +770,8 @@ rest is just minor size styling*/
       "i14"
       "i7"
       "i13"
+      "i15"
+      "i16"
       "b"
       "i5"
       "i12"
@@ -785,6 +801,8 @@ rest is just minor size styling*/
       "i14"
       "i7"
       "i13"
+      "i15"
+      "i16"
       "i5"
       "i12"
       "i2"
