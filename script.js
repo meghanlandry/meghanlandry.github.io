@@ -5,17 +5,17 @@ window.onload = runScript;
 
 
 
-
 // makes nav stick to top of page, swaps to animated bg after rest of page has loaded
 function runScript() {
+
+  var navbar = document.getElementById("navbar");
+  var sticky = navbar.offsetTop;
   window.onscroll = function() {
     stickyNav();
   };
 
-  var navbar = document.getElementById("navbar");
-  var sticky = navbar.offsetTop;
-
   // Used understanding of above example to make a expand button
+  var body = document.getElementById("mainpage");
   var landing = document.getElementById("landing");
   changeImage();
   var text5 = document.getElementById("text5");
@@ -27,6 +27,9 @@ function runScript() {
   var gallery = document.getElementById("gallery");
   var more = document.getElementById("more");
   document.getElementById("more").addEventListener("click", expand);
+
+
+
 
   function changeImage() {
     landing.classList.add("landing");
