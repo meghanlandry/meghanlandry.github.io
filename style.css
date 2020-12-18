@@ -59,6 +59,7 @@ a.pagelink:hover {
 .icon {
   margin: -35px 10px !important;
   height: 60px;
+  display: block;
 }
 
 #moonicon {
@@ -803,7 +804,7 @@ footer {
 
 
 /* individual art page template */
-main.artpage {
+section.artpage {
   font-size: 2.5vh;
   width: 100% !important;
   display: grid;
@@ -813,6 +814,7 @@ main.artpage {
 
 nav.artpagenav {
   width: 100% !important;
+  top: 0 !important;
   position: fixed;
 }
 
