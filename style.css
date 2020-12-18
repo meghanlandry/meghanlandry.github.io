@@ -154,20 +154,24 @@ div.foregroundImage {
   text-align: center;
   top: 33vh;
   left: -1.5%;
+  pointer-events: none;
 }
 
 #jupiter {
   animation: 12s linear infinite orbit;
   width: 12vh;
+  pointer-events: none;
 }
 
 #saturn {
   animation: 7s linear infinite orbit;
   width: 13vh;
+  pointer-events: none;
 }
 #neptune {
   animation: 3s linear infinite orbit;
   width: 5vh;
+  pointer-events: none;
 }
 
 div.backgroundImage {
