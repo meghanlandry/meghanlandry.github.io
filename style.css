@@ -206,7 +206,7 @@ div.bgcontainerr {
   grid-area: 1 / 1 / 2 / 4;
   position: relative;
   width: 100%;
-  animation: 30s ease infinite bob;
+  top: -10vh;
 }
 
 #cloud_demo2 {
