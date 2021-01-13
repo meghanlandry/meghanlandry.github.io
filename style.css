@@ -986,7 +986,7 @@ rest is just minor size styling*/
   section.art {
     margin: 0 !important;
     padding: 0 !important;
-    grid-template-rows: 20vh repeat(8, 20vh) 10vh repeat(6, 0vh) !important;
+    grid-template-rows: 20vh repeat(10, 20vh) 10vh repeat(6, 0vh) !important;
     grid-template-columns: 100vw;
     grid-template-areas:
       "t"
@@ -1017,7 +1017,7 @@ rest is just minor size styling*/
   section.artexpand {
     margin: 0 !important;
     padding: 0 !important;
-    grid-template-rows: 20vh repeat(8, 20vh) repeat(6, 15vh) !important;
+    grid-template-rows: 20vh repeat(10, 20vh) repeat(6, 15vh) !important;
     grid-template-columns: 100vw;
     grid-template-areas:
       "t"
@@ -1039,12 +1039,12 @@ rest is just minor size styling*/
       "i4" !important;
   }
 
-  #img5, #img1, #img3, #img7, #img12, #img4, #img14 {
+  #img5, #img1, #img3, #img7, #img12, #img4, #img14{
     max-width: 100% !important;
     height: 100% !important;
   }
 
-  #img8, #img9, #img10, #img12, #img13 {
+  #img8, #img9, #img10, #img12, #img13, #img16 {
     width: 100% !important;
     max-height: 100% !important;
   }
