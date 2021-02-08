@@ -71,6 +71,11 @@ p.justify {
   margin-right: 10vw;
 }
 
+span.small {
+  font-size: 16px !important;
+  font-style: italic;
+}
+
 #board {
   padding-top: 10vh;
   position: relative;
