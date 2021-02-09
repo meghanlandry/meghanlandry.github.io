@@ -74,6 +74,7 @@ p.justify {
 span.small {
   font-size: 16px !important;
   font-style: italic;
+  color: #bbb;
 }
 
 #board {
