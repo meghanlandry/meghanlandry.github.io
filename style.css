@@ -876,7 +876,6 @@ p.mainimagedescription {
 
 header.extratitle {
   padding-top: 5vh;
-  line-height: 75%;
   width: 100%;
   position: relative;
   text-align: center;
@@ -917,7 +916,8 @@ div.extraimagecontainer>a>img {
 }
 
 div.extracontainer {
-  width: 100%;
+  margin-left: 5%;
+  width: 90% !important;
   height: 60vh;
   justify-content: center;
   position: relative;
@@ -941,7 +941,6 @@ p.extraimagetext {
   text-align: center;
   letter-spacing: 1px;
   padding: 25px 25vw;
-
 }
 
 div.extratitle1 {
