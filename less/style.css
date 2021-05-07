@@ -1,0 +1,27 @@
+*{
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  width: 100%;
+}
+
+div.sizing {
+width: 100%;
+}
+
+div.presentation {
+  display: flex;
+  justify-content: center;
+  max-width: 100%;
+}
+
+div.presentation > div {
+  width: 25%;
+  height: 40vh;
+  object-fit: contain;
+}
+
+div.presentation > div > img {
+
+  height: 100%;
+}
