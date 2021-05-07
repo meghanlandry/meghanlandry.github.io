@@ -1,6 +1,42 @@
 * {
   margin: 0;
   padding: 0;
+  scroll-behavior: smooth;
+}
+body {
+  position: absolute;
+}
+#scoot {
+  margin-top: 50px;
+}
+
+nav {
+  background-color: #fff;
+  position: absolute;
+  color: #cd8b8c;
+  float: left;
+  z-index: 5;
+  width: 100%;
+  position: fixed;
+}
+
+nav>ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+
+}
+
+nav>ul>li {
+  list-style: none;
+  padding: 1vw 10px 1vw 10px;
+}
+
+nav>ul>li>a {
+  font-family: 'Josefin Sans', sans-serif;
+  font-style: normal;
+  font-size: 20px;
 }
 
 /* top iamge flexbox sizing */
@@ -93,7 +129,7 @@ img.imagefituni {
   height: 100%;
   width: 100%;
   object-fit: cover;
-  object-position: 0% 10%;
+  object-position: 50% 10%;
 }
 
 #board {
