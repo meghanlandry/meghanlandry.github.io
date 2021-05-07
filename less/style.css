@@ -1,8 +1,6 @@
 * {
   margin: 0;
   padding: 0;
-  text-align: center;
-  width: 100%;
 }
 
 /* top iamge flexbox sizing */
@@ -21,23 +19,34 @@ div.presentation>div {
   height: 40vh;
 }
 
-div.presentation>div>img {
+img.imagefit {
   height: 100%;
   width: 100%;
   object-fit: cover;
 }
 
 /* text resizing and styling */
+h1 {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 30px;
+  width: 100%;
+  text-align: center;
+  color: #1c2842;
+}
 
 div.container {
   width: 80%;
 }
 
 div.text {
-  margin: 0 15%;
   font-family: 'Josefin Sans', sans-serif;
   color: #777;
   font-size: 18px;
+  width: 98vw;
+  display: block;
+  box-sizing: border-box;
+  padding: 0 10%;
+  text-align: center;
 }
 
 a {
@@ -57,4 +66,71 @@ span.linkemph {
 
 span.emph {
   font-style: oblique;
+}
+
+span.finished {
+  text-decoration: line-through;
+  color: #1c2842;
+}
+
+span.working {
+  font-style: oblique;
+  color: #cd8b8c;
+}
+
+div.assetcontainer {
+  width: 100%;
+  height: 40vh;
+}
+
+div.assetcontainer > div {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+img.imagefituni {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: 0% 10%;
+}
+
+#board {
+  padding-top: 6vh;
+  position: relative;
+  font-size: 15px;
+  grid-row: auto;
+  grid-column: auto;
+  display: grid;
+}
+
+#boardImg {
+  position: relative;
+  z-index: 0;
+  width: 100%;
+}
+
+#overlay {
+  padding-top: 15vh;
+  justify-content: center;
+  position: absolute;
+  z-index: 2;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(10, calc(20vw*0.55));
+  display: grid;
+}
+
+div.hov {
+  margin: 15% 8% 5% 10%;
+  padding: 5%;
+  opacity: 0;
+}
+
+div.hov:hover {
+  border-radius: 10px;
+  opacity: .8;
+  color: #fff;
+  background: #343842;
+  transition: 300ms;
 }
