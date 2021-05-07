@@ -1,27 +1,60 @@
-*{
+* {
   margin: 0;
   padding: 0;
   text-align: center;
   width: 100%;
 }
 
+/* top iamge flexbox sizing */
 div.sizing {
-width: 100%;
+  width: 100%;
+  height: 40vh;
 }
 
 div.presentation {
   display: flex;
   justify-content: center;
-  max-width: 100%;
 }
 
-div.presentation > div {
+div.presentation>div {
   width: 25%;
   height: 40vh;
-  object-fit: contain;
 }
 
-div.presentation > div > img {
-
+div.presentation>div>img {
   height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* text resizing and styling */
+
+div.container {
+  width: 80%;
+}
+
+div.text {
+  margin: 0 15%;
+  font-family: 'Josefin Sans', sans-serif;
+  color: #777;
+  font-size: 18px;
+}
+
+a {
+  text-decoration: none;
+  color: #cd8b8c;
+  font-size: 25px;
+  font-style: italic;
+  font-weight: 500;
+}
+
+span.linkemph {
+  color: #1c2842;
+  font-style: oblique;
+  font-size: 20px;
+  font-weight: 300;
+}
+
+span.emph {
+  font-style: oblique;
 }
