@@ -1,0 +1,23 @@
+{
+	"Version": 3,
+	"FileReferences": {
+		"Moc": "site_girl.moc3",
+		"Textures": [
+			"site_girl.4096/texture_00.png"
+		],
+		"Physics": "site_girl.physics3.json",
+		"DisplayInfo": "site_girl.cdi3.json"
+	},
+	"Groups": [
+		{
+			"Target": "Parameter",
+			"Name": "LipSync",
+			"Ids": []
+		},
+		{
+			"Target": "Parameter",
+			"Name": "EyeBlink",
+			"Ids": []
+		}
+	]
+}
