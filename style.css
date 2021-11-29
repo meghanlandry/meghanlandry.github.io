@@ -116,33 +116,11 @@ a.pagelink:hover {
 /*all images for this background are placeholders until illustration is finished*/
 div.landing {
   grid-area: 1 / 1 / 2 / 4;
-  background:
-  /* url("images/jupiter.png") right 43vw bottom 20vh no-repeat,
-  url("images/neptune.png") left 43vw bottom 15vh no-repeat,
-  url("images/saturn.png") center bottom 5vh no-repeat, */
-  url("images/splash.png") center no-repeat;
-  /* url("images/moon.png") center -15vh no-repeat,
-  url("images/moon_glow.png") center -25vh no-repeat,
-  url("images/cloud_demo.png") right -10vh top 20vh no-repeat,
-  url("images/cloud_demo2.png") left -8vh top 28vh no-repeat,
-  url("images/clouds_bg.png") center top -30vh no-repeat; */
-  /* background-size: 12vh, 6vh, 13vh, 190vh, 50vh, 70vh, 125vh, 130vh, 220vh */
   background-size: 190vh;
 }
 
 div.preload {
   grid-area: 1 / 1 / 2 / 4;
-  background:
-  /* url("images/jupiter.png") right 43vw bottom 20vh no-repeat,
-  url("images/neptune.png") left 43vw bottom 15vh no-repeat,
-  url("images/saturn.png") center bottom 5vh no-repeat, */
-  url("images/preload.png") center no-repeat;
-  /* url("images/moon.png") center -15vh no-repeat,
-  url("images/moon_glow.png") center -25vh no-repeat,
-  url("images/cloud_demo.png") right -10vh top 20vh no-repeat,
-  url("images/cloud_demo2.png") left -8vh top 28vh no-repeat,
-  url("images/clouds_bg.png") center top -30vh no-repeat; */
-/* background-size: 12vh, 6vh, 13vh, 190vh, 50vh, 70vh, 125vh, 130vh, 220vh; */
 background-size: 190vh;
 }
 
@@ -158,21 +136,15 @@ div.foregroundImage {
   pointer-events: none;
 }
 
-#jupiter {
-  animation: 12s linear infinite orbit;
-  width: 12vh;
-  pointer-events: none;
-}
-
-#saturn {
-  animation: 7s linear infinite orbit;
-  width: 13vh;
-  pointer-events: none;
-}
-#neptune {
-  animation: 3s linear infinite orbit;
-  width: 5vh;
-  pointer-events: none;
+video.backgroundImage {
+  grid-area: 1 / 1 / 2 / 4;
+  z-index: -5;
+  width: 100%;
+  height: 100vh;
+  max-width: 100%;
+  min-height: 100vh;
+  text-align: center;
+  background-color: #1e2228;
 }
 
 div.backgroundImage {
@@ -181,13 +153,18 @@ div.backgroundImage {
   z-index: -5;
   width: 100%;
   height: 100vh;
+  min-width: 100%;
+  min-height: 100vh;
   text-align: center;
+  background-color: #1e2228;
 }
 
 div.backgroundImage2 {
   grid-area: 1 / 1 / 2 / 4;
   position: absolute;
   z-index: -5;
+  min-width: 100%;
+  min-height: 100vh;
   width: 100%;
   height: 100vh;
   text-align: center;
@@ -200,46 +177,6 @@ div.bgcontainerr {
   width: 100%;
   height: 100vh;
   overflow: hidden;
-}
-
-#clouds_bg {
-  grid-area: 1 / 1 / 2 / 4;
-  position: relative;
-  width: 100%;
-  top: -10vh;
-}
-
-#cloud_demo2 {
-  grid-area: 1 / 1 / 2 / 4;
-  position: relative;
-  left: -23%;
-  top: 33vh;
-  max-height: 60vh;
-  animation: 10s linear infinite swayleft;
-}
-
-#cloud_demo{
-  grid-area: 1 / 1 / 2 / 4;
-  position: relative;
-  right: -23%;
-  top: 23vh;
-  max-height: 70vh;
-  animation: 10s linear infinite swayright;
-}
-
-#moon_glow {
-  grid-area: 1 / 1 / 2 / 4;
-  position: relative;
-  max-height: 70vh;
-  top: -5vh;
-  animation: 5s ease infinite glow;
-}
-
-#moon {
-  grid-area: 1 / 1 / 2 / 4;
-  position: relative;
-  max-height: 60vh;
-  animation: 5s linear infinite bright;
 }
 
 @keyframes bright{
@@ -332,13 +269,13 @@ translate(-40%,-40%) rotate(-360deg);
 h1 {
   font-family: 'Dancing Script', serif;
   font-size: 40px;
-  color: #3d3f4e;
+  color: #f6e0e0;
   opacity: 0.8;
 }
 
 /*styling for second line of header, just a decoration now, but probably will have better text when I can*/
 h2 {
-  color: #bbb;
+  color: #fff;
 }
 
 /*gallery section styling*/
