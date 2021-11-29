@@ -4,6 +4,7 @@
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
+ font-smooth: always;
 }
 
 /*navigation bar styling */
@@ -271,12 +272,15 @@ h1 {
   font-size: 60px;
   color: #f6e0e0;
   opacity: 0.9;
-  background-color: #aaa;
+  background-color: #201f29;
 }
 
 /*styling for second line of header, just a decoration now, but probably will have better text when I can*/
 h2 {
   color: #fff;
+  font-size: 20px;
+  background-color: #201f29;
+  opacity: 0.8;
 }
 
 /*gallery section styling*/
