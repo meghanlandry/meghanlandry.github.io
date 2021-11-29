@@ -9,7 +9,7 @@
 /*navigation bar styling */
 /*sets position to below immediate viewframe*/
 nav {
-  font-family: 'Cormorant', serif;
+  font-family: 'Josefin Slab', serif;
   position: absolute;
   font-size: 24px;
   background-color: #aaa;
@@ -107,8 +107,8 @@ a.pagelink:hover {
 #mainpage {
   display: grid;
   grid-template: 100vh / repeat(3, 1fr);
-  font-family: 'Cormorant', serif;
-  font-size: 22px;
+  font-family: 'Josefin Slab', serif;
+  font-size: 25px;
 }
 
 /*main page styling*/
@@ -258,7 +258,7 @@ translate(-40%,-40%) rotate(-360deg);
 /*puts title headers into a flexbox, will expand on this later when background is done*/
 #landheader {
   margin-top: 2vh;
-  line-height: 75%;
+  line-height: 90%;
   text-align: center;
   display: flex;
   flex-wrap: wrap;
@@ -267,10 +267,11 @@ translate(-40%,-40%) rotate(-360deg);
 
 /*styles font of main title. Opacity will matter more when bg is properly painted. Not totally sold on this font, but fine for now.*/
 h1 {
-  font-family: 'Dancing Script', serif;
-  font-size: 40px;
+  font-family: 'League Script', serif;
+  font-size: 60px;
   color: #f6e0e0;
-  opacity: 0.8;
+  opacity: 0.9;
+  background-color: #aaa;
 }
 
 /*styling for second line of header, just a decoration now, but probably will have better text when I can*/
@@ -607,7 +608,7 @@ div.responsiveiframe>iframe {
 }
 
 #more {
-  font-family: 'Cormorant', serif;
+  font-family: 'Josefin Slab', serif;
   font-size: 2.3vh;
   letter-spacing: 5px;
   border-radius: 90px;
