@@ -17,7 +17,6 @@ function runScript() {
   // Used understanding of above example to make a expand button
   var body = document.getElementById("mainpage");
   var landing = document.getElementById("landing");
-  changeImage();
   var text5 = document.getElementById("text5");
   var text2 = document.getElementById("text2");
   var text12 = document.getElementById("text12");
@@ -29,24 +28,12 @@ function runScript() {
   document.getElementById("more").addEventListener("click", expand);
 
 
-
-
-  function changeImage() {
-    landing.classList.add("landing");
-    landing.classList.remove("preload");
-  }
-
   function stickyNav() {
     if (window.pageYOffset >= sticky) {
       navbar.classList.add("sticky")
     } else {
       navbar.classList.remove("sticky");
     }
-  }
-
-  function changeImage() {
-    landing.classList.add("landing");
-    landing.classList.remove("preload");
   }
 
   function expand() {

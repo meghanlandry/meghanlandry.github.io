@@ -12,9 +12,9 @@
 nav {
   font-family: 'Josefin Slab', serif;
   position: absolute;
-  font-size: 24px;
-  background-color: #aaa;
-  border-bottom: 2px solid #f6e0e0;
+  font-size: 35px;
+  background-color: #9fa0ab;
+  border-bottom: 2px solid #fff;
   float: left;
   z-index: 5;
   top: 100vh;
@@ -36,15 +36,16 @@ nav>ul>li {
 
 /*text styling for nav links, gets rid of ugly link styling*/
 nav>ul>li>a {
+  font-weight: bold;
   letter-spacing: 1.8px;
-  color: #f6e0e0;
+  color: #282735;
   text-decoration: none;
 }
 
 /* makes nav text white and glowy on hover*/
 a:hover {
   color: #fff;
-  text-shadow: 2px 0 8px #fff;
+  text-shadow: 3px 0 8px #fff;
 }
 
 a.pagelink {
@@ -88,7 +89,7 @@ a.pagelink:hover {
   position: absolute;
   bottom: 2vh;
   left: 48.7vw;
-  border: solid #aaa;
+  border: solid #d3a1ad;
   border-width: 0 .4vw .4vw 0;
   border-radius: 8%;
   padding: 1.5vh;
@@ -143,7 +144,7 @@ video.backgroundImage {
   width: 100%;
   height: 100vh;
   max-width: 100%;
-  min-height: 100vh;
+  min-height: 90vh;
   text-align: center;
   background-color: #1e2228;
 }
@@ -180,59 +181,6 @@ div.bgcontainerr {
   overflow: hidden;
 }
 
-@keyframes bright{
-  50% {
-    filter: brightness(115%);
-      transform: translate(0, 2%);
-  }
-  100% {
-    filter: brightness(100%);
-      transform: translate(0, 0%);
-  }
-}
-
-@keyframes bob {
-  50% {
-    transform: translate(0, 10%);
-  }
-  100% {
-    transform: translate(0, 0%);
-  }
-}
-
-/* Borrowed: https://lists.w3.org/Archives/Public/www-style/2012Feb/0294.html */
-@keyframes swayright {
-0% {
-transform:translate(-2%,-2%) rotate(0deg)
-translate(2%,2%) rotate(0deg);
-}
-100% {
-transform:translate(-2%,-2%) rotate(-360deg)
-translate(2%,2%) rotate(360deg);
-}
-}
-
-@keyframes swayleft {
-0% {
-transform:translate(2%,2%) rotate(0deg)
-translate(-2%,-2%) rotate(0deg);
-}
-100% {
-transform:translate(2%,2%) rotate(360deg)
-translate(-2%,-2%) rotate(-360deg);
-}
-}
-
-@keyframes orbit {
-0% {
-transform:translate(40%,40%) rotate(0deg)
-translate(-40%,-40%) rotate(0deg);
-}
-100% {
-transform:translate(40%,40%) rotate(360deg)
-translate(-40%,-40%) rotate(-360deg);
-}
-}
 
 @keyframes arrowbob {
   50% {
@@ -270,7 +218,7 @@ translate(-40%,-40%) rotate(-360deg);
 h1 {
   font-family: 'League Script', serif;
   font-size: 60px;
-  color: #f6e0e0;
+  color: #f3c0cc;
   opacity: 0.9;
   background-color: #201f29;
 }
@@ -281,11 +229,13 @@ h2 {
   font-size: 20px;
   background-color: #201f29;
   opacity: 0.8;
+  border-bottom: 1px solid #f6e0e0;
 }
 
 /*gallery section styling*/
 /*styling for gallery section, used grid template area styling because it's easiest to change layout quickly or swap things out (in my opinion) because I want a specific orientation of images. Hides lower section of grid by default and displays button*/
 section.art {
+background-color: #1e2228;
   box-sizing: border-box;
   grid-area: 2 / 1 / 3 / 4;
   display: grid;
@@ -320,6 +270,7 @@ section.art {
 
 /*I know this is the messiest, most unnecessary code ever, but I am so tired of messing with this part, basically this just gets rid of button and allows lower grid spaces to have height when see more button is pressed, really awkward, I know, but it works. The above class is swapped with this one with javascript on button blick*/
 section.artexpand {
+background-color: #1e2228;
   box-sizing: border-box;
   grid-area: 2 / 1 / 3 / 4;
   display: grid;
@@ -464,8 +415,8 @@ div.responsiveiframe>iframe {
 
 /*styling for title of this page, same as main title but designates grid area*/
 #arttitle {
-  line-height: 75%;
-  margin-top: 10vh;
+  line-height: 150%;
+  margin-top: 11vh;
   grid-area: t;
   width: 100%;
   position: relative;
@@ -650,6 +601,7 @@ div.responsiveiframe>iframe {
 
 /*about section styling, same as above more or less, added margins to make text look less sparse*/
 section.about {
+background-color: #1e2228;
   margin: 0 20% 0 20%;
   height: 100vh;
   grid-area: 3 / 1 / 4 / 4;
@@ -665,7 +617,7 @@ section.about {
 
 /*styling for about section title*/
 #abouttitle {
-  line-height: 75%;
+  line-height: 150%;
   margin-top: 10vh;
   width: 100%;
   position: relative;
@@ -692,6 +644,7 @@ section.about {
 
 /*contact section styling and grid designation, height at 75 for color block at bottom*/
 section.contact {
+background-color: #1e2228;
   margin-top: 100px;
   height: 75vh;
   grid-area: 4 / 1 / 5 / 4;
@@ -715,7 +668,7 @@ b {
 
 /*title styling like the ones above, probably should make this one class tag with about styling*/
 #contacttitle {
-  line-height: 75%;
+  line-height: 150%;
   margin-top: 10vh;
   width: 100%;
   position: relative;
