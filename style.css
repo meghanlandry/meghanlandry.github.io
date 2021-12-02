@@ -7,6 +7,10 @@
  font-smooth: always;
 }
 
+body {
+  background-color: #1e2228;
+}
+
 /*navigation bar styling */
 /*sets position to below immediate viewframe*/
 nav {
@@ -626,13 +630,14 @@ background-color: #1e2228;
 
 /*styling for about section font*/
 #intro {
-  background-image: linear-gradient(to bottom, white, lightgray);
-  color: #3d3f4e;
+  background-image: linear-gradient(to bottom, gray, #1e2228);
+  color: #f6e0e0;
   text-align: justify;
   font-size: 2.5vh;
   letter-spacing: .8px;
   width: 50%;
   padding-top: 15%;
+  padding: 5%;
 }
 
 /*styling for decorative image on about section*/
