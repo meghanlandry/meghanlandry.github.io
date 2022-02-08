@@ -1,40 +1,212 @@
-/*remove existing styling*/
-/*makes jumping between ids less jarring*/
+//palette
+//blue #1e2228
+//pink #f3c0cc
+
 * {
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
   font-smooth: always;
+  box-sizing: border-box;
 }
 
 body {
+  margin: 0;
+  padding: 0;
   background-color: #1e2228;
+  width: 100%;
 }
 
-/*navigation bar styling */
-/*sets position to below immediate viewframe*/
-nav {
+#mainpage {
+  width: 100%;
+  display: grid;
+  grid-template: 10% / repeat(3, 1fr);
+}
+
+#splash {
+  width: 100%;
+  grid-area: 1 / 1 / 10 / 4;
+  text-align: center;
+}
+
+#splashTitle {
+    width: 100%;
+    grid-area: 2 / 1 / 3 / 4;
+}
+
+#splashSubTitle {
+    width: 100%;
+    grid-area: 2 / 1 / 3 / 4;
+}
+
+.title {
+  top: 50vh;
+  text-align: center;
+  font-family: 'League Script', serif;
+  font-size: 60px;
+  color: #1e2228;
+  background-color: #ffffff78;
+  line-height: 25%
+}
+
+.subtitle {
+  text-align: center;
+  font-family: 'Josefin Slab', serif;
+  font-size: 20px;
+  color: #1e222880;
+}
+
+#splashVideo {
+  top: 0;
+  width: 100%;
+  max-height: 100vh;
+  z-index: -5;
+}
+
+#downArrow {
+  width: 100%;
+  grid-area: 2 / 1 / 3 / 4;
+}
+
+.arrow {
+  position: absolute;
+  bottom: 2vh;
+  left: 48.7vw;
+  border: solid #d3a1ad;
+  border-width: 0 1px 1px 0;
+  padding: 15px;
+  display: inline-block;
+  transform: rotate(45deg);
+}
+
+#images {
+  width: 100%;
+}
+
+h1 {
+  transform: translate(0px, 10px);
+  padding-top: 2%;
+  font-size: 40px;
+  text-align: center;
+  font-family: 'Josefin Slab', serif;
+  color: #fff;
+}
+
+.flexContainer {
+  margin-left: 10%;
+  margin-right: 10%;
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.char, .project {
+  position: relative;
+  flex-grow: 2;
+  width: 25%;
+  height: 15vw;
+  object-fit: cover;
+  object-position: 0 25%;
+  margin: 2%;
+  outline: .6vw solid #ffffff80;
+  border: 1px solid #1e2228;
+}
+
+.char:hover, .project:hover {
+  animation: borderFade .5s;
+  animation-fill-mode: forwards;
+  cursor: zoom-in;
+}
+
+@keyframes borderFade {
+  100% {
+    outline: .6vw solid #f3c0cc;
+    border: 1px solid #515359;
+  }
+  0% {
+    outline: .6vw solid #ffffff80;
+    border: 1px solid #1e2228;
+  }
+}
+
+.modal {
+  text-align: center;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  display: none;
+  z-index: 2;
+  overflow-y: auto;
+  background-color: #aaaaaa80;
+}
+
+.modal>img {
+  margin: 5vh;
+  position: relative;
+  max-width: 60vw;
+  max-height: 150vh;
+}
+
+#close {
+  position: fixed;
+  right: 5%;
+  top: 0%;
+  font-family: 'Josefin Slab', serif;
+  font-size: 10vh;
+  color: #fff;
+  display: none;
+  z-index: 3;
+}
+
+#close:hover {
+  cursor: pointer !important;
+}
+
+.filler {
+  border: 0px !important;
+  outline: 0px !important;
+  cursor: default !important;
+}
+
+iframe {
+  border: none;
+  position: relative;
+  width: 50vw;
+  height: 30vw;
+  overflow: hidden;
+}
+
+.newPage {
+  cursor: pointer !important;
+}
+
+.sticky {
+  position: fixed !important;
+  z-index: 20 !important;
+  top: 0 !important;
+  width: 100%;
+}
+
+#navbar {
   font-family: 'Josefin Slab', serif;
   position: absolute;
-  font-size: 35px;
+  font-size: 20px;
   background-color: #9fa0ab;
-  border-bottom: 2px solid #fff;
+  border-bottom: 1px solid #fff;
   float: left;
-  z-index: 5;
+  z-index: 10;
+  height: 40px;
   top: 100vh;
   width: 100%;
 }
 
 /*makes a flexbox for the navbar and centers it, aligns text with the icon by center*/
 nav>ul {
+  transform: translate(0px, -10px);
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-/*removes bullet points*/
-nav>ul>li {
-  padding: 5px;
   list-style: none;
 }
 
@@ -44,6 +216,8 @@ nav>ul>li>a {
   letter-spacing: 1.8px;
   color: #282735;
   text-decoration: none;
+  padding-right: 20px;
+  padding-left: 20px;
 }
 
 /* makes nav text white and glowy on hover*/
@@ -52,970 +226,24 @@ a:hover {
   text-shadow: 3px 0 8px #fff;
 }
 
-a.pagelink {
-  color: #888;
-  text-decoration: none;
-}
-
-a.pagelink:hover {
-  color: #aaa;
-}
-
 /*makes icon overlap a bit*/
 .icon {
-  margin: -35px 10px !important;
+  margin: -60px 10px !important;
   height: 60px;
   display: block;
 }
 
-#moonicon {
-  display: inline-block;
-}
-
 /* makes bigger on hover, janky way of keeping nav links from moving*/
 .icon:hover {
-  height: 65px;
+  height: 64px;
   margin: -35px 7.75;
   transition: all 150ms ease-in;
 }
 
-/*borrowed code controlled and sourced in script.js file, makes navbar fixed when page reaches a certain point by adding this class*/
-.sticky {
-  position: fixed !important;
-  z-index: 20 !important;
-  top: 0 !important;
-  width: 100%;
-}
-
-/*uses border and padding on an empty div to make an arrow*/
-.arrow {
-  border-width: 0 .2vw .2vw 0;
-  position: absolute;
-  bottom: 2vh;
-  left: 48.7vw;
-  border: solid #d3a1ad;
-  border-width: 0 .4vw .4vw 0;
-  border-radius: 8%;
-  padding: 1.5vh;
-  display: inline-block;
-  transform: rotate(45deg);
-}
-
-#downArrow {
-  width: 100%;
-  height: 91vh;
-  animation: 1s infinite arrowbob !important;
+p {
+letter-spacing: 1.8px;
   text-align: center;
-}
-
-/*grid setup*/
-/*set up a grid, each row is a display length page divided into 3 equal columns*/
-#mainpage {
-  display: grid;
-  grid-template: 100vh / repeat(3, 1fr);
   font-family: 'Josefin Slab', serif;
-  font-size: 25px;
-}
-
-/*main page styling*/
-/*designates first row and all colums for first "page". background is two stacked images, these will eventaully be animated, resizes bgimage responsively based on window height.*/
-/*all images for this background are placeholders until illustration is finished*/
-div.landing {
-  grid-area: 1 / 1 / 2 / 4;
-  background-size: 190vh;
-}
-
-div.preload {
-  grid-area: 1 / 1 / 2 / 4;
-background-size: 190vh;
-}
-
-div.foregroundImage {
-  grid-area: 1 / 1 / 2 / 4;
-  position: absolute;
-  z-index: 5;
-  width: 100%;
-  height: 100vh;
-  text-align: center;
-  top: 33vh;
-  left: -1.5%;
-  pointer-events: none;
-}
-
-video.backgroundImage {
-  grid-area: 1 / 1 / 2 / 4;
-  z-index: -5;
-  width: 100%;
-  height: 100vh;
-  max-width: 100%;
-  min-height: 90vh;
-  text-align: center;
-  background-color: #1e2228;
-}
-
-div.backgroundImage {
-  grid-area: 1 / 1 / 2 / 4;
-  position: absolute;
-  z-index: -5;
-  width: 100%;
-  height: 100vh;
-  min-width: 100%;
-  min-height: 100vh;
-  text-align: center;
-  background-color: #1e2228;
-}
-
-div.backgroundImage2 {
-  grid-area: 1 / 1 / 2 / 4;
-  position: absolute;
-  z-index: -5;
-  min-width: 100%;
-  min-height: 100vh;
-  width: 100%;
-  height: 100vh;
-  text-align: center;
-  overflow: hidden;
-}
-
-div.bgcontainerr {
-  grid-area: 1 / 1 / 2 / 4;
-  position: absolute;
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
-}
-
-
-@keyframes arrowbob {
-  50% {
-    transform: translate(0, .5%);
-  }
-  100% {
-    transform: translate(0, 0%);
-  }
-}
-
-@keyframes glow {
-  0% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-/*title styling*/
-/*puts title headers into a flexbox, will expand on this later when background is done*/
-#landheader {
-  margin-top: 2vh;
-  line-height: 90%;
-  text-align: center;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-}
-
-/*styles font of main title. Opacity will matter more when bg is properly painted. Not totally sold on this font, but fine for now.*/
-h1 {
-  font-family: 'League Script', serif;
-  font-size: 60px;
   color: #f3c0cc;
-  opacity: 0.9;
-  background-color: #201f29;
-}
 
-/*styling for second line of header, just a decoration now, but probably will have better text when I can*/
-h2 {
-  color: #fff;
-  font-size: 20px;
-  background-color: #201f29;
-  opacity: 0.8;
-  border-bottom: 1px solid #f6e0e0;
-}
-
-/*gallery section styling*/
-/*styling for gallery section, used grid template area styling because it's easiest to change layout quickly or swap things out (in my opinion) because I want a specific orientation of images. Hides lower section of grid by default and displays button*/
-section.art {
-background-color: #1e2228;
-  box-sizing: border-box;
-  grid-area: 2 / 1 / 3 / 4;
-  display: grid;
-  width: 100%;
-  justify-content: center;
-  grid-template-areas:
-    "t t t"
-    "i1 i1 i1"
-    "i1 i1 i1"
-    "i11 i11 i11"
-    "i11 i11 i11"
-    "i9 i9 i9"
-    "i9 i9 i9"
-    "i8 i8 i8"
-    "i8 i8 i8"
-    "i10 i10 i14"
-    "i10 i10 i14"
-    "i7 i13 i13"
-    "i7 i13 i13"
-    "i15 i15 i16"
-    "i15 i15 i16"
-    ". b ."
-    "i5 i5 i12"
-    "i2 i2 i12"
-    "i6 i3 i4"
-    "i6 i3 i4";
-  grid-template-rows: 15vh repeat(14, 40vh) 30px repeat(4, 0);
-  grid-template-columns: repeat(3, 1fr);
-  padding: 0 5% 0 5%;
-  font-size: 2vh;
-}
-
-/*I know this is the messiest, most unnecessary code ever, but I am so tired of messing with this part, basically this just gets rid of button and allows lower grid spaces to have height when see more button is pressed, really awkward, I know, but it works. The above class is swapped with this one with javascript on button blick*/
-section.artexpand {
-background-color: #1e2228;
-  box-sizing: border-box;
-  grid-area: 2 / 1 / 3 / 4;
-  display: grid;
-  width: 100%;
-  justify-content: center;
-  grid-template-areas:
-    "t t t"
-    "i1 i1 i1"
-    "i1 i1 i1"
-    "i11 i11 i11"
-    "i11 i11 i11"
-    "i9 i9 i9"
-    "i9 i9 i9"
-    "i8 i8 i8"
-    "i8 i8 i8"
-    "i10 i10 i14"
-    "i10 i10 i14"
-    "i7 i13 i13"
-    "i7 i13 i13"
-    "i15 i15 i16"
-    "i15 i15 i16"
-    "i5 i5 i12"
-    "i2 i2 i12"
-    "i6 i3 i4"
-    "i6 i3 i4";
-  grid-template-rows: 15vh repeat(14, 40vh) repeat(4, 30vh);
-  grid-template-columns: repeat(3, 1fr);
-  padding: 0 5% 0 5%;
-  font-size: 2vh;
-}
-
-/*desat high contrast images to avoid unwanted clash*/
-.desat {
-  filter: saturate(50%);
-}
-
-.lowdesat {
-  filter: saturate(70%)
-}
-
-div.popout {
-  margin: 5vh;
-  height: 8vh;
-  width: 8vh;
-  pointer-events: auto;
-  background-color: #aaa;
-  background-size: 100%;
-  opacity: .8;
-  position: absolute;
-  bottom: 0%;
-  right: 0%;
-  border: 2px solid #f6e0e0;
-  border-radius: 25px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-div.popout>a {
-  text-align: right;
-}
-
-div.popout>a>img {
-  display: inline-block;
-  height: 60%;
-  width: 60%;
-  right: 1.3vh;
-  position: relative;
-  object-fit: cover;
-}
-
-div.popout:hover {
-  padding-left: 25vh;
-  transition: 150ms ease-in;
-  border-radius: 25px;
-}
-
-p.popouttitle {
-  color: #3d3f4e;
-  opacity: 0;
-  top: 33%;
-  right: 8vh;
-  position: absolute;
-}
-
-/* need this wrapper to stop text stuttering, makes fixed clickable area */
-
-div.clickbox {
-  position: absolute;
-  z-index: 25;
-  width: 8vh;
-  height: 9vh;
-  right: 0;
-  bottom: -1vh;
-}
-
-div.clickbox:hover~.popouttitle {
-  color: #3d3f4e;
-  opacity: 1 !important;
-  transition: 150ms ease-in;
-  font-size: 2.5vh;
-}
-
-div.clickbox:hover {
-  width: 33vh !important;
-}
-
-/* makes bigger on hover */
-div.clickbox:hover~.popoutimg {
-  display: inline-block;
-  height: 70%;
-  width: 70%;
-  right: 1.5vh;
-  transition: 100ms ease-in;
-}
-
-/*text overlay styling, makes a gradient from bottom of image when hovered over to show some info about the image, realize the lack of symmetry with video items is weird, would like to fix that eventually, but right now it would make videos unplayable. Opactiy is 0 so it's hidden unless hovered*/
-/*10/30 update: disabled gradient and text for now, trying out just the simple popout button*/
-div.overlaycontainer {
-  pointer-events: none;
-  position: relative;
-  z-index: 10;
-}
-
-/* makes flexboxes work with breakpoints by putting it in a div*/
-div.responsiveiframe {
-  border: none;
-  position: relative;
-  height: 100%;
-  overflow: hidden;
-}
-
-/*position can be absolute because container is relative and maintains place in grid*/
-div.responsiveiframe>iframe {
-  border: none;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-/*styling for title of this page, same as main title but designates grid area*/
-#arttitle {
-  line-height: 150%;
-  margin-top: 11vh;
-  grid-area: t;
-  width: 100%;
-  position: relative;
-  text-align: center;
-}
-
-/*object fit causes view to center over abdomen for this image, changes to face view*/
-#img14 {
-  object-position: 0 30%;
-}
-
-/*grid image styling, object fit lets things line up nicely with the grid boxes, width and height prevents blank spaces when resizing window*/
-#img1, #img3, #img4, #img5, #img6, #img7, #img14{
-  position: relative;
-  object-fit: cover;
-  width: 100%;
-  max-height: 100%;
-}
-
-/*same as above except for horizontal items*/
-#img6, #img12, #img7, #img16  {
-  position: relative;
-  object-fit: cover;
-  height: 100%;
-  max-width: 100%;
-}
-
-/*styling for iframes*/
-#img8, #img9, #img10, #img13, #img15 {
-  border: none;
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
-}
-
-/*designates grid areas*/
-#img1, #text1 {
-  grid-area: i1;
-}
-
-#img2, #text2 {
-  grid-area: i2;
-}
-
-#img3, #text3 {
-  grid-area: i3;
-}
-
-#img4, #text4 {
-  grid-area: i4;
-}
-
-#img5, #text5 {
-  grid-area: i5;
-}
-
-#img6, #text6 {
-  grid-area: i6;
-}
-
-#img7, #text7 {
-  grid-area: i7;
-}
-
-#img8, #text8 {
-  grid-area: i8;
-}
-
-#img9, #text9 {
-  grid-area: i9;
-}
-
-#img10, #text10 {
-  grid-area: i10;
-}
-
-#img11, #text11 {
-  grid-area: i11;
-}
-
-#img12, #text12 {
-  grid-area: i12;
-}
-
-#img13, #text13 {
-  grid-area: i13;
-}
-
-#img14, #text14 {
-  grid-area: i14;
-}
-
-#img15, #text15 {
-  grid-area: i15;
-}
-
-#img16, #text16 {
-  grid-area: i16;
-}
-
-/*show image text overlays on mouseover*/
-#img1:hover~#text1, #img1~#text1:hover,
-#img2:hover~#text2, #img2~#text2:hover,
-#img3:hover~#text3, #img3~#text3:hover,
-#img4:hover~#text4, #img4~#text4:hover,
-#img5:hover~#text5, #img5~#text5:hover,
-#img6:hover~#text6, #img6~#text6:hover,
-#img7:hover~#text7, #img7~#text7:hover,
-#img8:hover~#text8, #img8~#text8:hover,
-#img9:hover~#text9, #img9~#text9:hover,
-#img11:hover~#text11, #img11~#text11:hover,
-#img12:hover~#text12, #img12~#text12:hover,
-#img14:hover~#text14, #img14~#text14:hover,
-#img15:hover~#text15, #img15~#text15:hover,
-#img16:hover~#text16, #img16~#text16:hover {
-  opacity: 1;
-}
-
-/*flexbox specific styling for the image triads*/
-#img2, #img11 {
-  object-fit: cover;
-  max-width: 100% !important;
-  max-height: 100%;
-  display: flex;
-}
-
-/*flexbox styling for images within the image triads*/
-#img2>img, #img11>img {
-  box-sizing: border-box;
-  height: auto;
-  width: 33.33%;
-  /*it feels like this is wrong*/
-  object-fit: cover;
-}
-
-/*see more button styling, would like to change width, but it ignores sizing and messing with padding/margins screws up the page because of total being greater than 100%, unsure how to manage this*/
-#buttonwrapper {
-  grid-area: b;
-  display: flex;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  width: 100%;
-  justify-content: center;
-}
-
-#more {
-  font-family: 'Josefin Slab', serif;
-  font-size: 2.3vh;
-  letter-spacing: 5px;
-  border-radius: 90px;
-  border: 3px solid #f6e0e0;
-  position: absolute;
-  z-index: 10;
-  width: 10vw;
-  height: 50px;
-}
-
-/*button is subtle so changed to a pointer to make interactiveness more forward*/
-#more:hover {
-  cursor: pointer;
-}
-
-#more:before {
-  content: " ";
-  position: absolute;
-  z-index: -5;
-  border-radius: 90px;
-  top: -3px;
-  left: -3px;
-  right: -3px;
-  bottom: -3px;
-  border: 1px solid #3d3f4e;
-}
-
-/*added and removed with Javascript to text sections and the button to make see more button work*/
-.hide {
-  font-size: 0px;
-  width: 0px;
-  height: 0px;
-  opacity: 0 !important;
-}
-
-/*about section styling, same as above more or less, added margins to make text look less sparse*/
-section.about {
-background-color: #1e2228;
-  margin: 0 20% 0 20%;
-  height: 100vh;
-  grid-area: 3 / 1 / 4 / 4;
-  overflow: hidden;
-}
-
-/*flexbox for image and text*/
-#abouttext {
-  padding-top: 10vh;
-  display: flex;
-  justify-content: center;
-}
-
-/*styling for about section title*/
-#abouttitle {
-  line-height: 150%;
-  margin-top: 10vh;
-  width: 100%;
-  position: relative;
-  text-align: center;
-}
-
-/*styling for about section font*/
-#intro {
-  background-image: linear-gradient(to bottom, gray, #1e2228);
-  color: #f6e0e0;
-  text-align: justify;
-  font-size: 2.5vh;
-  letter-spacing: .8px;
-  width: 50%;
-  padding-top: 15%;
-  padding: 5%;
-}
-
-/*styling for decorative image on about section*/
-#intropic {
-  object-fit: contain;
-  height: 60vh;
-  width: 50%;
-}
-
-/*contact section styling and grid designation, height at 75 for color block at bottom*/
-section.contact {
-background-color: #1e2228;
-  margin-top: 100px;
-  height: 75vh;
-  grid-area: 4 / 1 / 5 / 4;
-  overflow: hidden;
-}
-
-/*styling for contact section text*/
-section.contact>p {
-  margin: 5% 0 0 0;
-  font-size: 2.5vh;
-  letter-spacing: .8px;
-  word-spacing: 50px;
-  width: 100%;
-  text-align: center;
-}
-
-/*unsure if b tag counts as inline styling, but I like it more than font weight */
-b {
-  color: gray;
-}
-
-/*title styling like the ones above, probably should make this one class tag with about styling*/
-#contacttitle {
-  line-height: 150%;
-  margin-top: 10vh;
-  width: 100%;
-  position: relative;
-  text-align: center;
-}
-
-/*flexbox for social media icons, icons are borrowed and sourced in HTML doc, will make my own after finishing the rest of my page's illustrations*/
-#socials {
-  width: 100%;
-  display: flex;
-  text-align: center;
-  justify-content: center;
-}
-
-/*resizing social media icons based on screen height*/
-#socials>a>img {
-  width: 5vh;
-}
-
-/*footer section styling*/
-footer {
-  width: 100%;
-  height: 25vh;
-  background-color: #3d3f4e;
-  grid-area: 5 / 1 / 7 / 4;
-  overflow: hidden;
-}
-
-
-/* individual art page template */
-section.artpage {
-  font-size: 2.5vh;
-  width: 100% !important;
-  display: grid;
-  grid-auto-rows: max-content;
-  grid-template-columns: 100%;
-}
-
-nav.artpagenav {
-  width: 100% !important;
-  top: 0 !important;
-  position: fixed;
-}
-
-header.individualtitle {
-  line-height: 95%;
-  margin-top: 10vh;
-  margin-bottom: 5vh;
-  grid-area: 1 / 1 / 2 / 2;
-  width: 100%;
-  position: relative;
-  text-align: center;
-}
-
-header.individualtitle>h2 {
-  font-size: 20px !important;
-}
-
-div.mainimagecontainer {
-  margin-left: 5%;
-  width: 90% !important;
-  grid-area: 2 / 1 / 3 / 2;
-  overflow: hidden;
-  justify-content: center;
-  text-align: center;
-}
-
-div.pagecontainer {
-  max-height: 80vh;
-  width: 100%;
-}
-
-img.mainimage {
-  position: relative;
-  text-align: center;
-  width: 90%;
-  margin: 0 5%;
-  object-fit: contain;
-}
-
-.mainimagethin {
-  position: relative;
-  object-fit: contain;
-  width: 50%;
-}
-
-.mainimagesmol {
-  position: relative;
-  object-fit: contain;
-  width: 25%;
-}
-
-p.mainimagedescription {
-  color: #3d3f4e;
-  grid-area: 3 / 1 / 4 / 2;
-  text-align: center;
-  letter-spacing: 1px;
-  padding: 25px 25vw;
-}
-
-header.extratitle {
-  padding-top: 5vh;
-  width: 100%;
-  position: relative;
-  text-align: center;
-}
-
-div.extraimagecontainer {
-  width: 90%;
-  margin: 0 5%;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-div.extraimagecontainernowrap {
-  width: 90%;
-  margin: 0 5%;
-  display: flex;
-  justify-content: center;
-  flex-wrap: nowrap;
-}
-
-div.extraimagecontainernowrap>img {
-  max-width: 12vw;
-  max-height: 80vh;
-  object-fit: cover;
-}
-
-div.extraimagecontainer>img {
-  max-height: 80vh;
-  object-fit: contain;
-}
-
-div.extraimagecontainer>a>img {
-  width: 100%;
-  max-height: 40vh;
-  object-fit: contain;
-  overflow: hidden;
-}
-
-div.extracontainer {
-  margin-left: 5%;
-  width: 90% !important;
-  height: 60vh;
-  justify-content: center;
-  position: relative;
-  text-align: center;
-  overflow: hidden;
-}
-
-
-.extrastuff {
-  position: relative;
-  text-align: center;
-  justify-content: center;
-  width: 70%;
-  height: 60vh;
-  border: none;
-  overflow: none;
-}
-
-p.extraimagetext {
-  color: #3d3f4e;
-  text-align: center;
-  letter-spacing: 1px;
-  padding: 25px 25vw;
-}
-
-div.extratitle1 {
-  grid-area: 4 / 1 / 5 / 2;
-}
-
-div.extraimg1 {
-  grid-area: 5 / 1 / 6 / 2;
-}
-
-div.extratext1 {
-  grid-area: 6 / 1 / 7 / 2;
-}
-
-div.extratitle2 {
-  grid-area: 7 / 1 / 8 / 2;
-}
-
-div.extraimg2 {
-  grid-area: 8 / 1 / 9 / 2;
-}
-
-div.extratext2 {
-  grid-area: 9 / 1 / 10 / 2;
-}
-
-div.three {
-width: 65% !important;
-margin-left: 20%;
-}
-
-/* Any extra image specific styling for individual art pages */
-#FFstuff>img {
-  max-height: 80vh;
-}
-
-/*changes orientation of images to be screenwidth horizontal bars
-huge grid section is here twice for the same reason as above, to be controlled with the button
-positioning section is to make sure the faces are showing when the window gets resized
-rest is just minor size styling*/
-@media all and (max-width: 800px) {
-  section.art {
-    margin: 0 !important;
-    padding: 0 !important;
-    grid-template-rows: 20vh repeat(10, 20vh) 10vh repeat(6, 0vh) !important;
-    grid-template-columns: 100vw;
-    grid-template-areas:
-      "t"
-      "i1 "
-      "i11"
-      "i9"
-      "i8"
-      "i10"
-      "i14"
-      "i7"
-      "i13"
-      "i15"
-      "i16"
-      "b"
-      "i5"
-      "i12"
-      "i2"
-      "i6"
-      "i3"
-      "i4" !important;
-  }
-
-  #more {
-    height: 50px !important;
-    width: 30vw;
-  }
-
-  section.artexpand {
-    margin: 0 !important;
-    padding: 0 !important;
-    grid-template-rows: 20vh repeat(10, 20vh) repeat(6, 15vh) !important;
-    grid-template-columns: 100vw;
-    grid-template-areas:
-      "t"
-      "i1 "
-      "i11"
-      "i9"
-      "i8"
-      "i10"
-      "i14"
-      "i7"
-      "i13"
-      "i15"
-      "i16"
-      "i5"
-      "i12"
-      "i2"
-      "i6"
-      "i3"
-      "i4" !important;
-  }
-
-  #img5, #img1, #img3, #img7, #img12, #img4, #img14{
-    max-width: 100% !important;
-    height: 100% !important;
-  }
-
-  #img8, #img9, #img10, #img12, #img13, #img16 {
-    width: 100% !important;
-    max-height: 100% !important;
-  }
-
-  #img1 {
-    object-position: 0 25%;
-  }
-
-  #img4 {
-    object-position: 0 25%;
-  }
-
-  #img3 {
-    object-position: 0 22%;
-  }
-
-  #img5 {
-    object-position: 0 25%;
-  }
-
-  #img6 {
-    object-position: 0 28%;
-  }
-
-  #img7 {
-    object-position: 0 8%;
-  }
-
-  #img12 {
-    object-position: 0 18%;
-  }
-
-  #img14 {
-    object-position: 0 18%;
-  }
-
-  /* changes about section to column and stlyes around it. */
-  section.about {
-    margin: 0 2% 0 2%;
-    height: 115vh;
-  }
-
-  #abouttext {
-    flex-direction: column;
-    width: 100%;
-    padding: 0 !important;
-    margin: 0 !important;
-  }
-
-  #intro {
-    width: 100%;
-    padding: 0 !important;
-    margin: 0 !important;
-  }
-
-  #intropic {
-    padding-top: 20px;
-    object-fit: contain;
-    width: 100vw;
-  }
-
-  #socials>a>img {
-    width: 10vh;
-  }
-
-  /*changes progress images to column display*/
-  div.supplementalimagecontainer {
-    flex-direction: column;
-  }
-
-  div.supplementalimagecontainer>img {
-    max-width: 100vw;
-    width: 100vw;
-  }
 }
