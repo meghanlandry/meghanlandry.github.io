@@ -1,7 +1,6 @@
 //palette
 //blue #1e2228
 //pink #f3c0cc
-
 * {
   margin: 0;
   padding: 0;
@@ -30,13 +29,13 @@ body {
 }
 
 #splashTitle {
-    width: 100%;
-    grid-area: 2 / 1 / 3 / 4;
+  width: 100%;
+  grid-area: 2 / 1 / 3 / 4;
 }
 
 #splashSubTitle {
-    width: 100%;
-    grid-area: 2 / 1 / 3 / 4;
+  width: 100%;
+  grid-area: 2 / 1 / 3 / 4;
 }
 
 .title {
@@ -92,6 +91,35 @@ h1 {
   color: #fff;
 }
 
+h3 {
+  margin: 0;
+  font-family: 'Josefin Slab', serif;
+  font-size: 40px;
+  letter-spacing: 1.8px;
+  color: #1e2228;
+  background-color: #f3c0cc80;
+  border-bottom: 2px solid #fff;
+  padding-top: 3px;
+  margin-bottom: 3px;
+}
+
+h4 {
+  margin: 0;
+  font-family: 'Josefin Slab', serif;
+  font-size: 20px;
+  color: #1e2228;
+  background-color: #f3c0cc80;
+  border-bottom: 2px solid #fff;
+  border-top: 2px solid #fff;
+  padding-top: 3px;
+  margin-top: 5px;
+}
+
+a {
+  text-decoration: none;
+  color: #555;
+}
+
 .flexContainer {
   margin-left: 10%;
   margin-right: 10%;
@@ -124,6 +152,7 @@ h1 {
     outline: .6vw solid #f3c0cc;
     border: 1px solid #515359;
   }
+
   0% {
     outline: .6vw solid #ffffff80;
     border: 1px solid #1e2228;
@@ -142,7 +171,6 @@ h1 {
 }
 
 .modal>img {
-  margin: 5vh;
   position: relative;
   max-width: 60vw;
   max-height: 150vh;
@@ -241,9 +269,8 @@ a:hover {
 }
 
 p {
-letter-spacing: 1.8px;
+  letter-spacing: 1.8px;
   text-align: center;
   font-family: 'Josefin Slab', serif;
   color: #f3c0cc;
-
 }
