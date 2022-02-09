@@ -45,7 +45,8 @@ body {
   font-size: 60px;
   color: #1e2228;
   background-color: #ffffff78;
-  line-height: 25%
+  line-height: 25%;
+  letter-spacing: 0px;
 }
 
 .subtitle {
