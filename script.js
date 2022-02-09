@@ -1,6 +1,3 @@
-window.onload = runScript;
-
-function runScript() {
   var close = document.getElementById("close");
   var modalsCollection = document.getElementsByClassName("modal");
   var thumbsCollection = document.getElementsByClassName("flexItem");
@@ -86,8 +83,3 @@ function runScript() {
       navbar.style.display = "block";
     }
   }
-
-
-
-
-}
