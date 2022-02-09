@@ -175,6 +175,7 @@ a {
   position: relative;
   max-width: 60vw;
   max-height: 150vh;
+  margin-bottom: 5px;
 }
 
 #close {
