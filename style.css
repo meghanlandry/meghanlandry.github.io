@@ -74,10 +74,15 @@ body {
   bottom: 2vh;
   left: 48.7vw;
   border: solid #d3a1ad;
-  border-width: 0 1px 1px 0;
+  border-width: 0 2px 2px 0;
   padding: 15px;
   display: inline-block;
   transform: rotate(45deg);
+}
+
+.arrow:hover {
+  transition: all 200ms ease-in;
+  filter: drop-shadow(0 0 5px #FFF);
 }
 
 #images {
@@ -137,28 +142,22 @@ a {
   width: 25%;
   height: 15vw;
   object-fit: cover;
-  object-position: 0 25%;
   margin: 2%;
   outline: .6vw solid #ffffff80;
   border: 1px solid #1e2228;
 }
 
-.char:hover, .project:hover {
-  animation: borderFade .5s;
-  animation-fill-mode: forwards;
-  cursor: zoom-in;
+.char {
+  object-position: 0 25%;
 }
 
-@keyframes borderFade {
-  100% {
-    outline: .6vw solid #f3c0cc;
-    border: 1px solid #515359;
-  }
-
-  0% {
-    outline: .6vw solid #ffffff80;
-    border: 1px solid #1e2228;
-  }
+.char:hover, .project:hover {
+  transition: all 500ms ease-in;
+  animation-fill-mode: forwards;
+  cursor: zoom-in;
+  filter: drop-shadow(0 0 3px #ffffff80);
+  outline: .6vw solid #f3c0cc;
+  border: 1px solid #515359;
 }
 
 .modal {
@@ -177,6 +176,7 @@ a {
   max-width: 60vw;
   max-height: 150vh;
   margin-bottom: 5px;
+  border: 10px solid #515359;
 }
 
 #close {
@@ -259,16 +259,15 @@ a:hover {
 
 /*makes icon overlap a bit*/
 .icon {
-  margin: -60px 10px !important;
-  height: 60px;
+  margin: -40px 0px !important;
+  height: 50px;
   display: block;
 }
 
 /* makes bigger on hover, janky way of keeping nav links from moving*/
 .icon:hover {
-  height: 64px;
-  margin: -35px 7.75;
-  transition: all 150ms ease-in;
+  transition: all 300ms ease-in;
+  filter: drop-shadow(0 0 5px #f3c0cc);
 }
 
 p {
@@ -276,4 +275,14 @@ p {
   text-align: center;
   font-family: 'Josefin Slab', serif;
   color: #f3c0cc;
+}
+
+.iconSocial {
+  padding: 10px;
+  width: 50px;
+}
+
+.iconSocial:hover {
+  transition: all 300ms ease-in;
+  filter: drop-shadow(0 0 1px #FFF);
 }
